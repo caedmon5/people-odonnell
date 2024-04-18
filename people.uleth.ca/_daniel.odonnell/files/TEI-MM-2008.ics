@@ -1,0 +1,713 @@
+BEGIN:VCALENDAR
+X-WR-CALNAME;VALUE=TEXT:TEI
+PRODID:-//WebCalendar-ics-v1.2.b1
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000344
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Registration (Foyer\, Strand building)
+DESCRIPTION:Registration
+LOCATION:Foyer (Strand Building)
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T090000Z
+DTSTAMP:20081103T162741Z
+DTEND:20081106T093000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000345
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Welcome and Introductions (Safra Lecture Theatre\, Strand)
+DESCRIPTION:Welcome and Introductions (Safra Lecture Theatre\, Strand)
+LOCATION:Safra Lecture Theatre, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T093000Z
+DTSTAMP:20081103T162741Z
+DTEND:20081106T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000346
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Plenary Charlotte RouechÃ© From Stone to Byte: defining literature
+DESCRIPTION:Safra Lecture Theatre - Strand \nPlenary Charlotte RouechÃ© 
+  From Stone to Byte: defining literature  \n \nAbstract \n \nSince the 
+  middle ages\, scholars of the ancient graeco-roman worlds have based 
+  their work on the great literary texts of antiquity world\, preserved in
+   a manuscript tradition. Indeed\, those texts\, some of the greatest 
+  achievements of the worldÂs literary output\, provide the central 
+  reason why most people study those periods. At a later date\, the 
+  artefacts of the period became the subject of study Â firstly as
+  works  of art\, and later as matter for cultural history. A special
+  category of  material is the documents which have survived from
+  antiquity Â written  artefacts\, whose status in the among the
+  material to be studied is not  entirely clear. The deluge of papyri\,
+  and of inscriptions\, which have  been published since 1840\, has been
+  difficult to deal with using the  categories of earlier\, literature
+  based\, study\; and book-based  publication has created a gulf between
+  texts preserved...
+LOCATION:Safra Lecture Theatre - Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T100000Z
+DTSTAMP:20081103T162741Z
+DTEND:20081106T110000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000347
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Break (Foyer\, Strand building)
+DESCRIPTION:Break (Foyer\, Strand building)
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T110000Z
+DTSTAMP:20081103T162741Z
+DTEND:20081106T113000Z
+RRULE:FREQ=DAILY;UNTIL=20081109T000000Z
+EXDATE;VALUE=DATE:20081108
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000348
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Panel Manuscript Encoding
+DESCRIPTION:Panel Manuscript EncodinG \nManuscripts Encoding: 3-paper panel
+   \n \n(Elena Pierazzo\, Deborah K. Wright\, Fotis Jannidis\, Malte 
+  Rehbein\, Justin Tonra) \n \nThis panel is a product of the Manuscripts 
+  Special Interest Group. One of the aims of the SIG is to test the 
+  ability of the TEI P5 encoding schema to handle the different needs that
+   scholars face while transcribing manuscripts and creating digital 
+  editions based on manuscripts. \n \nIn its first days the Manuscripts 
+  SIG witnessed a lengthy debate on the existence or otherwise of 
+  differences between modern and medieval manuscripts\; during the SIG 
+  meeting held at the TEI MembersÂ Meeting 2007\, the participants 
+  acknowledged that such a difference exists and that these differences 
+  come about from specific scholarly needs which depend in turn on the 
+  different nature of the manuscripts to be encoded: mostly scribal fair 
+  copies (or other kinds of fragmentary primary sources) on the one hand 
+  and authorial\, mostly working or private manuscripts on the o...
+LOCATION:Safra Lecture Theatre - Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T113000Z
+DTSTAMP:20081103T162741Z
+DTEND:20081106T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000349
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Papers
+DESCRIPTION:Chair Julia Flanders \n \n    * Johannes Kepper Encoding of 
+  scholarly music editions and the TEI \n    * Peter Stadler The 
+  Carl-Maria-von-Weber Correspondence edited with TEI P5 \n    * Thomas 
+  Schmidt and Andreas Witt Transcription tools\, transcription conventions
+   and the TEI guidelines for transcriptions of speec
+LOCATION:Great Hall - Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T113000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000350
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Lunch
+DESCRIPTION:Lunch
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T130000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T140000Z
+RRULE:FREQ=DAILY;UNTIL=20081109T000000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000351
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Plenary Dino Buzzetti The expediency of markup  (Safra Lecture 
+  Theatre\, Strand)
+DESCRIPTION:Paper \n \nThe expediency of markup. \nAbstract \n \nThe TEI 
+  has attained a major achievement in digital humanities. Its influence 
+  has been thorough and pervasive in humanities computing theory and 
+  practice. It can be observed\, though\, that the chief effort of the TEI
+   community so far has been directed to the production of TEI encoded 
+  data\, whereas less attention has been payed to their reuse in 
+  processing applications. Can the challenge be faced? Where do the 
+  difficulties reside? Analytic markup solutions on the one hand and 
+  semantic representations of sorts\, such as those promoted in the 
+  framework of the Semantic Web Activity on the other\, are apparently 
+  developing in rather unrelated ways. A crucial problem for the TEI 
+  community is therefore that of finding systematic ways to relate markup 
+  structures one the one side to object domain semantic structures on the 
+  other. A first step in this direction can be offered by an engaging 
+  discussion on a model of digital text representation comprising bo...
+LOCATION:Safra Lecture Theatre, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T140000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T150000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000352
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Connecting TEI to External Conceptual Models as a Method for 
+  Information Integr
+DESCRIPTION:Connecting TEI to External Conceptual Models as a Method for 
+  Information Integration \n \n(Ãyvind Eide\, Achille Felicetti\,
+  Gregory  Crane\, Arianna Ciula\, JosÃ© Miguel Vieira) \nDocument
+  Contents \n \n     * References \n    * Papers \n \nThe TEI Ontologies
+  SIG has been active  for four years since its establishment at the TEI
+  meeting in 2004. In  this period\, there has been development in two
+  different\, but related\,  directions in our field. \n \nFirstly\, a new
+  version of P5 has been  developed. In this process\, SIG members have
+  played a part\, especially  in the expansion of chapter 13\, Names\,
+  Dates\, People\, and Places.  Much of the information important to our
+  work\, e.g. related to persons  and places\, can now be easily tagged in
+  TEI. \n \nA second line of work  has been on clarifying how connections
+  between TEI and external  conceptual models or ontologies should be
+  made. Even with the expansion  of TEI\, this is still a necessary
+  solution in many cases. \n \nThe  proposed panel consists of three
+  papers covering di...
+LOCATION:Safra Lecture Theatre - Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T150000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T163000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000353
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Text and Graphics I (Great Hall - Strand)
+DESCRIPTION:Text & Graphics \n \n(Dorothy Carr Porter\, John Walsh) \n 
+  \nThe Text and Graphics Special Interest Group serves as a forum for the
+   discussion\, development\, testing\, and documentation of various 
+  strategies and best practices for implementing the digital facsimile 
+  structures available in TEI P5\, especially as relates to graphically 
+  rich texts\, and for developing methods to extend the TEI when existing 
+  structures are not suitable. The two sessions here sponsored by the SIG 
+  cover many different aspects of the issue of text and graphics as they 
+  relate to TEI. \n \nSession I is a more advanced session\, with two 
+  technical presentations describing different non-<facsimile> approaches 
+  to linking text and image. The first is a report on experiments carried 
+  out for the First Century of the First State University collection at 
+  Documenting the American South to automate linking between manuscript 
+  images and TEI transcriptions\, using SVG. The second is a report on the
+   Archimedes Palimpsest project\, which is us...
+LOCATION:Great Hall - Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T150000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T163000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000354
+LAST-MODIFIED:20081103T162217Z
+SUMMARY:Break (Great Hall\, Strand)
+DESCRIPTION:Break (Great Hall\, Strand)
+CLASS:PUBLIC
+STATUS:TENTATIVE
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=SENT:TEI <dan@kakelbont.ca>
+DTSTART:20081106T163000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T170000Z
+RRULE:FREQ=DAILY;UNTIL=20081109T000000Z
+EXDATE;VALUE=DATE:20081108
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000355
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Funders Panel (Great Hall - Strand)
+DESCRIPTION:Roundtable Discussion: New Directions in Digital Funding \n \nA
+   featured roundtable\, New Directions in Digital Funding\, chaired by 
+  Harold Short (head of CCH\, King's College London) will include 
+  representatives from major funding agencies\, projects and institutions:
+   \n \n    * Helen Cullyer\, Mellon Foundation\, U.S. \n    * Julianne 
+  Nyhan\, European Science Foundation (ESF)\, Europe. \n    * David Robey\,
+   Arts and Humanities Research Council (AHRC)\, U.K. \n    * Laurent 
+  Romary\, Max Planck Society (MPS) and Institut National de Recherche en 
+  Informatique (INRIA)\, Germany and France. \n    * Dirk Roorda\, DANS\, 
+  Netherlands. \n \n  \nHelen Cullyer \n \nHelen Cullyer holds a PhD in 
+  Classics from Yale University\, and is currently Associate Program 
+  Officer in the Scholarly Communications Program at the Andrew W. Mellon 
+  Foundation. Prior to joining the Foundation in January of this year\, 
+  she taught at the Evergreen State College in Olympia\, Washington\, and 
+  then at the University of Pittsburgh\, where she was Director...
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081106T170000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T183000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000356
+LAST-MODIFIED:20081103T162322Z
+SUMMARY:Reception (Chapters\, Strand)
+DESCRIPTION:Reception (Chapters\, Strand)
+LOCATION:Chapters, Strand
+CLASS:PUBLIC
+STATUS:TENTATIVE
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=SENT:TEI <dan@kakelbont.ca>
+DTSTART:20081106T183000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081106T193000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000357
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:TEI Business Meeting (Great Hall\, Strand)
+DESCRIPTION:TEI Business Meeting (Great Hall\, Strand)
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T090000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T110000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000358
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:TEI Analytics (Safra Lecture Theatre\, Strand)
+DESCRIPTION:TEI Analytics: 3-paper panel \n \n(Martin Mueller\, Brian 
+  Pytlik-Zillig\, Stephen Ramsay) \n \nWe present a TEI AnalyticsÂa TEI
+   subset designed to facilitate interoperability of text archives for the
+   purpose of conducting large-scale text analysis operations on full text
+   archives. Our panel covers three aspects of the project. Martin Mueller
+   discusses the nature and development of the TEI Analytics schema\, with
+   its specific focus on data points for natural language processing.
+  Brian  Pytlik-ZilligÂs fully automatic method for converting
+  arbitrary  TEIÂand even non-TEIÂdocuments to TEI-A uses schema
+  harvesting\, and  so he presents his particular technique for using
+  schemas to write  stylesheets (that write stylesheets). Stephen Ramsay
+  talks about Abbot:  a tool designed to enclose Pytlik-ZilligÂs schema
+  harvester within a  highly configurable framework\, which also takes
+  advantage of some novel  (XML-based) software engineering techniques. \n
+  \nTEI Analytics grew out  of the specific needs of the MONK P...
+LOCATION:Safra Lecture Theatre, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T113000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000359
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Papers (Great Hall\, Strand)
+DESCRIPTION:Chair Syd Baumann \n \n    * Tom Elliott\, Sean Gillies\, 
+  Sebastian Rahtz\, Hafed Walda\, Gabriel Bodard Geography in TEI/EpiDoc 
+  Document Collections \n    * Marion LamÃ© Epidoc encoding of Mommsen's
+   1883 edition of the Res Gestae Divi Augusti \n    * Michael B. Toth and
+   Doug Emery The Role of TEI in Completing a Multidisciplinary Study of 
+  the Archimedes Palimpsest \n
+LOCATION:Safra Lecture Theatre, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T113000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000360
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Plenary Vanda Broughton Metadata and content: common ground in 
+  representing mea
+DESCRIPTION:Paper \n \nMetadata and content: common ground in representing 
+  meaning. \n \nFacet analysis is a well established methodology for 
+  determining the status and relationships of terms in a controlled 
+  indexing vocabulary or subject metadata tool. Those concepts and their 
+  attributes which facet analysis attempts to manage have much in common 
+  with the elements identified in the mark-up of digital texts\, and there
+   appears to be some conceptual similarity of approach in encoding for 
+  subject representation and encoding for document analysis in a digital 
+  context. \n \nCurrent work on developing ways of representing subject 
+  content through faceted systems has shown that\, when properly 
+  engineered\, there are indications that it is valid as a general theory 
+  of semantic modelling which can underpin a variety of indexing formats. 
+  The mapping of terms onto concepts\, and vice versa\, is not without 
+  difficulty. Nevertheless\, facet analysis works well for both of these 
+  approaches\, and allows the vocabulary to be expre...
+LOCATION:Safra Lecture Theatre - Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T140000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T150000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000361
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Panel: Text and Graphics II
+DESCRIPTION:Text & Graphics \n \n(Dorothy Carr Porter\, John Walsh) \n 
+  \nThe Text and Graphics Special Interest Group serves as a forum for the
+   discussion\, development\, testing\, and documentation of various 
+  strategies and best practices for implementing the digital facsimile 
+  structures available in TEI P5\, especially as relates to graphically 
+  rich texts\, and for developing methods to extend the TEI when existing 
+  structures are not suitable. The two sessions here sponsored by the SIG 
+  cover many different aspects of the issue of text and graphics as they 
+  relate to TEI. \n \nSession I is a more advanced session\, with two 
+  technical presentations describing different non-<facsimile> approaches 
+  to linking text and image. The first is a report on experiments carried 
+  out for the First Century of the First State University collection at 
+  Documenting the American South to automate linking between manuscript 
+  images and TEI transcriptions\, using SVG. The second is a report on the
+   Archimedes Palimpsest project\, which is us...
+LOCATION:Safra Lecture Theatre, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T150000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T163000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000362
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Papers
+DESCRIPTION:Chair Matthew Driscoll \n \n    * Kevin S. Hawkins FRBR Group 1
+   Entities and the TEI Guidelines \n    * Richard Light and Jeff Cowton 
+  TEI in the Museum: the Goslar to Grasmere project \n    * Paul Caton 
+  Page Space in the TEI Universe
+LOCATION:Safra Lecture Theatre, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T150000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T163000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000363
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Poster Slam
+DESCRIPTION:Chair: Kevin Hawkins
+LOCATION:Great Hall, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T170000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T173000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000364
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Poster Session
+DESCRIPTION:    *   Syd Bauman  Local Enumeration Constraint \n    * Marcus
+   Bingenheimer\, Aming Tu\, and Jen-jou Hung TEI markup in a GIS project 
+  \n    * Hugh Cayless and Natasha Smith Publishing the Colonial and State
+   Records of North Carolina \n    * Hugh Cayless and Raffaele Viglianti 
+  The Chapel Hill Electronic Text-Converter (CHET-C) \n    * James 
+  Cummings URI-based pointing in TEI P5 \n    * Christiane Fritze The 
+  German Text Archive \n    * Maureen Jameson and Donald J. Trainor 
+  Litgloss on TEIRails: demonstration of a CMS for TEI-encoded documents 
+  \n    * Dorothy Carr Porter Facsimile: A Good Start \n    * Doug Reside 
+  Multimedia Tagging with the Ajax XML Encoder (AXE) \n    * Daniel 
+  RÃ¶wenstrunk Edirom Â a workbench for digital historical-critical
+  music  editions \n    * Stephanie Schlitz and Garrick Bodine The
+  TEIViewer:  Layering XML\, XSL\, CSS and jQuery \n    * Aja Teehan\,
+  Damien  Gallagher\, John G. Keating\, and Thomas O'Connor The AlcalÃ¡
+  account  book project - an interactive 18th century ledger \n    * Tsc...
+LOCATION:Great Hall
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T173000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T183000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000365
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Reception
+DESCRIPTION:Reception
+LOCATION:Weston room, Maughan Library
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T183000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T194500Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000366
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Fleet Str. and South Bank Walk
+DESCRIPTION:Fleet Str. and South Bank Walk
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081107T194500Z
+DTSTAMP:20081103T162742Z
+DTEND:20081107T210000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000367
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Manuscripts SIG
+DESCRIPTION:Working Papers \n \n    * Hilde BÃ¸e\,  Clarification and 
+  Transposition\; New Features for the Module for Transcription of Primary
+   Sources?\, Some Thoughts after Experiences with the Manuscripts of 
+  Henrik Ibsen \n    * Alexei Lavrentiev\, A Tag for Punctuation? \n    * 
+  Dot Porter\, Extending msDescription to Describe Printed Books (and to 
+  describe manuscripts better) \n    * Torsten SchaÃan\, Using 
+  msDescription with Other Manuscript Description Standards or: TEI as 
+  interchange format for manuscript descriptions
+LOCATION:G06 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T093000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T110000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000368
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Ontologies SIG
+DESCRIPTION:Ontologies SIG
+LOCATION:G03 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T093000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T110000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000369
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Libraries SIG
+DESCRIPTION:Libraries SIG
+LOCATION:G17 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T093000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T110000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000370
+LAST-MODIFIED:20081103T161014Z
+SUMMARY:Education SIG
+DESCRIPTION:Education SIG
+LOCATION:G11 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T093000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T110000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000371
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Manuscripts SIG
+DESCRIPTION:Manuscripts SIG
+LOCATION:G06 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T113000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000372
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Ontologies SIG
+DESCRIPTION:Ontologies SIG
+LOCATION:G03 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T113000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000373
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Libraries SIG
+DESCRIPTION:Libraries SIG
+LOCATION:G17 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T113000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000374
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Tools SIG
+DESCRIPTION:Tools SIG
+LOCATION:G04 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T113000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T130000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000375
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Manuscripts SIG
+DESCRIPTION:Manuscripts SIG
+LOCATION:G06 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T140000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T153000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000376
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Ontologies SIG
+DESCRIPTION:Ontologies SIG
+LOCATION:G03 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T140000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T153000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000377
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Correspondence SIG
+DESCRIPTION:Correspondence SIG
+LOCATION:G17 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T140000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T153000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000378
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Music SIG
+DESCRIPTION:Music SIG
+LOCATION:G11 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T140000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T153000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000379
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Text and Graphics SIG
+DESCRIPTION:Text and Graphics SIG
+LOCATION:G04 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T140000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T153000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000380
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Break
+DESCRIPTION:Break
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T153000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T160000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000381
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Break
+DESCRIPTION:Break
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T110000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T113000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000382
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Manuscripts SIG
+DESCRIPTION:Manuscripts SIG
+LOCATION:G06 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T160000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T173000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000383
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Ontologies SIG
+DESCRIPTION:Ontologies SIG
+LOCATION:G03 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T160000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T173000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000384
+LAST-MODIFIED:20081103T161015Z
+SUMMARY:Correspondence SIG
+DESCRIPTION:Correspondence SIG
+LOCATION:G17 - Drury Lane
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081108T160000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081108T173000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:-KAKELBONT-HOMELINUX-NET-WEBCALENDAR-TEI-0000000385
+LAST-MODIFIED:20081103T161016Z
+SUMMARY:TEI Board Meeting
+DESCRIPTION:TEI Board Meeting
+LOCATION:School of Humanities Seminar Room, Strand
+CLASS:PUBLIC
+STATUS:CONFIRMED
+ATTENDEE;ROLE=ATTENDEE;PARTSTAT=ACCEPTED:TEI <dan@kakelbont.ca>
+DTSTART:20081109T090000Z
+DTSTAMP:20081103T162742Z
+DTEND:20081109T160000Z
+END:VEVENT
+END:VCALENDAR
