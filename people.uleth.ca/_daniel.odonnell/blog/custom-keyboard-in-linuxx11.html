@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!-- head -->
+	
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/blog/custom-keyboard-in-linuxx11 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:51:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="9ZHP1FDttD1YeXYP4jrDb8KmwNTGqQgRb92Y1B3M_Ro" />
+		<title>
+			Custom Keyboard in Linux/X11 | Daniel Paul O&#039;Donnell
+		</title>
+
+		<!-- txp:feed_link flavor="atom" format="link" label="Atom"/ -->
+		<!-- txp:feed_link flavor="rss" format="link" label="RSS"/ -->
+		<link rel="shortcut icon" href="../transparent.ico" />
+		<style type="text/css" media="screen" title="Default"> @import url(../css/txpscreen.css); </style>
+		<style type="text/css" media="print,mobile" title="Default"> @import url(../css/txpprint.css); </style>
+		<style type="text/css" media="all" title="Default"> @import url(../css/txpcommonstyles.css); </style>
+
+<!-- hypothes.is enabled via the following. See https://hypothes.is/for-publishers/ -->
+
+<!-- the following disables default show highlighting -->
+<!-- <script>window.hypothesisConfig = function () { return {showHighlights: false}; };</script> -->
+<!-- the following loads the annotator -->
+<script defer async src="http://hypothes.is/embed.js"></script>
+
+<!-- end hypothes.is enabling -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-32780614-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<!-- body -->
+	<body>
+		<div class="body">
+
+			<!-- Top bar -->
+			<div class="head">
+				<div>
+					<h1 style="vertical-align:center">
+						<a href="../index.html">
+							<img src="../images/11.png" alt="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." title="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." id="logoimage" width="10%"/></a> <span style="vertical-align:center">Daniel Paul O&#039;Donnell</span>
+					</h1>
+				</div>
+			</div>
+
+		</div>
+<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<p>
+						
+						
+							<a href="../index.html">Daniel Paul O&#039;Donnell</a>&#160;&#187;&#160;<a href="index.html">Blog</a>
+						
+					</p>
+				</div>
+<!-- end breadcrumb -->
+
+		<!-- content -->
+		<div class="content">
+			<p class="hideme">
+				<a class="hideme" id="content"></a>
+				<a href="#navigation" class="hideme">Forward to Navigation</a>
+			</p>
+			<!-- section logic begins -->
+			 <!-- debug #1 -->
+			
+				<!-- we are not on the default section -->
+				<!-- Debug #2 -->
+				
+					<!-- default page form begins -->
+
+
+
+<h2>Custom Keyboard in Linux/X11</h2>
+<div style="background-color:light gray">
+<p><strong><a rel="author" href="../author/Daniel%2bPaul%2bO%27Donnell/index.html">Daniel Paul O&#039;Donnell</a></strong></p>
+<p>Posted: Dec 09, 2006 14:12;<br/>Last Modified: Apr 04, 2021 12:04<br/>
+Keywords: <seg onload="displayLinks()"></seg></p>
+
+<script>
+        // Place the JavaScript function here
+        function generateLinkTags(keywords) {
+            let linkTags = "'";
+            keywords.forEach(keyword => {
+                let link = `<a href='https://home.uleth.ca/~daniel.odonnell/tags/{encodeURIComponent(keyword)}'>${keyword}</a>`;
+                linkTags += link + "<br>";
+            });
+            return linkTags;
+        }
+
+        // This function will be called once the page is fully loaded
+        function displayLinks() {
+            let keywords = ["JavaScript", "OpenAI", "Web Development"];
+            let htmlLinks = generateLinkTags(keywords);
+            document.body.innerHTML = htmlLinks;
+        }
+    </script>
+
+
+
+
+</div>
+<img src="../images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<!--
+<img src="https://people.uleth.ca/~daniel.odonnell/images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+-->
+<!-- automatic TOC begins after this -->
+<div id="TOC">
+   <!--txp:soo_toc label="Contents" labeltag="h3"/-->
+</div>
+<!-- automatic TOC ends -->
+<h3 id="tl">tl;dr (works as of Ubuntu 16.04)</h3>
+
+<ol>
+	<li><a href="#c">edit/create a keyboard</a> in <code>/usr/share/X11/xkb/symbols/</code> (mine is <a href="../file_download/28/oe">here</a>)</li>
+	<li><a href="#e">add definition for keyboard</a> to <code>/usr/share/X11/xkb/rules/evdev.xml</code> (<a href="../file_download/21/evdev.xml">here&#8217;s my file</a>)</li>
+	<li>reboot</li>
+	<li>add keyboard to <strong>Settings &gt; Language and Region &gt; Input Sources</strong> (I don&#8217;t know what files that interface changes)</li>
+	<li><strike>assign “third level” shifter and “compose” keys using <strong>System Settings &gt; Keyboard &gt; Shortcuts</strong></strike> (The <span class="caps">GUI</span> menu is now [Jan 2021] only available from Gnome Tweaks, but it doesn&#8217;t make a persistent change; to make a chooser persistent see the note below under “Third-level chooser”)</li>
+	<li>Bob&#8217;s your uncle.</li>
+</ol>
+
+<p>There were a number of problems with using this method in Ubuntu 14 and 15. They seem to be solved now.</p>
+
+<div id="TOC">
+   <h3>Contents</h3>
+<ul class="toc">
+	<li><a href="#tl">tl;dr (works as of Ubuntu 16.04)</a></li>
+	<li><a href="#a">Introduction</a></li>
+	<li><a href="#b">Customising the keyboard layout</a>
+	<ul>
+		<li><a href="#c">Creating a custom keyboard layout</a>
+		<ul>
+			<li><a href="#d"><code>X11/xkb/rules/xorg.xml</code> (&#x2264; Ubuntu 8.04)</a></li>
+			<li><a href="#e"><code>X11/xkb/rules/evdev.xml</code> (&#x2265; Ubuntu 8.10)</a></li>
+			<li><a href="#f"><code>X11/xkb/rules/xorg.lst</code> (optional)</a></li>
+		</ul></li>
+		<li><a href="#g">Assign “Third-Level Chooser”</a></li>
+	</ul></li>
+	<li><a href="#h">Customising compose key sequences.</a>
+	<ul>
+		<li><a href="#i">Changing the input method to xim</a></li>
+		<li><a href="#j">Creating a list of keybindings</a></li>
+		<li><a href="#k">Assign “Compose key”</a></li>
+	</ul></li>
+	<li><a href="#m">Resetting the keyboard</a></li>
+</ul></li>
+<li><a href="#otherOS">I&#8217;m a Mac/Windows/Chromebook/Android etc. user: how do I create a custom keyboard?</a>
+<ul>
+	<li><a href="#l">Notes</a></li>
+</ul>
+
+</div>
+
+<h3 id="a">Introduction</h3>
+
+<p>As an early medieval English philologist, I make daily use of a number of characters that are not found on the standard US computer keyboard. These include characters and accented letters from various European languages (e.g. ß, é,  ä, ø), <span class="caps">IPA</span> symbols (e.g. ŋ, ә, etc.), Middle English ȝ, and various letters and forms used in Old English (æ, þ, ċ, ġ, ƿ, ū, ȳ, etc.).</p>
+
+<p>It is possible to gain access to these letters from the character map utility (versions of this are found in all operating systems) or from the “Insert Special Characters” function in my word processor. But for characters I use all the time, this is quite tedious and time consuming. If I am typing Old English, I want to be able to access the “special characters” I use most often from the keyboard. Characters consisting of a single glyph (e.g. æ, ß, þ, ð), I want to be able to enter from the keyboard directly; accented characters (e.g. è, ü, ȳ), I want to be able to build (<em>compose</em>) from their component parts (e.g. type <em>`</em> and <em>e</em>  to get <em>è</em><sup class="footnote"><a href="#fn1">1</a></sup>. I also want to be able to use these characters in all programs and utilities on my computer: in my email client, from the command line, in programs and utilities that do not have a “insert special characters” menu item.</p>
+
+<p>Fortunately, it is quite easy in X-11 based Linux distributions to create both custom keyboard layouts (for typing individual characters) and custom compose sequences (for building characters from their component parts)<sup class="footnote"><a href="#fn2">2</a></sup>. </p>
+
+<p>The following shows how I customised my keyboard and compose sequences in Ubuntu. Ubuntu (or perhaps Gnome?) changed things between Ubuntu 8.04 and 8.10, so you need to do things slightly differently depending on which version you are using. The same techniques should work in other X11-based distributions, although different distributions have the files in different places (see, for example, <a href="custom-keyboard-in-linuxx11-2.html#c000346">comment 8 below</a> for Fedora 8).</p>
+
+<p>This material is derived primarily from discussions at the following <span class="caps">URL</span>s: <br />
+<ul>
+	<li><a href="http://hektor.umcs.lublin.pl/~mikosmul/computing/articles/custom-keyboard-layouts-xkb.html">http://hektor.umcs.lublin.pl/~mikosmul/computing/articles/custom-keyboard-layouts-xkb.html</a>,</li>
+	<li><a href="http://www.jw-stumpel.nl/stestu.html">http://www.jw-stumpel.nl/stestu.html</a></li>
+	<li><a href="http://ubuntuforums.org/showthread.php?t=209115">http://ubuntuforums.org/showthread.php?t=209115</a></li><br />
+</ul></p>
+
+<p>In adding material on Ubuntu 8.10, I am indebted to the comments by <a href="custom-keyboard-in-linuxx11-2.html#c000758">jv</a> and <a href="custom-keyboard-in-linuxx11-2.html#c000853">raek</a>, below. Thanks very much.  </p>
+
+<h3 id="b">Customising the keyboard layout</h3>
+
+<p>Customising the keyboard layout involves four or five steps that vary depending on your distribution:</p>
+
+<ol>
+	<li>Creating a custom keyboard layout in <code>X11/xkb/symbols/</code> (<a href="../files/ang.html">here&#8217;s my original</a> and <a href="../file_download/28/oe" title="updated Jan 2021">my latest</a>). <sup class="footnote"> <a href="#fn3">3</a> </sup></li>
+	<li>Modifying the configuration files
+	<ol>
+		<li><strong>&#x2264; Ubuntu 8.04:</strong> <code>X11/xkb/rules/xorg.xml</code> (<a href="../files/xorg.xml">here&#8217;s mine</a>) and (optionally) <code>X11/xkb/rules/xorg.lst</code> (<a href="../files/xorg.html">here&#8217;s mine</a>)</li>
+		<li><strong>&#x2265; Ubuntu 8.10:</strong> <code>X11/xkb/rules/evdev.xml</code> (<a href="../files/evdev.xml">here&#8217;s mine</a>)</li>
+	</ol></li>
+	<li>Other cleanup and enabling
+	<ol>
+		<li><strong>&#x2264; Ubuntu 8.04 (not necessary in &#x2265; Ubuntu 8.10):</strong> Modifying the combination key bindings (i.e. the strokes that produced composed keys such as ȳ) <code>X11/locale/en_US.UTF-8/Compose</code> copied to <code>/home/$USER/.XCompose</code> and modified if necessary (<a href="../files/.html">here&#8217;s mine</a>)</li>
+		<li>Invoking the new evdev, either by <code>sudo dpkg-reconfigure xkb-data</code> or by deleting the <code>xkm</code> files in <code>/var/lib/xkb</code> and either logging out and back in or just switching to a new layout and back (see <a href="http://askubuntu.com/questions/361128/why-did-13-10-break-my-custom-keyboard-layout/439198#439198?newreg=1473a9338df740dc967c0cc0d77d1d10">here</a> for details)</li>
+	</ol></li>
+	<li>Designating “third level chooser” and “compose” keys in Gnome.</li>
+</ol>
+
+<p>When you design your custom keyboard, you might want to keep some of the national, <acronym title="International Standards Organization"><span class="caps">ISO</span></acronym>, or <acronym title="Summer Institute of Linguistics"><span class="caps">SIL</span></acronym> keyboards in mind: there&#8217;s no point learning an idiosyncratic keyboard layout if something already exists that covers what you want. For national and <span class="caps">ISO</span> standards, the Wikipedia article <a href="http://en.wikipedia.org/wiki/Keyboard_layout">Keyboard Layout</a> is a good place to start. For <span class="caps">SIL</span>, you can start at their <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=InputResources">resources page</a></p>
+
+<h4 id="c">Creating a custom keyboard layout</h4>
+
+<p>In X11 systems, keyboard layouts are kept in the <code>X11/xkb/symbols</code> directory (in Ubuntu, the full path is <code>/etc/X11/xkb/symbols</code> (&#x2264; Ubuntu 8.04) or <code>/usr/share/X11/xkb/symbols</code> (&#x2265; Ubuntu 8.10); the top level directory may be different in other distributions).</p>
+
+<p>Each of the files in this directory contains a series of entries of the following type:</p>
+
+<p>key &lt;AC01&gt; { [	   a,          A,        aacute,           Aacute ] };</p>
+
+<p>This entry maps a key on the keyboard to a number of specific characters using the following conventions:</p>
+
+<ol>
+	<li>The first two letters after key indicate where the key is found: The first letter indicates we are looking in the alphanumeric key block (other options include KP [for keypad] and FK [for Function Key]); the second indicates the row, counting from the bottom in which the key is found. (In a standard US keyboard, the space bar is in row AA and the number keys are in row AE).</li>
+	<li>The next two numbers indicate the position of the key, counting from the left and ignoring any specially named key like &lt;<span class="caps">TAB</span>&gt; or &lt;<span class="caps">TLDE</span>&gt; (tilde): AC01 is in the third row up, first key over from the left (ignoring CapsLock, if present); on a standard US keyboard, this is the key marked “a”.</li>
+	<li>The brace and square brackets enclose the list of characters assigned to each key. This can contain between one and four entries, separated by commas.
+	<ol>
+		<li>The first entry is for the unmodified key (i.e. what happens when you press the key by itself)—in this case <em>a</em>.</li>
+		<li>The second entry is for the shifted character (i.e. what happens when you press the key in question and &lt;shift&gt; at the same time)—in this case <em>A</em>.</li>
+		<li>The third entry is for the “third level” character (accessed when you press the key with a “third level chooser” (see below)—in this case <em>á</em>.</li>
+		<li>The fourth entry is for the shifted “third level” (i.e. when you press the key at the same time as &lt;<span class="caps">SHIFT</span>&gt; and the “third level chooser”—in this case <em>Á</em>.</li>
+	</ol></li>
+	</ol>
+
+<p>Creating a custom keyboard map is as easy as replacing the characters you don&#8217;t want in a given line with the ones you do. As an early medieval English specialist, I type <em>á</em> and <em>Á</em> much less frequently than I type <em>æ</em> and <em>Æ</em>, for example. To add the Old English characters to my list, I simply replace <em>aacute</em> and <em>Aacute</em> with the entity names or Unicode code points for <em>æ</em> and <em>Æ</em> (“aelig” or U00E6 and “AElig” or U00C6, respectively). Note that <a href="custom-keyboard-in-linuxx11-2.html#c006757">in the comments</a>, Jedd Schrock records having difficulty with entity names for some characters, whereas the Unicode points always work; perhaps for anything other than the most common characters, it is just easier to use the code points:</p>
+
+<blockquote>
+	<p>key &lt;AC01&gt; { [	   a,          A,        aelig,           AElig ] };</p>
+</blockquote>
+
+<p>or </p>
+
+<blockquote>
+	<p>key &lt;AC01&gt; { [	   a,          A,        U00E6,           U00C6 ] };</p>
+</blockquote>
+
+<p>When I am finished modifying my keyboard layout, I save the file with a new name (in my case <code>oe</code> in the <code>X11/xkb/symbols</code> directory. </p>
+
+<h4>Adding a new keyboard layout to <code>xorg.xml</code> (&#x2264; Ubuntu 8.04)/<code>evdev.xml</code> (&#x2265; Ubuntu 8.10) and <code>xorg.lst</code></h4>
+
+<p>In order to use my new keyboard layout, I need to tell X11 that it exists. X11 keeps track of installed keyboards in one of two  configuration files: <code>X11/xkb/rules/xorg.xml</code> (Ubuntu 8.04 and lower) or <code>X11/xkb/rules/evdev.xml</code> (Ubuntu 8.10 and higher) (There is also a file <code>/etc/X11/xkb/rules/xorg.lst</code> that seems to contain similar information; it doesn&#8217;t seem to be used in any recent version of Ubuntu).</p>
+
+<h5 id="d"><code>X11/xkb/rules/xorg.xml</code> (&#x2264; Ubuntu 8.04)</h5>
+
+<p>To add a keyboard layout to <code>X11/xkb/rules/xorg.xml</code> (i.e. for use in <strong>Ubuntu 8.04</strong> and lower):</p>
+
+<ol>
+	<li>Open <code>X11/xkb/rules/xorg.xml</code> in an editor</li>
+	<li>Go to the end of the &lt;layoutList&gt; section (search for &lt;/layoutList&gt;). Add the following after the last &lt;/layout&gt; tag, where <strong><em>x</em></strong> is the file name of your keyboard layout in X11/xkb/symbols (in my case Old English); <strong><em>y</em></strong> a suitable short name (in my case OE); and <strong><em>z</em></strong> an appropriate long name in one or more languages (in my case “Old English”):</li>
+</ol>
+
+<pre class="code"><code>
+       &lt;layout&gt;
+         &lt;configItem&gt;
+           &lt;name&gt; x &lt;/name&gt;
+           &lt;shortDescription&gt; y &lt;/shortDescription&gt;
+           &lt;description&gt; z &lt;/description&gt;
+         &lt;/configItem&gt;
+       &lt;/layout&gt;</code></pre>
+
+<h5 id="e"><code>X11/xkb/rules/evdev.xml</code> (&#x2265; Ubuntu 8.10)</h5>
+
+<p>To add a keyboard layout to <code>X11/xkb/rules/evdev.xml</code> (i.e. for use in <strong>Ubuntu 8.10</strong> and higher):</p>
+
+<ol>
+	<li>Open <code>X11/xkb/rules/evdev.xml</code> in an editor</li>
+	<li>Go to the end of the &lt;layoutList&gt; section (search for &lt;/layoutList&gt;). Add the following after the last &lt;/layout&gt; tag, where <strong>x</strong> is the file name of your keyboard layout in X11/xkb/symbols (in my case Old English); <strong>y</strong> a suitable short name (in my case <em>English philologist</em>); <strong>z</strong> an appropriate long name in one or more languages (in my case <em>English philologist</em>), and <strong>aaa</strong> a <a href="http://www.loc.gov/standards/iso639-2/php/English_list.php">legal three letter (<span class="caps">ISO</span> 639-2) language code</a> (e.g. <em>eng</em> for English) (Do not leave spaces between the tags and the names you are using: the system still works if you do, but there are display issues):</li>
+</ol>
+
+<pre class="code"><code>
+       &lt;layout&gt;
+         &lt;configItem&gt;
+           &lt;name&gt; x &lt;/name&gt;
+           &lt;shortDescription&gt; y &lt;/shortDescription&gt;
+           &lt;description&gt; z &lt;/description&gt;
+           &lt;languageList&gt;
+              &lt;iso639Id&gt; aaa &lt;/iso639Id&gt;
+           &lt;/languageList&gt;
+         &lt;/configItem&gt;
+         &lt;variantList/&gt;
+       &lt;/layout&gt;</code></pre>
+
+<h5 id="f"><code>X11/xkb/rules/xorg.lst</code> (optional)</h5>
+
+<p>For sake of consistency, you may want to edit <code>X11/xkb/rules/xorg.lst</code> to reflect the settings in <code>X11/xkb/rules/xorg.xml</code> (As far as I can tell, not doing so does not affect anything, but who knows?).</p>
+
+<ol>
+	<li>Open <code>X11/xkb/rules/xorg.lst</code> in an editor.</li>
+	<li>Find the section that begins <code>! layout</code></li>
+	<li>At the end of this block add the file name your keyboard layout has in <code>X11/xkb/symbols</code> and a long-text description of your keyboard (in my case these are <em>oe</em> and <em>Old English</em> respectively).</li>
+</ol>
+
+<h4 id="g">Assign “Third-Level Chooser”</h4>
+
+<p><b>Note (Jan 2021)</b>: I&#8217;ve been having trouble with this for a while: I could only access the keyboard menu described below using Gnome Tweaks (it&#8217;s no longer available from settings) and nothing I chose there seemed to “stick” &#8212; every time I rebooted, the third level choser (and dead key selecter stopped working and the only solution was to go in and reselect it in “Tweaks” (i.e. by selecting a dfferent key, returning, and then saving).</p>
+
+<p>I discovered a solution (don&#8217;t remember where), which is to add the following at the end of my keyboard layout (it is now in the layout available from this page:</p>
+
+<pre class="code"><code>
+ partial alphanumeric_keys
+ xkb_symbols &quot;euro&quot; {
+
+     include &quot;us(basic)&quot;
+     name[Group1]= &quot;English (US, euro on 5)&quot;;
+
+     include &quot;eurosign(5)&quot;
+
+     include &quot;level3(ralt_switch)&quot;
+ };</code></pre>
+
+<p>Since adding this, I&#8217;ve had no problems.</p>
+
+<p><b>Note (March 2021)</b>: Myke adds <a href="custom-keyboard-in-linuxx11-2.html#c006784">two</a> <a href="custom-keyboard-in-linuxx11-2.html#c006785">comments</a> below that suggests that the above code is more than is needed (edited to capture his intention):</p>
+
+<blockquote>
+	<p>I have noticed that many of the standard keyboards integrate the ‘level3(ralt_switch)’ directly from the ‘level3’ package, without the ‘euro’ component. i.e. they include the reference within the layout paragraph, at the very end.</p>
+
+	<p>The Italian, for example, has:</p>
+</blockquote>
+
+<pre><code>key &lt;LSGT&gt; { [ less, greater,guillemotleft,guillemotright] }; include “level3(ralt_switch)” };</code></pre>
+
+<blockquote>
+	<p>as the last line in its ‘basic’ paragraph</p>
+</blockquote>
+
+<p>I hope to try this out next time I update the keyboard.</p>
+
+
+
+<p>What follows is the previous instructions&#8230;. </p>
+
+<p>The final stage is to designate a “Third Level Chooser” key to allow you to access the characters you have just added to your keyboard. In Gnome-based systems like Ubuntu, this is probably best done from the menu bar: </p>
+
+<ol>
+	<li>Open the Keyboard menu (System &gt; Preferences &gt; Keyboards)</li>
+	<li>Select the “Layouts” tab</li>
+	<li>Click the “Add” button</li>
+	<li>Choose your custom layout from the alphabetical list of available layouts and click “OK”. If you want this working every time you log in, check the “default” option.</li>
+	<li>Select the “Layout Options” tab</li>
+	<li>Expand the “Third-Level Choosers” list entry</li>
+	<li>Choose the key you want to use as a “Third Level Chooser”<sup class="footnote" id="fnrev1349272154606a05e870da6-1"><a href="#fn1349272154606a05e870da6-1">4</a></sup></li>
+	<li>Click on the “Close” button</li>
+</ol>
+
+<p>You should be able to access your custom keys immediately. If you find that they are not working, reset X11 by logging out and back in. At that point they should work fine.</p>
+
+<h3 id="h">Customising compose key sequences.</h3>
+
+<p style="background-color:yellow;color:black;"><strong>Note:</strong> I am not sure is this section (except for assigning a compose key in Gnome) is necessary in Ubuntu 8.10+).</p>
+
+<p>Gnome provides access to hundreds of compose key sequences by default, though getting a list of these sequences can be quite difficult.    </p>
+
+<p>While the default key bindings are almost certainly enough for typing most modern languages, you may discover one you need is missing, or wish to use a different set of keys. In such cases, you will need to add or modify the compose key sequences.</p>
+
+<p>Apparently (<a href="http://ubuntuforums.org/showpost.php?p=1231373&amp;postcount=2">http://ubuntuforums.org/showpost.php?p=1231373&amp;postcount=2</a>), this list of compose key bindings cannot be edited<sup class="footnote" id="fnrev1349272154606a05e870da6-2"><a href="#fn1349272154606a05e870da6-2">5</a></sup>. To get around this, you set the text input method to xim and create a custom list of compose key bindings. This sounds harder than it is:</p>
+
+<h4 id="i">Changing the input method to xim</h4>
+
+<ol>
+	<li>Open <code>/etc/environment</code> in an editor</li>
+	<li>Add <code>export GTK_IM_MODULE=xim</code> to the end and save.</li>
+</ol>
+
+<h4 id="j">Creating a list of keybindings</h4>
+
+<ol>
+	<li>Copy the X11 compose-key bindings for your keyboard to your home directory (for US keyboards <code> cp /usr/share/X11/locale/en_US.UTF-8/Compose ~/.XCompose</code>; for other locales, see the options available in <code>/usr/share/X11/locale/</code></li>
+	<li>Open <code>~/.XCompose in an editor. The file consists of a series of lines that map character combinations to Unicode code points, e.g. 
+&lt;code&gt;&lt;Multi_key&gt; &lt;macron&gt; &lt;U&gt;         	: &quot;Ū&quot;   U016A # LATIN CAPITAL LETTER U WITH MACRON</code></li>
+	<li>Edit/Add key sequences (e.g. <code>&lt;Multi_key&gt; &lt;minus&gt; &lt;Y&gt;       	: &quot;ȳ&quot;   U0233 # LATIN SMALL LETTER Y WITH MACRON</code> (<strong>Tip</strong>: this file contains a number of references to characters you probably don&#8217;t have set up in your keyboard, such as &lt;macron&gt; in key bindings for characters like <em>ē</em>. In my case, I changed all examples of &lt;macron&gt; to &lt;minus&gt;.</li>
+	<li>Save file.</li>
+</ol>
+
+<h4 id="k">Assign “Compose key”</h4>
+
+<p>The final stage is to designate a “Compose Key” key. This is the key that indicates the next keys are part of a compose key sequence. </p>
+
+<ol>
+	<li>Open the Keyboard menu (System &gt; Preferences &gt; Keyboards)</li>
+	<li>Select the “Layout Options” tab</li>
+	<li>Expand the “Compose Key” list entry</li>
+	<li>Choose the key you want to use as a “Compose Key”</li>
+	<li>Click on the “Close” button.</li>
+</ol>
+
+<p>You will need to log out and back in before your settings take effect. After you have logged back in, you should be able to use your new compose key sequences.</p>
+
+<h3 id="m">Resetting the keyboard</h3>
+
+<p style="background-color:yellow;color:black;">This no longer (as of 16.04) seems to be necessary. The keyboard loads on reboot.</p>
+
+<p>I&#8217;ve had trouble with changes not taking effect. According to <a href="http://ubuntuforums.org/showthread.php?t=1589744">this forum entry</a>, the only way of doing this is to eliminate the all the <code>*.xkb</code> files in <code>/var/lib/xkb</code> and then restart the windows manager (in post-Unity versions of Ubuntu <code>sudo restart lightdm</code>). I have since found that the lightdm restart does noting (i.e. starting in in 16.04). <a href="https://help.ubuntu.com/community/Custom keyboard layout definitions#How_to_load_changes">A different page</a> suggested using <code>sudo dpkg-reconfigure xkb-data</code>.</p>
+
+<p>I did this by creating a new directory for the old files, then moving them to that directory, then restarting the manager. </p>
+
+<p>It works.</p>
+
+<h2 id="otherOS">I&#8217;m a Mac/Windows/Chromebook/Android etc. user: how do I create a custom keyboard?</h2>
+
+<p>The short answer is that I don&#8217;t know: the method discussed here only works with the X11 windows manager, which means only in Linux. But here&#8217;s some resources to help you find out how to do this or something similar in other operating systems:</p>
+
+<ul>
+	<li>Windows (multiple ways of entering special characters): <a href="https://www.theverge.com/22351023/windows-pc-special-characters-how-to">https://www.theverge.com/22351023/windows-pc-special-characters-how-to</a></li>
+</ul>
+
+<hr />
+
+<h3 id="l">Notes</h3>
+
+<p class="footnote" id="fn1349272154606a05e870da6-3"><sup>1</sup> I make this distinction because I don&#8217;t type accented characters enough to make it worth my while to treat accented characters as single glyphs. If I found myself typing characters like ü very often, I could easily add them to my keyboard in the same way I add characters like æ or ß.</p>
+
+<p class="footnote" id="fn1349272154606a05e870da6-4"><sup>2</sup> Windows, pre-OS X Macs (and to a lesser extent Mac OS X) handle keyboard mapping differently. Utilities exist that either allow you to create custom keymaps or use keymaps that cover common specialisations (e.g. for linguists who need to type <acronym title="International Phonetic Alphabet"><span class="caps">IPA</span></acronym>. You can find more about these solutions by searching for terms like “keyboard” “custom” “keymaps” and “Windows” or “Mac”.</p>
+
+<p class="footnote" id="fn1349272154606a05e870da6-5"><sup>3</sup> The top level directory for this path varies from distribution to distribution. In Ubuntu &#x2264; 8.10, the full path is <code>/etc/X11/xkb/symbols/</code>; in In Ubuntu &#x2265; 9.04 it is <code>/usr/share/X11/xkb/symbols/</code>. There are other changes in the contents of these files. You are better modifying the version on your system than downloading my copies of <code>evdev</code>, etc. The keyboard layout file itself should work fine if you download it. Just make sure you change the name to match the contents of the <code>&lt;name&gt;</code> element in <code>evdev.xml</code>.</p>
+
+<p class="footnote" id="fn1349272154606a05e870da6-1"><sup>4</sup> For reasons that are not clear to me, some programs (most notably Evolution) fail to recognise “Third Level Choosers” if you deselect “Right Alt”—the safest way to go is to use right alt as your third level chooser or make two keys your third level chooser: right alt and some other key of your choosing.</p>
+
+<p class="footnote" id="fn1349272154606a05e870da6-2"><sup>5</sup> Actually I doubt this is true, but the method I&#8217;m describing here works for me and proved easier than discovering how to do it within Gnome.</p>
+<!-- <img src="https://people.uleth.ca/~daniel.odonnell/images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<p>Posted: Saturday December  9, 2006. 14:15.</p> 
+<p>Last modified: Sunday April 4, 2021. 12:31.</p> -->
+<div class="comments">
+<img src="../images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+<!-- txp:comments_invite wraptag="p" / -->
+<!-- txp:comments_form / -->
+&#x00A0;
+</div>
+<!-- default page form ends --><h3 id="comment">Comment [73]</h3>
+
+<ol class="comments"><li><seg class="small"><strong>Mate (Mon Jan 29, 2007 (12:23:44)) <a href="custom-keyboard-in-linuxx11.html#c000007" id="c000007">[PermLink]</a>:</strong></seg>
+
+	<p>Thank you very much! I searched for a tutorial exactly like this! Mate from Hungary.</p>
+
+
+</li>
+<li><seg class="small"><strong>Jan (Mon Apr  9, 2007 (16:23:51)) <a href="custom-keyboard-in-linuxx11.html#c000014" id="c000014">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks for your tutorial. I’ve used it to define a new layout, but i’m having trouble using combined diacritics to accent all vowels. Do i define the character combinations somewhere else?</p>
+
+
+</li>
+<li><seg class="small"><strong>Dan O&#039;Donnell (Tue Apr 10, 2007 (12:40:07)) <a href="custom-keyboard-in-linuxx11.html#c000015" id="c000015">[PermLink]</a>:</strong></seg>
+
+	<p>Jan,</p>
+
+	<p>I’m not sure exactly what the nature of your problem is: </p>
+
+	<p>* do you mean that certain combinations of combining diacritics are not working? </p>
+
+	<p>* Or that you want to add new combinations that don’t exist</p>
+
+	<p>* Or that you want to add precomposed characters to your keyboard layout?</p>
+
+	<p>* Or something else?</p>
+
+	<p>The thing to keep in mind to start with is that composition and key assignments are different: if you want to get a composed character in one key stroke (with or without a second or third level chooser), you add it to a custom keyboard; if you want to be able to compose on the fly, you use a compose key (different from your third level chooser) and then two other keys—for the diacritic and for the letter it combines with.</p>
+
+	<p>If the issue is that you don’t know how to combine certain diacritics with certain letters, all I know is written out above in the section “Customising compose key sequences.”  I found it a more tedious question of ploughing through ~/.XCompose.</p>
+
+
+</li>
+<li><seg class="small"><strong>neo (Fri May 18, 2007 (12:45:17)) <a href="custom-keyboard-in-linuxx11.html#c000020" id="c000020">[PermLink]</a>:</strong></seg>
+
+	<p>Anyone has done this successfully in Debian? I found out there is no xkb, etc. setting located in the X11 folders. What should I do in order to get it worked under Debian  testing?</p>
+
+	<p>Many thanks.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri May 18, 2007 (17:28:14)) <a href="custom-keyboard-in-linuxx11.html#c000021" id="c000021">[PermLink]</a>:</strong></seg>
+
+	<p>I&#8217;m assuming you mean pure debian rather than the Ubuntu fork/variant?</p>
+
+	<p>I don&#8217;t know. I just checked and Ubuntu Feisty still has the directory under /etc/X11. I don&#8217;t have a spare computer available to install straight Debian and see what happens.</p>
+
+
+</li>
+<li><seg class="small"><strong>Daniel (Mon Mar 17, 2008 (20:46:46)) <a href="custom-keyboard-in-linuxx11.html#c000188" id="c000188">[PermLink]</a>:</strong></seg>
+
+	<p>Been trying to make my own layout it&#8217;s got 6 levels (english, latin, greek)<br />
+Plus its Dvorak. anything above 4 levels seams to be undocumented so I found the canadian layout which uses 6 levels (8 levels possible) email me at yellow_onion at orcon.net.nz if you want to perhaps update your tutorial and be the first to document it</p>
+
+
+</li>
+<li><seg class="small"><strong>ivan (Thu Apr 17, 2008 (15:42:35)) <a href="custom-keyboard-in-linuxx11.html#c000307" id="c000307">[PermLink]</a>:</strong></seg>
+
+	<p>thanks, i needed some custom layout for Java programming, this is absolute winner tutorial<br />
+:)))</p>
+
+
+</li>
+<li><seg class="small"><strong>linuxbee (Thu May  8, 2008 (20:58:39)) <a href="custom-keyboard-in-linuxx11.html#c000346" id="c000346">[PermLink]</a>:</strong></seg>
+
+	<p>in Fedora 8, the path is given by:<br />
+/usr/share/X11/xkb/</p>
+
+
+</li>
+<li><seg class="small"><strong>Dan O&#039;Donnell (Tue May 20, 2008 (09:33:20)) <a href="custom-keyboard-in-linuxx11.html#c000360" id="c000360">[PermLink]</a>:</strong></seg>
+
+	<p>I reported that &#8220;this method doesn&#8217;t seem to work in versions 7.10 or 8.04 from a clean install. Part of the problem seems to be that Ubuntu now has the X11 material in two places and uses different names for some of the files.&#8221; </p>
+
+	<p>But I was wrong: the trouble was I changed the name of the file and it wasn&#8217;t loading properly. The method works just fine on new Ubuntu installs of 7.10 and 8.04.</p>
+
+
+</li>
+<li><seg class="small"><strong>Josh (Fri May 30, 2008 (23:21:27)) <a href="custom-keyboard-in-linuxx11.html#c000366" id="c000366">[PermLink]</a>:</strong></seg>
+
+	<p>Spectacular! It took me a while to find, but worth every second!</p>
+
+	<p>I Used it to change the &#60;MENU&#62; key to a &#60;KPDL&#62; &#8220;KP_Delete&#8221; key in Ubuntu 8.04</p>
+
+	<p>At first I was a little confused how the layout file was tied to the xorg.xml file. I eventually got everything to work, then of course saw Note #4.</p>
+
+	<p>Your xorg.xml file has &#8220;&#60;name&#62;Old English&#60;/name&#62;&#8221; instead of &#8220;&#60;name&#62;oe&#60;/name&#62;&#8221; as Note #4 implies.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Sun Jun  8, 2008 (16:44:00)) <a href="custom-keyboard-in-linuxx11.html#c000370" id="c000370">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks very much: I&#8217;ve fixed the note.</p>
+
+
+</li>
+<li><seg class="small"><strong>ABU SAUD (Thu Jun 19, 2008 (22:41:55)) <a href="custom-keyboard-in-linuxx11.html#c000398" id="c000398">[PermLink]</a>:</strong></seg>
+
+	<p>I have some problem in xml unicode entities….i con’t access some entities and utilities in linux os server pls…help me….mail me to yummy.abu@gmail.com</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Jun 23, 2008 (23:56:40)) <a href="custom-keyboard-in-linuxx11.html#c000409" id="c000409">[PermLink]</a>:</strong></seg>
+
+	<p>Sorry. I don&#8217;t know what you mean!</p>
+
+
+</li>
+<li><seg class="small"><strong>Petr (Sat Aug 16, 2008 (07:22:40)) <a href="custom-keyboard-in-linuxx11.html#c000590" id="c000590">[PermLink]</a>:</strong></seg>
+
+	<p>I need to define diferent compose keys in diferent for diferent layouts. Could you help me? The same key combination should get č when the Czech is elected, but ĉ, when I am using the layout for Esperanto.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Sun Aug 17, 2008 (23:25:11)) <a href="custom-keyboard-in-linuxx11.html#c000591" id="c000591">[PermLink]</a>:</strong></seg>
+
+	<p>I believe this is possible from within the key layouts themselves, but I confess I don&#8217;t know how to do it. You could look through all the various files in the symbol directory looking for compose keys.</p>
+
+	<p>But are you sure you want the same key strokes for these? I can see how it might be handy to keep the two accents separate so that you can use them in typing other languages in both keyboards&#8230; e.g. French and/or American Phonetic Alphabet.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Sun Aug 17, 2008 (23:31:23)) <a href="custom-keyboard-in-linuxx11.html#c000592" id="c000592">[PermLink]</a>:</strong></seg>
+
+	<p>A follow up: Have you thought of the first approach listed under Linux here: http://www.esperanto.net/veb/faq-14.html</p>
+
+
+</li>
+<li><seg class="small"><strong>Elmer (Sat Sep 20, 2008 (20:04:03)) <a href="custom-keyboard-in-linuxx11.html#c000619" id="c000619">[PermLink]</a>:</strong></seg>
+
+	<p>Great information.  I am trying to get tengwar (language developed by J.J.R. Tolkien for Lord of the Rings) working on my Ubuntu 8.04 and so far it is going ok.  The problem with tengwar is even though fonts are available for the characters, it uses the US standard keyboard.  You can activate the fonts (I do this by using gvim and then selecting one of the tengwar fonts I installed in ~/.fonts) and then gvim uses the US standard keys to select which font to display.  There is really no keymap.  I am going to develope a tengwar keymap that takes into account what the most common tengwar symbol usage frequency.</p>
+
+	<p>This is the same concept as the Dvorak keyboard.</p>
+
+	<p>anyhow thanks a lot for your article.</p>
+
+
+</li>
+<li><seg class="small"><strong>tims (Thu Oct 30, 2008 (06:20:31)) <a href="custom-keyboard-in-linuxx11.html#c000714" id="c000714">[PermLink]</a>:</strong></seg>
+
+	<p>As a technical writer, I appreciate how clearly you have explained things. As a dabbler in West African scripts, this will be most useful. Thanks!</p>
+
+
+</li>
+<li><seg class="small"><strong>jv (Thu Nov 20, 2008 (13:37:32)) <a href="custom-keyboard-in-linuxx11.html#c000754" id="c000754">[PermLink]</a>:</strong></seg>
+
+	<p>I just installed the latest Ubuntu version 8.10 (Intrepid) and have been trying to get these things working. I have found out that the X11 directory has moved to /usr/share/ and that the files evdev.xml and evdev.lst are the right ones to modify now. I still haven&#8217;t been able to make new independent layouts show up in Gnome, but only variants. That&#8217;s not a big problem, but if someone finds out a way, I would be happy to know about it.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Thu Nov 20, 2008 (22:22:05)) <a href="custom-keyboard-in-linuxx11.html#c000755" id="c000755">[PermLink]</a>:</strong></seg>
+
+	<p>Thank you very much. I’ve just installed a couple of 8.10 versions and haven’t been able to figure out where things are yet.</p>
+
+	<p>You’ve seen that the symbols directory is under xkb, right? Presumably that’s where you drop the new layouts.</p>
+
+<p>I also see the old xorg.xml and xorg.lst in that directory. Are you sure changing them doesn't work as of old?</p>
+
+
+</li>
+<li><seg class="small"><strong>jv (Mon Nov 24, 2008 (11:30:23)) <a href="custom-keyboard-in-linuxx11.html#c000758" id="c000758">[PermLink]</a>:</strong></seg>
+
+	<p>At least the first time I got something new to show up in the Gnome selector was when I added a variant in evdev.xml.</p>
+
+	<p>It seems the selection is now based on country or language. I think they used to be just layouts before (but typically named after countries). I also got an independent layout file working by adding a  with &lt;span class="caps">ISO&lt;/span> country codes in evdev.xml. That way the layout still appears under the chosen country/countries. I’m happy with that, as the panel indicator is now showing my own , which is more descriptive than the country code.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Tue Nov 25, 2008 (09:43:33)) <a href="custom-keyboard-in-linuxx11.html#c000759" id="c000759">[PermLink]</a>:</strong></seg>
+
+	<p>You&#8217;re right. I wasn&#8217;t able to get anything working in xorg.xml (which is basically the same format as evdev.xml). But I&#8217;m not getting things right anyway.</p>
+
+	<p>You wouldn&#8217;t want to post an example of how you got it to work with the <span class="caps">ISO</span> names, would you?</p>
+
+
+</li>
+<li><seg class="small"><strong>jv (Tue Nov 25, 2008 (15:38:09)) <a href="custom-keyboard-in-linuxx11.html#c000760" id="c000760">[PermLink]</a>:</strong></seg>
+
+	<p>Oh, the xml elements were dropped from my post. Just search for countryList in evdev.xml for an example. There are some japanese, arabic and latin american layouts with countryLists. I added same kind of countryList with the iso3166Id of my home country and found the layout in the corresponding section of the Gnome selector.</p>
+
+
+</li>
+<li><seg class="small"><strong>Owaqpzru (Sat Dec 13, 2008 (11:25:33)) <a href="custom-keyboard-in-linuxx11.html#c000780" id="c000780">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks!,</p>
+
+
+</li>
+<li><seg class="small"><strong>Nico de Berlin (Sun Feb  8, 2009 (13:17:36)) <a href="custom-keyboard-in-linuxx11.html#c000819" id="c000819">[PermLink]</a>:</strong></seg>
+
+	<p>Great ! i was always puzzled by all these configuration files. Very clear tutorial. ThX !</p>
+
+	<p>Made for polish letters with a german <span class="caps">QWERTZ</span> keyboard.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Sun Feb  8, 2009 (18:04:45)) <a href="custom-keyboard-in-linuxx11.html#c000820" id="c000820">[PermLink]</a>:</strong></seg>
+
+	<p>Did you get it working in 8.10? I haven&#8217;t! What did you do?</p>
+
+
+</li>
+<li><seg class="small"><strong>Tova (Thu Mar 12, 2009 (12:25:38)) <a href="custom-keyboard-in-linuxx11.html#c000852" id="c000852">[PermLink]</a>:</strong></seg>
+
+	<p>Thank you very much for this very clear tuto ! It allowed me to type these darned Old Norse names far more easily. Sincere thanks from all the Óláfs !</p>
+
+
+</li>
+<li><seg class="small"><strong>raek (Thu Mar 12, 2009 (15:28:40)) <a href="custom-keyboard-in-linuxx11.html#c000853" id="c000853">[PermLink]</a>:</strong></seg>
+
+	<p>I managed to get my layout working in Ubuntu 8.10:<br />
+1) Place the symbol file in <strong>/usr/share/X11/xkb/symbols/</strong>.<br />
+2) Edit the <strong>/usr/share/X11/xkb/rules/evdev.xml</strong> file.<br />
+3) Add your layout to the file as described in this page.<br />
+4) After ‹/description›, add ‹languageList›‹iso639Id› <em>language</em> ‹/iso639Id›‹/languageList›, where <em>language</em> is an <strong>existing</strong> language code, for example &#8220;eng&#8221; – English or &#8220;art&#8221; – Artificial. If you choose a non-existing language id, or omit it all together, your layout won&#8217;t appear in the Gnome selector. </p>
+
+	<p>(NOTE: i used angle quotes instead of angle brackets in the <span class="caps">XML</span> tags in this post due to technical restrictions, so don&#8217;t copypaste these characters into your configuration file.)</p>
+
+	<p>Thanks for the great tutorial, Dan!</p>
+
+
+</li>
+<li><seg class="small"><strong>Daniel (Fri Mar 13, 2009 (05:59:06)) <a href="custom-keyboard-in-linuxx11.html#c000854" id="c000854">[PermLink]</a>:</strong></seg>
+
+	<p>Cannot find the files mentioned on Ubuntu 8.10 :(</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Mar 13, 2009 (19:00:50)) <a href="custom-keyboard-in-linuxx11.html#c000855" id="c000855">[PermLink]</a>:</strong></seg>
+
+	<p>Raek&#8230; this worked like a charm for me. Thanks very much. I&#8217;ve been missing my custom keys since last October!</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Mar 13, 2009 (19:08:45)) <a href="custom-keyboard-in-linuxx11.html#c000856" id="c000856">[PermLink]</a>:</strong></seg>
+
+	<p>Daniel: all the files (including those mentioned in Raek&#8217;s post) are found on my clean Ubuntu 8.10 install. How are you looking for them? From the command line? In Nautilus? Could it be in this later case that you need to work as root/sudo?</p>
+
+
+</li>
+<li><seg class="small"><strong>oeb (Mon Mar 16, 2009 (12:10:13)) <a href="custom-keyboard-in-linuxx11.html#c000857" id="c000857">[PermLink]</a>:</strong></seg>
+
+	<p>how would one change the third level chooser to the  [space-bar] for implementing a one-hand qwerty setup as in:</p>
+
+	<p>http://eklhad.net/linux/app/halfqwerty.xkb    ?</p>
+
+	<p>the space-bar isn&#8217;t a choice in &#8216;layout options&#8217;. 
+ I&#8217;m using hardy-lts, which uses the X11-xkb-utils and not xkbcomp.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Mar 16, 2009 (21:05:23)) <a href="custom-keyboard-in-linuxx11.html#c000858" id="c000858">[PermLink]</a>:</strong></seg>
+
+	<p>Perhaps something in /home/$USER/.XCompose?</p>
+
+	<p>I&#8217;ve not had much luck overriding gnome, though.</p>
+
+
+</li>
+<li><seg class="small"><strong>Nazar (Wed Mar 18, 2009 (09:40:05)) <a href="custom-keyboard-in-linuxx11.html#c000859" id="c000859">[PermLink]</a>:</strong></seg>
+
+	<p>Thanx, great tutorial.</p>
+
+	<p>All i could add is the link to language ids referred by reak :<br />
+http://www.loc.gov/standards/iso639-2/php/English_list.php</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Wed Mar 18, 2009 (10:14:00)) <a href="custom-keyboard-in-linuxx11.html#c000860" id="c000860">[PermLink]</a>:</strong></seg>
+
+	<p>I&#8217;ve now updated the instructions to cover &#38;#x2265;Ubuntu 8.10.</p>
+
+
+</li>
+<li><seg class="small"><strong>John (Fri Mar 20, 2009 (19:55:10)) <a href="custom-keyboard-in-linuxx11.html#c000866" id="c000866">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks for the tutorial.<br />
+My files were in /usr/share/X11.</p>
+
+
+</li>
+<li><seg class="small"><strong>ThierryM (Fri May  8, 2009 (07:18:37)) <a href="custom-keyboard-in-linuxx11.html#c000947" id="c000947">[PermLink]</a>:</strong></seg>
+
+	<p>Thank you very much for this tutorial. Under Ubuntu Jaunty 9.04, I had to modify the file /etc/X11/xkb/base.xml . I described how I made here in french : http://forum.ubuntu-fr.org/viewtopic.php?pid=2627927#p2627927.</p>
+
+
+</li>
+<li><seg class="small"><strong>BulatY (Sun May 31, 2009 (11:54:45)) <a href="custom-keyboard-in-linuxx11.html#c001019" id="c001019">[PermLink]</a>:</strong></seg>
+
+	<p>Thank you very much. This tutorial make possible to define bashkir  layout (russian ciryllic with some original characters) in Linux.</p>
+
+
+</li>
+<li><seg class="small"><strong>Nico der Berliner (Tue Sep 22, 2009 (04:29:24)) <a href="custom-keyboard-in-linuxx11.html#c001114" id="c001114">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks a lot for this very clear tutorial. I could finally create a Variant with polish letters to my german <span class="caps">QWERTZ</span> keyboard.</p>
+
+
+</li>
+<li><seg class="small"><strong>Luzi (Tue Nov 24, 2009 (01:38:57)) <a href="custom-keyboard-in-linuxx11.html#c001141" id="c001141">[PermLink]</a>:</strong></seg>
+
+	<p>With the help of your instructions, I managed to design <a href="http://www.doink.ch/an-x11-keyboard-layout-for-scholars-of-old-germanic/" rel="nofollow" >my own keyboard layout for Old Germanic</a> <br />
+So: [&#8216;θæŋks]!</p>
+
+
+</li>
+<li><seg class="small"><strong>Mariusz (Wed Nov 25, 2009 (14:14:05)) <a href="custom-keyboard-in-linuxx11.html#c001145" id="c001145">[PermLink]</a>:</strong></seg>
+
+	<p>An excellent and a very much needed tutorial.</p>
+
+	<p>Do you know how to add a new keymap without root privilages?</p>
+
+	<p>If you know or find out, would you be so kind to post the instructions? That would be doubly useful as many of us use Linux workstations at various scholarly institutions around the world as ordinary users who cannot modify any of the system files.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Nov 27, 2009 (15:25:24)) <a href="custom-keyboard-in-linuxx11.html#c001147" id="c001147">[PermLink]</a>:</strong></seg>
+
+	<p>I don&#8217;t know that, but you&#8217;re right that it would be good to know. I&#8217;ll keep an eye out to see how one can override system wide settings in one&#8217;s own account. It is presumably possible.</p>
+
+
+</li>
+<li><seg class="small"><strong>hajder (Sun Feb 28, 2010 (12:39:53)) <a href="custom-keyboard-in-linuxx11.html#c001205" id="c001205">[PermLink]</a>:</strong></seg>
+
+	<p>Mariusz: <br />
+temporarily you can set it by typing &#8220;setxkbmap &#8220;<br />
+or xmodmap</p>
+
+
+</li>
+<li><seg class="small"><strong>poacheR (Fri Feb 18, 2011 (14:47:54)) <a href="custom-keyboard-in-linuxx11.html#c001430" id="c001430">[PermLink]</a>:</strong></seg>
+
+	<p>I&#8217;m trying to enable putting acute accents on russian (cyrillic) characters. I&#8217;ve had problems with the compose key that I won&#8217;t go into, so I&#8217;m trying to avoid that for now. I&#8217;ve had luck with editing the /usr/share/X11/xkb/symbols/ru file, and replacing the semicolon with U0301 (i.e.a non-spacing acute accent).</p>
+
+	<p>For some reason, I always have to reload the keyboard after a login, before the accent gets activated, but it works. Now I can accent russian letters by pressing the key and then the semicolon key: о́чень хорошо́!</p>
+
+	<p>What I was wondering is if there is a way to input composed unicode characters directly. Xkb throws an error if I try to insert a composed character, e.g. U0061 U0301   instead of, say, U00E1. Is it a matter of a syntax error on my part? Or can you not compose characters directly like that in the config file?</p>
+
+	<p>(what I&#8217;m after would be to press the third-level key and the cyrillic vowel, and result in an accented cyrillic vowel)</p>
+
+	<p>Спаси́бо, Dan!</p>
+
+
+</li>
+<li><seg class="small"><strong>stan (Thu May 12, 2011 (18:31:14)) <a href="custom-keyboard-in-linuxx11.html#c001446" id="c001446">[PermLink]</a>:</strong></seg>
+
+	<p>poacheR &#8211; As far as I know, what you want to do is impossible.  However, you should be able to put in the single equivalent unicode character in your keymap.</p>
+
+	<p>I just stopped to thank Dan for posting these instructions.  They still work on Fedora 14.  It is possible to use them for either a variant (rules/evdev.xml and symbols/us) or a standalone keymap (rules/evdev.xml and symbols/my_keyfile).  During development,I had some errors in my keymap, and the X error messages in the popup weren&#8217;t helpful.  I ended up booting to runlevel 3, console only, and testing with startx.  As a normal user, running the command   startx &#62; startx_output 2&#62;&#38;1   .  When I logged out of X, I was able to see the error messages saved in the file and fix the problem.  Maybe this will help someone else.</p>
+
+
+</li>
+<li><seg class="small"><strong>JTSchrock (Fri May 20, 2011 (18:53:36)) <a href="custom-keyboard-in-linuxx11.html#c001454" id="c001454">[PermLink]</a>:</strong></seg>
+
+	<p>Hello,</p>
+
+	<p>Thanks so much for this tutorial.  It has been the one tool I&#8217;ve found useful so far for creating custom keyboards in Ubuntu.</p>
+
+	<p>However, I am still having some difficulties.  I&#8217;ve followed the steps you outline above, up to the third level chooser and Xcompose sections.  (the keyboard I am making doesn&#8217;t have need for more than two levels).  I also added:</p>
+
+  cj      Chinook Jargon
+
+	<p>to the !layout section of xorg.lst and xorg.xml.</p>
+
+	<p>After I add my layout file to ..X11/xkb/symbols and change the evdev.xml file I get the following error window:</p>
+
+	<p>Error activating <span class="caps">XKB</span> configuration.<br />
+It can happen under various circumstances:
+ • a bug in libxklavier library
+ • a bug in X server (xkbcomp, xmodmap utilities)
+ • X server with incompatible libxkbfile implementation</p>
+
+	<p>X server version data:<br />
+The X.Org Foundation<br />
+11001000</p>
+
+	<p>If you report this situation as a bug, please include:
+ • The result of xprop -root | grep <span class="caps">XKB</span>
+ • The result of gconftool-2 -R /desktop/gnome/peripherals/keyboard/kbd</p>
+
+	<p>I am using Ubuntu 11.04.  After I&#8217;ve added the cj layout file and listed it in evdev.xml, I go to set my keyboard preference &#8220;Chinook Jargon&#8221; (that&#8217;s my target language). Remarkably, Chinook Jargon does show up as a permissible language, and even when I choose is in the &#8220;choose layout&#8221; window, the proper layout is displayed on the keyboard graphic.  Once I click &#8220;add&#8221; the error message pops up.  This makes me think there are additional steps that I must take to satisfy all of xkb&#8217;s requirements.</p>
+
+	<p>I tried a workaround to test my layout file.  I sudo&#8217;ed into ../xkb/symbols/bgr. Opened bgr in gedit, erased the first alphanumeric section, and pasted in the text from my cj layout file.  Loaded Bulgarian as a keyboard in the preferences section, and away I typed in Jargon.  This confirms that I&#8217;m missing a step or two in registering everything correctly within the xkb system. </p>
+
+	<p>Would an absent third-level chooser cause this glitch?  Xcompose?</p>
+
+	<p>Thanks for any thoughts  </p>
+
+	<p>hayu masi pus munk-tʼsəm ukuk ɬush tʼwax̣-iliʔi!</p>
+
+
+</li>
+<li><seg class="small"><strong>Sagar Behere (Wed May 25, 2011 (05:40:48)) <a href="custom-keyboard-in-linuxx11.html#c001456" id="c001456">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks! This is exactly what I was looking for :)</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Jun  6, 2011 (18:36:10)) <a href="custom-keyboard-in-linuxx11.html#c001459" id="c001459">[PermLink]</a>:</strong></seg>
+
+	<p>First of all, JT, we should meet up: we must be very close to each other and I&#8217;m extremely interested in Chinook Jargon.</p>
+
+	<p>As to the rest of your questions, I&#8217;ll need to check. Hopefully tomorrow.</p>
+
+
+</li>
+<li><seg class="small"><strong>raek (Sat Jun 18, 2011 (04:30:00)) <a href="custom-keyboard-in-linuxx11.html#c001462" id="c001462">[PermLink]</a>:</strong></seg>
+
+	<p>Hello again!</p>
+
+	<p>I thought I&#8217;d share a link to the Ubuntu Community Documentation that I just found:</p>
+
+	<p><a href="https://help.ubuntu.com/community/Howto%3A Custom keyboard layout definitions" rel="nofollow" >Howto: Custom keyboard layout definitions</a></p>
+
+	<p>It seems to be similar to this page, but not as detailed. It does however point to the files you should edit in recent versions of Ubuntu and has some good links.</p>
+
+	<p>Again, thanks for a great tutorial!</p>
+
+
+</li>
+<li><seg class="small"><strong>Jaaf (Sat Aug  6, 2011 (08:07:17)) <a href="custom-keyboard-in-linuxx11.html#c001479" id="c001479">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks for this very clear tutorial.<br />
+I attempted to do as you say under Ubuntu 11.04 (Gnome). I took your file oe and put it in /usr/share/X11/xkb/symbols and modified evdev.xml and evdev.lst as you say.<br />
+I did nothing else (no compose ans no third level chooser). Unfortunately after log out and back in again. I can&#8217;t find Old English in System &#62; Preferences &#62; keyboard.<br />
+Any suggestion would be welcome.<br />
+Thanks.</p>
+
+
+</li>
+<li><seg class="small"><strong>DirkL (Mon Apr  6, 2015 (16:23:21)) <a href="custom-keyboard-in-linuxx11.html#c006498" id="c006498">[PermLink]</a>:</strong></seg>
+
+	<p>In Ubuntu 14.04, maybe before (I only use <span class="caps">LTS</span> releases) the ability to<br />
+reassign Level 3 Chooser is no longer available. Probably upstream<br />
+Gnome decision. Only workaround that I could find is to run *sudo<br />
+dpkg-reconfigure keyboard-configuration* which redefines the<br />
+system-wide default.</p>
+
+	<p>Also, restarting the window manager is only necessary if you have<br />
+changed <strong>evdev.xml</strong>. If you have only changed files in <strong>symbols</strong>,<br />
+<a href="http://askubuntu.com/questions/121474/permanently-change-keyboard-layout" rel="nofollow">AskUbuntu</a><br />
+says you can type</p>
+
+	<p>udevadm trigger &#8212;subsystem-match=input &#8212;action=change</p>
+
+	<p>It goes without saying that you should make a script file for that!</p>
+</li>
+<li><seg class="small"><strong>Yuta (Fri Aug  3, 2018 (16:52:11)) <a href="custom-keyboard-in-linuxx11.html#c006710" id="c006710">[PermLink]</a>:</strong></seg>
+
+<p>Thank you for the excellent instruction! It was clear and easy to follow. Worked like a charm, too = )<br />
+Things like this are the reasons I love linux so much</p>
+</li>
+<li><seg class="small"><strong>NIRANJAN TAMBE (Wed Jul  3, 2019 (12:33:12)) <a href="custom-keyboard-in-linuxx11.html#c006717" id="c006717">[PermLink]</a>:</strong></seg>
+
+<p>Hello sir. Can I dump a combination of characters (or a character and a diacritic) together on one key?</p>
+</li>
+<li><seg class="small"><strong>Michael (Wed Oct 23, 2019 (17:09:46)) <a href="custom-keyboard-in-linuxx11.html#c006719" id="c006719">[PermLink]</a>:</strong></seg>
+
+<p>Anyone know how to do this on Xubuntu 18.04 or <span class="caps">LMDE</span>?  Doesn’t seem to work on these.</p>
+</li>
+<li><seg class="small"><strong>leo (Sun Apr 26, 2020 (05:05:52)) <a href="custom-keyboard-in-linuxx11.html#c006736" id="c006736">[PermLink]</a>:</strong></seg>
+
+<p>Still updated&#8230; worked great for me.</p>
+
+<p>my Lenovo Ideapad 17 has a broken keyboard.. getting a replacement&#8230; really a pain in the rear. I had an external.. but not really a laptop the.. so  I decided to mapp normal numeric line AD01 .. AD09 to replace the keys that stppped working. <br />
+Finish with a numeric line that uses the 4 columns for map letters, numbers, acute and characters.</p>
+
+
+<p>One question that could be helpful for others, I could not find what are the positions for the numeric keyboard on the right side, maybe AD15 &#8211; AD18 to AF15 &#8211; AF18 ?</p>
+
+<p>Did not try it that as with current configuration and while I get a replacement keyboard, I am satisfied with end particular keyboard. </p>
+
+<p>Do you know how are referenced in an EN x11/symbols file standard keyboard?</p>
+
+<p>Thanks.</p>
+</li>
+<li><seg class="small"><strong>javid (Sun Jun  7, 2020 (12:19:45)) <a href="custom-keyboard-in-linuxx11.html#c006741" id="c006741">[PermLink]</a>:</strong></seg>
+
+<p>Hi<br />
+I try to added Persian layout on ubuntu xfce4 descktop and I select Win+Space from Change layout option but it changes at first from English to Persian but after that it does not work to switch from Persian to English.</p>
+</li>
+<li><seg class="small"><strong>javid (Sun Jun  7, 2020 (12:19:45)) <a href="custom-keyboard-in-linuxx11.html#c006742" id="c006742">[PermLink]</a>:</strong></seg>
+
+<p>Hi<br />
+I try to added Persian layout on ubuntu xfce4 descktop and I select Win+Space from Change layout option but it changes at first from English to Persian but after that it does not work to switch from Persian to English.</p>
+</li>
+<li><seg class="small"><strong>Joe (Wed Jun 17, 2020 (09:04:55)) <a href="custom-keyboard-in-linuxx11.html#c006743" id="c006743">[PermLink]</a>:</strong></seg>
+
+<p>Does this still work nowadays? I&#8217;m pretty sure I did everything the way you said, however my layout doesn&#8217;t show up in the settings. <br />
+Thanks.</p>
+</li>
+<li><seg class="small"><strong>Dan O&#039;Donnell (Fri Jun 19, 2020 (10:05:28)) <a href="custom-keyboard-in-linuxx11.html#c006744" id="c006744">[PermLink]</a>:</strong></seg>
+
+<p>Joe: Yes, just used it today. Updated the instructions a little, but I don&#8217;t quite know how to find the third-level chooser anymore. It just seemed to remember for me. Maybe it&#8217;s in the keyboard now? Don&#8217;t remember.</p>
+</li>
+<li><seg class="small"><strong>Dan O&#039;Donnell (Fri Jun 19, 2020 (10:07:50)) <a href="custom-keyboard-in-linuxx11.html#c006745" id="c006745">[PermLink]</a>:</strong></seg>
+
+<p>Hi Javid. I&#8217;m afraid I don&#8217;t know the answer: this is one of these things where my knowledge is no reduced to what is written here. It still works for me is all I know.</p>
+
+<p>Good luck and let me know if you do solve it. We can add something here.</p>
+</li>
+<li><seg class="small"><strong>Jedd Schrock (Sat Jul 25, 2020 (08:54:18)) <a href="custom-keyboard-in-linuxx11.html#c006752" id="c006752">[PermLink]</a>:</strong></seg>
+
+<p>Hi Paul,</p>
+
+<p>I&#8217;m trying to make a keyboard for typing Chinuk Wawa (Oregon, Native American). I&#8217;ve followed the steps you&#8217;ve described here, but I&#8217;m having some hang-ups. </p>
+
+<p>I&#8217;m working in Linux Mint 20. Xedit is the default text editor in Mint. </p>
+
+<p>I created a layout called “chn” and put it in the /x11/../symbols/ folder.  I also added my layout to  evdev.xml. (doing all of this as root).  I am pasting the syntax you show above for the evdev.xml file.  When I edit my evdev file, my terminal (where I sudo thunar to get to my root file manager) immediately shows an error message : </p>
+
+<p>	<ul>
+		<li>(xed:2342): <span class="caps">WARNING</span> **: 07:11:54.661: Set document metadata failed: Setting attribute metadata::xed-spell-language not supported</li>
+	</ul></li></p>
+
+<p>	<ul>
+		<li>(xed:2342): <span class="caps">WARNING</span> **: 07:11:54.661: Set document metadata failed: Setting attribute metadata::xed-encoding not supported.</li>
+	</ul></li></p>
+
+<p>It&#8217;s like I&#8217;m breaking my evdev.xml file by editing it. Maybe I can&#8217;t do this in Xedit? Weird. Once I reboot, my chn keyboard does show up in settings-&gt;keyboard-&gt;layout, but I can&#8217;t switch to it. English still works but no switching happens.  It&#8217;s like X11 acknowledges the file is there but maybe it&#8217;s corrupt or something. Anyway, any thoughts you have on this would be greatly appreciated.</p>
+</li>
+<li><seg class="small"><strong>Dan O&#039;Donnell (Sat Jul 25, 2020 (21:33:59)) <a href="custom-keyboard-in-linuxx11.html#c006753" id="c006753">[PermLink]</a>:</strong></seg>
+
+<p>Dear Jedd,</p>
+
+<p>Sorry. I&#8217;m not sure. Given that it happens immediately, and it&#8217;s an xed error, I wonder if you shouldn&#8217;t try a different editor, in case this one is trying to add something. I use nano (a bash editor) for a lot of this stuff, or gedit (a more <span class="caps">GUI</span>-one, and I&#8217;ve never had this issue.</p>
+
+<p>Perhaps report back if you fix it?</p>
+</li>
+<li><seg class="small"><strong>Jedd Schrock (Tue Jul 28, 2020 (15:42:33)) <a href="custom-keyboard-in-linuxx11.html#c006756" id="c006756">[PermLink]</a>:</strong></seg>
+
+<p>Hi Paul,</p>
+
+<p>Thanks for your reply. </p>
+
+<p>Using Gedit did get rid of those errors upon saving. But my keyboard still won&#8217;t switch.  </p>
+
+<p>I first tried switching to a German keyboard (German layout already in <span class="caps">XKB</span>)to make sure switching works generally on my system.  No problems there.</p>
+
+<p>Then I installed your oe keyboard (from this page) just to see if I could load a custom keyboard. That also works/switches  fine. </p>
+
+<p>So given all this with the fact that my cw (Chinuk Wawa) layout shows up as an option, but switching to it doesn&#8217;t work, makes me think there is something wrong with the syntax in my cw.txt layout file.</p>
+
+<p>What glyph names am I supposed to use for the characters? My layout currently has all my special characters listed as Unicode values like U0313 for combining comma above. Maybe <span class="caps">XKB</span> has character naming requirements that I don&#8217;t know about.</p>
+
+<p>Maybe I&#8217;m missing something with commas or other delimiters?  Here is a section:</p>
+
+<p>key &lt;AD01&gt; {	[	  q,	Q,	Q 		]	};<br />
+key &lt;AD02&gt; {	[	  w,	U02B7,	U028D,	W		]	};<br />
+key &lt;AD03&gt; {	[	  e,	U025B,	E		]	};<br />
+key &lt;AD04&gt; {	[	  r,	,	R		]	};<br />
+key &lt;AD05&gt; {	[	  t,	U1D1B,	T		]	};</p>
+
+<p>Feels like I&#8217;m zeroing in on my problem!</p>
+
+<p>Thanks,</p>
+
+<p>Jedd</p>
+</li>
+<li><seg class="small"><strong>Jedd Schrock (Tue Jul 28, 2020 (19:13:00)) <a href="custom-keyboard-in-linuxx11.html#c006757" id="c006757">[PermLink]</a>:</strong></seg>
+
+<p>It works!</p>
+
+<p>I went into my layout file in ../xkb../rules and did some house-cleaning. There were some errant commas without any following unicode values. I also was using tabs in between the commas. I&#8217;m not sure which of these changes did the trick, but my keyboard now works.</p>
+
+<p>This is an example of the syntax in my layout file:</p>
+
+<p>key &lt;AD02&gt; { [ w, U02B7, U028D, W ] }; <br />
+key &lt;AD03&gt; { [ e, U025B, E ] };<br />
+key &lt;AD04&gt; { [ r, U025B, R ] };</p>
+
+<p>So in summary what I&#8217;ve learned here: do not use tabs to separate items in the layout file, and make sure there are no empty characters between the delimiting commas. </p>
+
+<ul>
+	<li>(not ok) <br />
+key &lt;AD02&gt; { [ w, U02B7, U028D, , W, ] };</li>
+</ul>
+
+<p>thank you for all your help</p>
+
+<p>Jedd</p>
+</li>
+<li><seg class="small"><strong>Jedd Schrock (Tue Jul 28, 2020 (19:19:07)) <a href="custom-keyboard-in-linuxx11.html#c006758" id="c006758">[PermLink]</a>:</strong></seg>
+
+<p>I think it would be helpful to list somewhere in these instructions appropriate character names to use in the layout file. My experience tells me that “U0301” style (Unicode) naming always works. From other examples I have seen, it appears other users prefer to use names like “exclam” “period” etc. I think it would be helpful to let new users know what acceptable nomenclature is for the layout file.</p>
+</li>
+<li><seg class="small"><strong>Coby (Sun Oct 11, 2020 (14:42:17)) <a href="custom-keyboard-in-linuxx11.html#c006769" id="c006769">[PermLink]</a>:</strong></seg>
+
+<p>I tried and tried to get this to work, to no avail. I even emailed Dan. But then I went back and looked at my files, and I found several errors.</p>
+
+<p>1) At first I thought it was because I was using a lot of dead keys and combining diacritics. That turned out not to matter.<br />
+2) I had tried putting my keyboard in its own file. Then I tried making it part of the default file, in my case, US. But it never worked. Then I moved it back out into its own file, because that was the one place I knew for sure evdev.xml knew where to find it.<br />
+3) I had a malformed line. I had forgot to put “default partial alphanumeric_keys” at the top. That shall not happen to you.<br />
+4) I found that it helped to snitch a line from some of the other partial keyboards, ‘include “level3(ralt_switch)” ‘ This goes at the end of the key definitions, indented several steps for clarity.<br />
+5) I did have to do a full restart before my changes showed up.</p>
+
+<p>I am a baker and I ought to know better than to make more than one modification to a recipe at once. But I combined several, and so I can&#8217;t tell you which of them was causing my diacritics not to appear. But no matter. You have to do them all anyway.</p>
+</li>
+<li><seg class="small"><strong>Dan (Sun Oct 11, 2020 (18:48:06)) <a href="custom-keyboard-in-linuxx11.html#c006770" id="c006770">[PermLink]</a>:</strong></seg>
+
+<p>That&#8217;s interesting about the level3(ralt_switch). I&#8217;ll have to look into that more.</p>
+</li>
+<li><seg class="small"><strong>Myke (Thu Mar  4, 2021 (13:13:17)) <a href="custom-keyboard-in-linuxx11.html#c006784" id="c006784">[PermLink]</a>:</strong></seg>
+
+<p>Good Afternoon</p>
+
+<p>Great work, here, although I must say: we linuxers seem to reinvent the wheel over and over and over and&#8230; you get the idea. No centralized place to find/add solutions&#8230; but I digress from my purpose.</p>
+
+<p>I have noticed that many of the standard keyboards integrate the ‘level3(ralt_switch)’ directly from the ‘level3’ package, without the ‘euro’ component. Would that work for you as well?</p>
+
+<p>&#8212; cheers</p>
+</li>
+<li><seg class="small"><strong>Myke (Thu Mar  4, 2021 (13:20:17)) <a href="custom-keyboard-in-linuxx11.html#c006785" id="c006785">[PermLink]</a>:</strong></seg>
+
+<p>Hi,</p>
+
+<p>Slight correction: other keyboards include the reference within the layout paragraph, at the very end.</p>
+
+<p>The Italian, for example, has:</p>
+
+   key &lt;<span class="caps">LSGT</span>&gt;	{ [      less,    greater,guillemotleft,guillemotright] };
+
+    include “level3(ralt_switch)”
+    };
+
+<p>as the last line in its ‘basic’ paragraph</p>
+
+<p>&#8212;cheers</p>
+</li>
+<li><seg class="small"><strong>Daniel O&#039;Donnell (Sun Apr  4, 2021 (12:26:02)) <a href="custom-keyboard-in-linuxx11.html#c006789" id="c006789">[PermLink]</a>:</strong></seg>
+
+<p>Thanks Myke, for this. </p>
+
+<p>I confess the whole level three key business has always been a bit of a mystery to me: Sometimes it works, sometimes it doesn&#8217;t for a while, and then usually it does again after a while. I&#8217;ve never really figured out what setting is controlling it and when I do manage to get it right its through something like the GnomeTweaks <span class="caps">GUI</span>.</p>
+
+<p>Maybe this is the solution. I&#8217;ve never really looked at it. Next time I modify my keyboard, I&#8217;ll look at testing this.</p>
+</li>
+<li><seg class="small"><strong>Mr M McCarthy (Tue Jun 22, 2021 (10:25:17)) <a href="custom-keyboard-in-linuxx11.html#c006797" id="c006797">[PermLink]</a>:</strong></seg>
+
+<p>Thanks for posting and keeping this article up to date. After reading I stumbled across an X input hackers blog which may be of  interest: https://who-t.blogspot.com/2020/09/no-user-specific-xkb-configuration-in-x.html</p>
+</li>
+<li><seg class="small"><strong>CT (Sun Jul 18, 2021 (03:55:46)) <a href="custom-keyboard-in-linuxx11.html#c006801" id="c006801">[PermLink]</a>:</strong></seg>
+
+<p>Had a need recently to mix and match Devanaagri, <span class="caps">IPA</span> and English without constantly switching input methods&#8230; this guide fit the bill perfectly.</p>
+
+<p>Many thanks!</p>
+
+<p>(Completely off topic, but I&#8217;m pretty sure we met and conversed @ a <span class="caps">TEI</span> meet.. College Park, ca.2006?)</p>
+</li>
+<li><seg class="small"><strong>Benjamin (Tue Jun  6, 2023 (08:42:26)) <a href="custom-keyboard-in-linuxx11.html#c006840" id="c006840">[PermLink]</a>:</strong></seg>
+
+<p>Do you know if it is possible to insert more than one Unicode character with one keystroke? What I want to do is insert “a” plus the combining macron below (U+0331). I want to do something like this:</p>
+
+<p>key &lt;AC01&gt;  { [	    a,      A,	    a + 0&#215;1000331,  A + 0&#215;1000331 ] };</p>
+
+<p>Obviously the plus sign doesn&#8217;t work, and I tried several other things to no avail. Maybe it&#8217;s impossible, but if it is possible I would like to know how to do it. Thanks!</p>
+</li></ol>
+
+
+
+
+<form id="txpCommentInputForm" method="post" action="https://people.uleth.ca/~daniel.odonnell/blog/custom-keyboard-in-linuxx11#cpreview">
+<div class="comments-wrapper">
+
+<p><label for="name">Name</label>: 
+<input name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="25" value="" /><br/>
+<label for="email">Email</label>:  
+<input name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="25" value="" /><br/>
+<input class="checkbox" id="remember" name="remember" type="checkbox" value="1" /> <label for="remember">Remember</label> 
+<input name="checkbox_type" type="hidden" value="remember" /><br/>
+<label for="message">Message</label>:<br/><textarea class="txpCommentInputMessage" id="message" name="message" cols="25" rows="5" required="required"></textarea> 
+<input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview" /> 
+<input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit" /><br/>
+<a id="txpCommentHelpLink" href="https://rpc.textpattern.com/help/?item=textile_comments&amp;language=en-gb" onclick="window.open(this.href, 'popupwindow', 'width=300,height=400,scrollbars,resizable'); return false;">Textile help</a></p>
+
+<input name="parentid" type="hidden" value="39" />
+
+<input name="backpage" type="hidden" value="/~daniel.odonnell/blog/custom-keyboard-in-linuxx11" />
+</div>
+</form>
+
+				<!-- #2cl -->
+				
+			<!-- #1cl -->
+			
+		</div>
+
+		<!-- Right bar -->
+		<!--googleoff: all-->
+		<!-- this stops google indexing the tweets and other static information -->
+		<div class="rightbar">
+			<p class="hideme">
+				<a class="hideme" id="navigation"></a>
+				<a href="#content" class="hideme">Back to content</a>
+			</p>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, autoDisplay: false, gaTrack: true, gaId: 'UA-32780614-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+			<h2>Search my site</h2>
+				<form role="search" method="get" action="https://people.uleth.ca/~daniel.odonnell/Search/">
+<p class="search_input">
+<input name="q" required="required" size="15" type="search" value="" /><input type="submit" value="Go!" /></p>
+</form>
+			<h2>Sections</h2>
+			<ul>
+<li><a href="https://outlook.office.com/bookwithme/user/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/meetingtype/vFTDmf-nQECoMYPMEtPS2A2?anonymous&amp;ep=mlink">Book a meeting time with me</a></li>				
+<li><a href="../Academic-Policies/current-academic-policies.html">Academic Policies (Current)</a></li>
+				<li><a href="index.html">Blog</a></li>
+<li><a href="../contact/index.html">Contact</a></li>
+<li><a href="../research/index.html">Research</a></li>
+<li><a href="../teaching/index-2.html">Teaching</a></li>
+<li><a href="../tutorials/index.html">Tutorials</a></li>
+			</ul>
+<!-- h2>Schedule</h2>
+
+<iframe 
+name="My calendar"
+title="My calendar"
+width="75%"
+scrolling="yes"
+marginheight="0"
+marginwidth="0"
+src="https://outlook.office365.com/owa/calendar/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/2c4f66847b2042dfb7db8ba348396f3c14689327663406417309/calendar.html"/>
+-->
+<h2>Current teaching</h2>
+			<ul>
+
+<li><a href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a></li>
+
+<li><a href="../teaching/english-4850a-7850a-beowulf-spring-2024.html">English 4850a/7850a: Advanced Old English (Spring 2024)</a></li>
+
+
+
+			</ul>
+			<h2>Recent changes to this site</h2>
+			<ul>
+				<li><strong><a rel="bookmark" href="calm-slippery-and-sadistic-my-silent-war-by-kim-philby-and-a-spy-among-friends-by-ben-macintyre.html">Calm, Slippery, and sadistic: My Silent War by Kim Philby and A Spy among Friends by Ben MacIntyre</a> </strong></li><li><strong><a rel="bookmark" href="chatbot-prompt-thyself.html">ChatBot prompt thyself</a> </strong></li><li><strong><a rel="bookmark" href="what-a-fuss-about-an-omlette-why-lies-are-protected-speech-in-the-us.html">What a fuss about an omlette! Why lies are protected speech in the U.S. (Liar in a crowded theater; Kosseff 2023)</a> </strong></li><li><strong><a rel="bookmark" href="blow-by-blow-island-victory-sla-marshall-1944-2002.html">Blow by blow: Island Victory, S.L.A. Marshall 1944/2002</a> </strong></li><li><strong><a rel="bookmark" href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a> </strong></li>
+			</ul>
+			<h2>Tags</h2>
+			<a href="../tag/anglo-saxon%2bstudies/index.html" class="tagSizeMedium tagSize11" style="font-size: 135%;">anglo-saxon studies</a>, 
+<a href="../tag/caedmon/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">caedmon</a>, 
+<a href="../tag/citation%2bpractice/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">citation practice</a>, 
+<a href="../tag/composition/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">composition</a>, 
+<a href="../tag/computers/index.html" class="tagSizeMedium tagSize24" style="font-size: 182%;">computers</a>, 
+<a href="../tag/digital%2bhumanities/index.html" class="tagSizeLargest tagSize29" style="font-size: 200%;">digital humanities</a>, 
+<a href="../tag/digital%2bpedagogy/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">digital pedagogy</a>, 
+<a href="../tag/grammar/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">grammar</a>, 
+<a href="../tag/history/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">history</a>, 
+<a href="../tag/moodle/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">moodle</a>, 
+<a href="../tag/old%2benglish/index.html" class="tagSizeMedium tagSize6" style="font-size: 117%;">old english</a>, 
+<a href="../tag/pedagogy/index.html" class="tagSizeMedium tagSize13" style="font-size: 142%;">pedagogy</a>, 
+<a href="../tag/research/index.html" class="tagSizeMedium tagSize4" style="font-size: 110%;">research</a>, 
+<a href="../tag/students/index.html" class="tagSizeMedium tagSize7" style="font-size: 121%;">students</a>, 
+<a href="../tag/study%2btips/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">study tips</a>, 
+<a href="../tag/teaching/index.html" class="tagSizeMedium tagSize10" style="font-size: 132%;">teaching</a>, 
+<a href="../tag/tips/index.html" class="tagSizeMedium tagSize16" style="font-size: 153%;">tips</a>, 
+<a href="../tag/tutorials/index.html" class="tagSizeMedium tagSize12" style="font-size: 139%;">tutorials</a>, 
+<a href="../tag/unessay/index.html" class="tagSizeMedium tagSize8" style="font-size: 125%;">unessay</a>, 
+<a href="../tag/universities/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">universities</a><br /><br />
+			<a style="padding-left:1em;" href="../tag/index.html">See all...</a>
+			<!-- <h2>What I'm reading...</h2> -->
+			<!-- txp:aks_rss form="externalRSS" feed="https://api.zotero.org/groups/81065/items/" limit_per_feed="4" wraptag="ul" break="li" /> -->
+			<!-- <h2>Bibliography ticker...</h2> -->
+			<!-- txp:aks_rss form="citationTicker" feed="https://api.zotero.org/users/632779/items?key=lSavInnm7WmefW45BRO6f7uh" limit_per_feed="4" wraptag="p" break="<span />" /> -->
+			<h2>Follow me on <a href="https://twitter.com/#!/DanielPaulOD">Twitter</a></h2>
+			<ul class="arc_twitter"><li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I&#039;m afraid I don&#039;t. I thought it was one o&hellip; <a href='https://twitter.com/i/web/status/1673712143542390785'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 27, 09:17 AM</span></li>
+<li>RT <a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>: The results are in!
+
+<a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>&nbsp;members have voted 97% in favour of strike authorization, if necessary.
+
+The participation r&hellip; <span class="arc_twitter-posted">Jun 27, 08:33 AM</span></li>
+<li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I thought I heard talk of this at caut this year. <span class="arc_twitter-posted">Jun 27, 08:30 AM</span></li>
+<li>RT <a href='http://twitter.com/deelomas' rel='external'>@deelomas</a>: And, the official winner of the &lsquo;Not My Job&rsquo; award goes to&hellip; <a href='https://twitter.com/deelomas/status/1672611829967667202/photo/1'>pic.twitter.com/0sDes9D5oq</a> <span class="arc_twitter-posted">Jun 26, 09:34 PM</span></li>
+<li>I&#039;m beginning to think that electric vehicles are sort of a Linux of the car world at the moment. Except Teslas whi&hellip; <a href='https://twitter.com/i/web/status/1673344791856267271'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 26, 08:57 AM</span></li>
+<li>&quot;He felt that American children in recent generations have had too much parental protection and too little opportun&hellip; <a href='https://twitter.com/i/web/status/1670627745641172993'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 18, 09:01 PM</span></li>
+<li>I&#039;ve been going through Ernie Pyle&#039;s Brave Men (a collection of columns from the European front in WWII) looking up&hellip; <a href='https://twitter.com/i/web/status/1670263169556836354'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 17, 08:52 PM</span></li>
+<li>Traditionally, &ldquo;knowledge workers&rdquo; have had two productivity peaks in their workday: just before lunch and just aft&hellip; <a href='https://twitter.com/i/web/status/1667749991186833409'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 10, 10:25 PM</span></li>
+<li>RT <a href='http://twitter.com/JasonOnTheDrums' rel='external'>@JasonOnTheDrums</a>: <a href='http://twitter.com/search?q=%23Ableg' rel='external'>#Ableg</a>
+
+Today was within 97% of the record votes we record on Tuesday.
+
+We&rsquo;re on pace for 784,475 votes over and will&hellip; <span class="arc_twitter-posted">May 26, 08:08 PM</span></li>
+<li>So if we were doing bets,  here&#039;s mine: 
+
+NDP 45
+UCP 41
+IND (Child-hating poop-cookie) 1
+
+I think people are undere&hellip; <a href='https://twitter.com/i/web/status/1662279319685849088'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">May 26, 08:07 PM</span></li></ul>
+			<!--  <h2><form method="get" action="https://people.uleth.ca/~daniel.odonnell/"><div>
+
+<input name="s" type="hidden" value="blog" />
+Navigation<br />
+<select name="s" onchange="submit(this.form);">
+	<option value="">&#160;</option>
+	<option value="about">About</option>
+	<option value="academic-policies">Academic Policies</option>
+	<option value="archive">Archive</option>
+	<option value="blog" selected="selected">Blog</option>
+	<option value="contact">Contact</option>
+	<option value="drafts">Drafts</option>
+	<option value="research">Research</option>
+	<option value="search">Search</option>
+	<option value="tag">All Tags</option>
+	<option value="teaching">Teaching</option>
+	<option value="tutorials">Tutorials</option>
+</select>
+<noscript><div><input type="submit" value="Go" /></div></noscript>
+</div>
+</form></h2> -->
+			<!-- h2>At <a href="http://dpod.kakelbont.ca/">the dpod blog</a></h2 -->
+			<!-- txp:aks_rss form="externalRSS" feed="http://dpod.kakelbont.ca/feed/" limit_per_feed="10" wraptag="ul" break="li"/ -->
+		</div>
+		<div class="footer">
+<p>Our University’s Blackfoot name is Iniskim, meaning Sacred
+Buffalo Stone.<br/>The University is located in traditional Blackfoot Confederacy territory.<br/>We honour the Blackfoot
+people and their traditional ways of knowing in caring for this land, as well as all Aboriginal peoples who have
+helped shape and continue to strengthen our University community.</p>
+			<p><a href="http://www.uleth.ca/">University of Lethbridge</a> | <a href="http://www.uleth.ca/artsci/">Faculty of Arts and Science</a> | <a href="http://www.uleth.ca/artsci/english">Department of English</a> | <a href="http://www.uleth.ca/graduatestudies/">School of Graduate studies</a> | <a href="../textpattern/index.html">Site
+Administration</a><br />&copy; Date of publication or modification by Daniel Paul O'Donnell<br />Unless otherwise noted, the non-negotiated licence for all work on this site is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>.<br />If you want to use the work in some other fashion, feel free to contact me. </p>
+		</div>
+		<!--googleon: all-->
+	</body>
+
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/blog/custom-keyboard-in-linuxx11 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:52:00 GMT -->
+</html>

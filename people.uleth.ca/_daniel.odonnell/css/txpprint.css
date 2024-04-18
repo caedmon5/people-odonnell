@@ -1,0 +1,85 @@
+/*
+  SCREEN ELEMENTS (DIV level)
+  ------------------------------------------------------------
+ */
+
+body {
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+    font-family: serif;
+    margin: 1cm;
+}
+
+
+
+div.leftbar, div.rightbar, div.logo {
+    display:none;
+}
+
+
+
+/*
+  BLOCK LEVEL STYLE SCREEN ELEMENTS 
+  -------------------------------------------
+ */
+div.logo img, div.leftbar img, div.rightbar img {
+    display:none;
+}
+
+img {
+    padding:0.5em;
+    max-width: 98%;
+}
+img.right {
+    position: relative;
+    float: right;
+    padding-left: .5em;
+    border: none;
+}
+img.left {
+    position: relative;
+    float: left;
+    padding-right: .5em;
+    border: none;
+}
+div.leftbar ul, div.rightbar ul {
+    display:none;
+}
+div.leftbar ul li, div.rightbar ul li {
+        display:none;
+}
+div.leftbar ul li a, div.rightbar ul li a {
+        display:none;
+}
+
+td.test, td.test strong, td.holiday, td.holiday strong {
+    background: black;
+    color:white;
+}
+
+td.announcement, td.announcement strong {
+	background: #bfbfbf;
+	color: #7f7f7f;
+}
+/*
+  PHRASE-LEVEL STYLE (SCREEN ELEMENTS)
+  -----------------------------------------------
+ */
+
+h1 {
+    display:none;
+}
+
+h2 {
+    font-size: 200%;
+}
+a {
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+}
+
+.breadcrumb {
+    display:none;
+}

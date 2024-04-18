@@ -1,0 +1,163 @@
+/*
+  GENERAL GEOGRAPHY AND DIV LEVEL FEATURES
+  ==========================================
+ */
+body
+{
+    background: #fff;
+    color: #000;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+
+div.colophon
+{
+    border: thin solid gray;
+    background: black;
+    color: white
+}
+
+div.colophon a
+{
+    background: black;
+    color: #AAEEEE;
+    text-decoration: underline;
+}
+/* GENERAL BLOCK-LEVEL LAYOUT (I.E. SCREEN AND PRINT */
+
+table
+{
+    width: 95%;
+    font-size: 80%;
+}
+
+table.grades
+{
+    font-size: 70%;
+}
+
+table, tr, td
+{
+    border: thin solid gray;
+    border-collapse: collapse;
+}
+
+td
+{
+    text-align: center;
+    vertical-align: top;
+}
+
+td.label
+{
+    text-align: left;
+}
+
+td ul {
+margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1em;
+    list-style-position: inside;
+    padding-left: 0;
+    text-indent: -1em;
+    text-align: left;
+    list-style-type: disc;
+}
+
+p.right, p.signature
+{
+    text-align: right;
+}
+
+img.center
+{
+    margin: auto;
+    border: none;
+    text-align:center;
+}
+
+img.right
+{
+    position: relative;
+    float: right;
+    padding-left: .5em;
+    border: none;
+}
+
+img.left
+{
+    position: relative;
+    float: left;
+    padding-right: .5em;
+    border: none;
+}
+
+/*
+  PHRASE-LEVEL STYLE (GENERAL)
+  -----------------------------------------------
+ */
+
+h1
+{
+    font-size: 250%;
+    text-align: left;
+}
+
+h2
+{
+    font-size: 150%;
+    text-align: left;
+}
+
+h3, div.leftbar h2, div.rightbar h2
+{
+    font-size: 125%;
+    text-align: left;
+    font-weight: bold;
+}
+
+h4
+{
+    font-size: 112%;
+    text-align: left;
+}
+
+h5
+{
+    font-size: 106%;
+    text-align: left;
+}
+
+h6, h7
+{
+    font-size: 100%;
+    text-align: left;
+}
+
+p.byline
+{
+    font-weight: bold;
+}
+
+
+acronym
+{
+    font-weight: bold;
+}
+
+.small, .bibliography, .backmatter
+{
+    font-size: 80%;
+}
+
+
+code, .code
+{
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.hideme
+{
+    display:none;
+}

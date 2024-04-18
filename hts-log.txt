@@ -1,0 +1,188 @@
+HTTrack3.49-4+libhtsjava.so.2 launched on Sun, 31 Mar 2024 16:37:34 at https://people.uleth.ca/~daniel.odonnell/
+(winhttrack https://people.uleth.ca/~daniel.odonnell/ -O "/home/dan/git/websites/odonnell" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:38:18	Warning: 	Found for people.uleth.ca/robots.txt
+16:38:18	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/robots.txt and https://people.uleth.ca/robots.txt
+16:38:18	Warning: 	Warning moved treated for people.uleth.ca/robots.txt (real one is https://people.uleth.ca/robots.txt)
+16:38:18	Warning: 	Found for people.uleth.ca/~daniel.odonnell/Teaching/
+16:38:18	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/Teaching/ and https://people.uleth.ca/~daniel.odonnell/Teaching/
+16:38:18	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/Teaching/ to https://people.uleth.ca/~daniel.odonnell/Teaching/
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/anglo-saxon+studies/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/caedmon/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/citation+practice/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/composition/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/computers/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/digital+humanities/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/digital+pedagogy/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/grammar/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/history/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/moodle/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/old+english/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/pedagogy/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/research/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/students/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/study+tips/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/teaching/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/tips/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/tutorials/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/unessay/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/tag/universities/ (from https://people.uleth.ca/~daniel.odonnell/)
+16:46:18	Warning: 	Found for people.uleth.ca/~daniel.odonnell/tag/
+16:46:18	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/tag/ and https://people.uleth.ca/~daniel.odonnell/tag/
+16:46:18	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/tag/ to https://people.uleth.ca/~daniel.odonnell/tag/
+16:46:18	Warning: 	Link https://people.uleth.ca/~daniel.odonnell/textpattern/index.php not scanned (follow robots meta tag)
+16:52:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/research/cv.pdf (from https://people.uleth.ca/~daniel.odonnell/research/)
+16:52:16	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/http/people.uleth.ca/~daniel.odonnell/Tutorials (from https://people.uleth.ca/~daniel.odonnell/teaching/)
+16:58:31	Warning: 	Found for people.uleth.ca/~daniel.odonnell/Contact/
+16:58:31	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/Contact/ and https://people.uleth.ca/~daniel.odonnell/Contact/
+16:58:31	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/Contact/ to https://people.uleth.ca/~daniel.odonnell/Contact/
+16:58:31	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/https//humanitiesinnovationlab.ca (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024)
+16:58:37	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/index.htm (from https://people.uleth.ca/~daniel.odonnell/2004-2006.htm)
+16:58:37	Warning: 	Found for people.uleth.ca/~daniel.odonnell/policies/
+16:58:37	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/policies/ and https://people.uleth.ca/~daniel.odonnell/policies/
+16:58:37	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/policies/ to https://people.uleth.ca/~daniel.odonnell/policies/
+16:58:37	Warning: 	Found for people.uleth.ca/~daniel.odonnell/teaching/3450Fall2006/
+16:58:37	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/teaching/3450Fall2006/ and https://people.uleth.ca/~daniel.odonnell/teaching/3450Fall2006/
+16:58:37	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/teaching/3450Fall2006/ to https://people.uleth.ca/~daniel.odonnell/teaching/3450Fall2006/
+16:58:46	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Unessay (from https://people.uleth.ca/~daniel.odonnell/Academic-Policies/essay-style-some-basics)
+16:58:46	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/contact.htm (from https://people.uleth.ca/~daniel.odonnell/Research/)
+16:58:46	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/president.ubc.ca/files/2015/10/Summary-of-Process-and-Conclusions-Final.pdf (from https://people.uleth.ca/~daniel.odonnell/blog/quis-custodiet-ipsos-custodes-review-of-cheryl-foy-an-introduction-to-university-governance-irwin-law-2021-director-s-cut)
+16:58:51	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/s4 (from https://people.uleth.ca/~daniel.odonnell/blog/but-does-it-work-in-theory-developing-a-generative-theory-for-the-scholarly-commons)
+16:58:51	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/e6 (from https://people.uleth.ca/~daniel.odonnell/blog/but-does-it-work-in-theory-developing-a-generative-theory-for-the-scholarly-commons)
+16:58:51	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/o2 (from https://people.uleth.ca/~daniel.odonnell/blog/but-does-it-work-in-theory-developing-a-generative-theory-for-the-scholarly-commons)
+16:58:51	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/o4 (from https://people.uleth.ca/~daniel.odonnell/blog/but-does-it-work-in-theory-developing-a-generative-theory-for-the-scholarly-commons)
+16:58:51	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/s2 (from https://people.uleth.ca/~daniel.odonnell/blog/but-does-it-work-in-theory-developing-a-generative-theory-for-the-scholarly-commons)
+16:58:51	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/s5 (from https://people.uleth.ca/~daniel.odonnell/blog/but-does-it-work-in-theory-developing-a-generative-theory-for-the-scholarly-commons)
+16:58:52	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/www.uleth.ca/experts-database (from https://people.uleth.ca/~daniel.odonnell/blog/faculty-members-webpresence-at-the-university-of-lethbridge)
+16:58:52	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/research/caedmon-job.html (from https://people.uleth.ca/~daniel.odonnell/blog/the-first-law-of-humanities-computing)
+16:58:52	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/textpattern.com (from https://people.uleth.ca/~daniel.odonnell/blog/how-to-do-a-table-of-contents-in-text-pattern)
+16:58:52	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/blog/":http://www.mla.org/guidelines_evaluation_digital (from https://people.uleth.ca/~daniel.odonnell/blog/the-true-north-strong-and-hegemonic-or-why-do-canadians-seem-to-run-dh)
+16:58:52	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Teaching/yii-ensuring-that-key-terms-are-always-linked (from https://people.uleth.ca/~daniel.odonnell/blog/creating-compound-attributes-in-yii)
+16:58:52	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Teaching/creating-compound-attributes-in-yii (from https://people.uleth.ca/~daniel.odonnell/blog/yii-ensuring-that-key-terms-are-always-linked)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/www.ciut.fm (from https://people.uleth.ca/~daniel.odonnell/blog/within-the-hollow-crown-a-sad-tale-of-the-death-of-kings-radio-play)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/blog/"http://forums.spry.com/showthread.php?t=98 (from https://people.uleth.ca/~daniel.odonnell/blog/handy-linux-commands)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/blog/"http://forevergeek.com/linux/check_disk_space_in_linux.php (from https://people.uleth.ca/~daniel.odonnell/blog/handy-linux-commands)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/blog/"http://ubuntuforums.org/showpost.php?p=1942898&postcount=8 (from https://people.uleth.ca/~daniel.odonnell/blog/handy-linux-commands)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/URL (from https://people.uleth.ca/~daniel.odonnell/research/if-i-were-you-how-academics-can-stop-worrying-and-learn-to-love-the-encyclopedia-that-anyone-can-edit)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/2023/09/05/english-3450a-what-i-did-did-not-know-about-early-medieval-england (from https://people.uleth.ca/~daniel.odonnell/teaching/english-3450a-old-english-fall-2023)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/%3Ahttp%3A//people.uleth.ca/~daniel.odonnell/Academic-Policies/about-blogs (from https://people.uleth.ca/~daniel.odonnell/teaching/english-3450a-old-english-fall-2023)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/2023/09/05/policy-on-the-use-of-generative-artificial-intelligence-ai-such-as-chatgpt (from https://people.uleth.ca/~daniel.odonnell/teaching/english-3450a-old-english-fall-2023)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/%3Ahttp%3A//people.uleth.ca/~daniel.odonnell/Academic-Policies/about-blogs (from https://people.uleth.ca/~daniel.odonnell/teaching/english-3450a-old-english-fall-2020)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Academic-Policies/late-policySunday (from https://people.uleth.ca/~daniel.odonnell/teaching/english-3401a-medieval-literature-spring-2020)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/daniel.odonnell@uleth.ca?subject=Appointment%2520request%2520for%2520English%25203450a%2520student&cc=caedmon@uleth.ca (from https://people.uleth.ca/~daniel.odonnell/teaching/english-3450a-old-english-fall-2015)
+16:58:55	Warning: 	Link https://people.uleth.ca/~daniel.odonnell/textpattern/index.php?event=article&step=edit&ID=105 not scanned (follow robots meta tag)
+16:58:55	Warning: 	Link https://people.uleth.ca/~daniel.odonnell/textpattern/index.php?event=article&step=edit&ID=160 not scanned (follow robots meta tag)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Contact/office-hours-fall-2009 (from https://people.uleth.ca/~daniel.odonnell/teaching/english-2400a-british-survey-i-fall-2009)
+16:58:55	Warning: 	Link https://people.uleth.ca/~daniel.odonnell/textpattern/index.php?event=article&step=edit&ID=161 not scanned (follow robots meta tag)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Contact/office-hours-spring-2009 (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400b-cyberscholarship-and-culture)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/":http://people.uleth.ca/~daniel.odonnell/Academic-Policies/style-sheet (from https://people.uleth.ca/~daniel.odonnell/teaching/english-1900e-2008-essay-3)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/( (from https://people.uleth.ca/~daniel.odonnell/teaching/english-1900e-2008-class-notes)
+16:58:55	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Contact/office-hours-fall-2008 (from https://people.uleth.ca/~daniel.odonnell/teaching/english-1900e-introduction-to-language-and-literature-fall-2008)
+16:58:57	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Academic-Policies/pre-submission-checklist (from https://people.uleth.ca/~daniel.odonnell/teaching/english-1900e-introduction-to-language-and-literature-fall-2008)
+16:58:57	Warning: 	Link https://people.uleth.ca/~daniel.odonnell/textpattern/index.php?event=article&step=edit&ID=104 not scanned (follow robots meta tag)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/files/_____________ (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-notes-for-discussion)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/files/Nabokov__.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-notes-for-discussion)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/files/Cleland__.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-notes-for-discussion)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/files/Lamb__.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-notes-for-discussion)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/files/__________.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-notes-for-discussion)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Foley1988.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Bakhtin1986.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Adorno1992.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Gordon1959.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/ODonnell2001a.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Fitzpatrick1933.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Blake1980.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Milton1957.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Spenser1978.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/McCall1966.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Root1957_1901.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Stillwell1948.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Swanton1993.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Orchard1995.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Gordon1959b (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Tolkien1936.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/4400Readings/Sisam1953.pdf (from https://people.uleth.ca/~daniel.odonnell/teaching/english-4400a-history-of-the-book-fall-2007)
+17:00:02	Warning: 	Found for people.uleth.ca/~daniel.odonnell/tag/basic+computer+skills/
+17:00:02	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/tag/basic+computer+skills/ and https://people.uleth.ca/~daniel.odonnell/tag/basic+computer+skills/
+17:00:02	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/tag/basic+computer+skills/ to https://people.uleth.ca/~daniel.odonnell/tag/basic+computer+skills/
+17:00:17	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/medLang/courses.htm (from https://people.uleth.ca/~daniel.odonnell/message.htm)
+17:00:17	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/medLang/brochure.htm (from https://people.uleth.ca/~daniel.odonnell/message.htm)
+17:00:17	Warning: 	Found for people.uleth.ca/~daniel.odonnell/teaching/1900DSpring2004/
+17:00:17	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/teaching/1900DSpring2004/ and https://people.uleth.ca/~daniel.odonnell/teaching/1900DSpring2004/
+17:00:17	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/teaching/1900DSpring2004/ to https://people.uleth.ca/~daniel.odonnell/teaching/1900DSpring2004/
+17:00:17	Warning: 	Found for people.uleth.ca/~daniel.odonnell/teaching/1900ESpring2004/
+17:00:17	Warning: 	Redirected link is identical because of 'URL Hack' option: people.uleth.ca/~daniel.odonnell/teaching/1900ESpring2004/ and https://people.uleth.ca/~daniel.odonnell/teaching/1900ESpring2004/
+17:00:17	Warning: 	File has moved from people.uleth.ca/~daniel.odonnell/teaching/1900ESpring2004/ to https://people.uleth.ca/~daniel.odonnell/teaching/1900ESpring2004/
+17:00:30	Warning: 	Link https://people.uleth.ca/~daniel.odonnell/textpattern/ not scanned (follow robots meta tag)
+17:00:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/textpattern/txp_img/txp_slug105x45.gif (from https://people.uleth.ca/~daniel.odonnell/Search/?q=unessay)
+17:00:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Blog/":http://www.mla.org/guidelines_evaluation_digital (from https://people.uleth.ca/~daniel.odonnell/Blog/the-true-north-strong-and-hegemonic-or-why-do-canadians-seem-to-run-dh)
+17:00:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Blog/"http://forums.spry.com/showthread.php?t=98 (from https://people.uleth.ca/~daniel.odonnell/Blog/handy-linux-commands)
+17:00:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Blog/"http://forevergeek.com/linux/check_disk_space_in_linux.php (from https://people.uleth.ca/~daniel.odonnell/Blog/handy-linux-commands)
+17:00:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Blog/"http://ubuntuforums.org/showpost.php?p=1942898&postcount=8 (from https://people.uleth.ca/~daniel.odonnell/Blog/handy-linux-commands)
+17:00:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Teaching/( (from https://people.uleth.ca/~daniel.odonnell/Teaching/english-1900e-2008-class-notes)
+17:00:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/Teaching/":http://people.uleth.ca/~daniel.odonnell/Academic-Policies/style-sheet (from https://people.uleth.ca/~daniel.odonnell/Teaching/english-1900e-2008-essay-3)
+17:00:32	Warning: 	File not parsed, looks like binary: https://people.uleth.ca/~daniel.odonnell/files/Small_Lamb_Of_God_North_Ruthwell_Cross.ply
+17:01:12	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/general/basicGrammar.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/titleFrame.htm)
+17:01:12	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/general/bibMaker.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/titleFrame.htm)
+17:01:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/gradeConverter.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/titleFrame.htm)
+17:01:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/1900Summer2000/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/archiveTeachingMenu.htm)
+17:01:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/2100Spring2000/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/archiveTeachingMenu.htm)
+17:01:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/2900Spring2000/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/archiveTeachingMenu.htm)
+17:01:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/3450Fall2000/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/archiveTeachingMenu.htm)
+17:01:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/3601Fall1999/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/archiveTeachingMenu.htm)
+17:01:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/4400Fall1999/index.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/archiveTeachingMenu.htm)
+17:01:28	Error: 	"Unauthorized" (401) at link https://people.uleth.ca/~daniel.odonnell/offPrints/private/strategy.pdf (from https://people.uleth.ca/~daniel.odonnell/offPrints/offprints.htm)
+17:01:28	Error: 	"Unauthorized" (401) at link https://people.uleth.ca/~daniel.odonnell/offPrints/private/caedmonSASLC.pdf (from https://people.uleth.ca/~daniel.odonnell/offPrints/offprints.htm)
+17:01:28	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/medLang/index.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/brochureMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/research/bibliography.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/researchMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/misc/intllibr.html (from https://people.uleth.ca/~daniel.odonnell/navigation/researchMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/2810Fall2003/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/currentTeachingMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/3401Fall2003/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/currentTeachingMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/3450Fall2003/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/currentTeachingMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/2900Spring2002/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/currentTeachingMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/3700Spring2001/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/currentTeachingMenu.htm)
+17:01:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/4400Spring2002/classFrame.htm (from https://people.uleth.ca/~daniel.odonnell/navigation/currentTeachingMenu.htm)
+17:01:39	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/teaching/officeHours.htm (from https://people.uleth.ca/~daniel.odonnell/policies/policiesText.htm)
+17:01:41	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/start.htm (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/)
+17:02:30	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/)
+17:02:51	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/toc.htm)
+17:04:59	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/system.htm (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/toc.htm)
+17:04:59	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/installation.htm (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/toc.htm)
+17:04:59	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/backmatter/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/backmatter/analyticindex.htm)
+17:04:59	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/frontmatter/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/frontmatter/preface.htm)
+17:06:05	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/introduction/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/introduction/ch1.htm)
+17:06:05	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/original/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/original/index.htm)
+17:06:05	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/eorthan/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/eorthan/index.htm)
+17:06:05	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/b1/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/b1/index.htm)
+17:06:05	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/b1/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/b1/index.htm)
+17:06:07	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/o/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/o/index.htm)
+17:06:07	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/o/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/o/index.htm)
+17:06:09	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/eorthe/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/eorthe/index.htm)
+17:06:09	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/ylda/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/edition/ylda/index.htm)
+17:06:09	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/bd/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/bd/index.htm)
+17:06:11	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/br/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/br/index.htm)
+17:06:15	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/ca/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/ca/index.htm)
+17:06:17	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/carms/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/carms/index.htm)
+17:06:19	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/di/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/di/index.htm)
+17:06:21	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/h/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/h/index.htm)
+17:06:23	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/hr/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/hr/index.htm)
+17:06:25	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/ld/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/ld/index.htm)
+17:06:27	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/ln/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/ln/index.htm)
+17:06:29	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/m/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/m/index.htm)
+17:06:31	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/mg/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/mg/index.htm)
+17:06:33	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/n/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/n/index.htm)
+17:06:37	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/l/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/l/index.htm)
+17:06:39	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/p1/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/p1/index.htm)
+17:06:41	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/sanm/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/sanm/index.htm)
+17:06:43	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/t1/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/t1/index.htm)
+17:06:45	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/to/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/to/index.htm)
+17:06:49	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/tr1/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/tr1/index.htm)
+17:06:53	Error: 	"Not Found" (404) at link https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/w/_httpquery_ (from https://people.uleth.ca/~daniel.odonnell/caedmon/html/htm/transcription/w/index.htm)
+
+HTTrack Website Copier/3.49-4 mirror complete in 29 minutes 21 seconds : 1319 links scanned, 1166 files written (1473752990 bytes overall) [1475946106 bytes received at 838129 bytes/sec], 25921587 bytes transferred using HTTP compression in 768 files, ratio 25%, 10.2 requests per connection
+(143 errors, 34 warnings, 0 messages)

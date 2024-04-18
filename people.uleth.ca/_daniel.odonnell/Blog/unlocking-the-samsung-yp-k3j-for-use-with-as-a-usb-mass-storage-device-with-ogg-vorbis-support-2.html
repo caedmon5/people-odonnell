@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!-- head -->
+	
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/Blog/unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:58:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="9ZHP1FDttD1YeXYP4jrDb8KmwNTGqQgRb92Y1B3M_Ro" />
+		<title>
+			Unlocking the Samsung YP-K3J for use with as a USB Mass Storage Device with OGG Vorbis Support | Daniel Paul O&#039;Donnell
+		</title>
+
+		<!-- txp:feed_link flavor="atom" format="link" label="Atom"/ -->
+		<!-- txp:feed_link flavor="rss" format="link" label="RSS"/ -->
+		<link rel="shortcut icon" href="../transparent.ico" />
+		<style type="text/css" media="screen" title="Default"> @import url(../css/txpscreen.css); </style>
+		<style type="text/css" media="print,mobile" title="Default"> @import url(../css/txpprint.css); </style>
+		<style type="text/css" media="all" title="Default"> @import url(../css/txpcommonstyles.css); </style>
+
+<!-- hypothes.is enabled via the following. See https://hypothes.is/for-publishers/ -->
+
+<!-- the following disables default show highlighting -->
+<!-- <script>window.hypothesisConfig = function () { return {showHighlights: false}; };</script> -->
+<!-- the following loads the annotator -->
+<script defer async src="http://hypothes.is/embed.js"></script>
+
+<!-- end hypothes.is enabling -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-32780614-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<!-- body -->
+	<body>
+		<div class="body">
+
+			<!-- Top bar -->
+			<div class="head">
+				<div>
+					<h1 style="vertical-align:center">
+						<a href="../index.html">
+							<img src="../images/11.png" alt="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." title="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." id="logoimage" width="10%"/></a> <span style="vertical-align:center">Daniel Paul O&#039;Donnell</span>
+					</h1>
+				</div>
+			</div>
+
+		</div>
+<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<p>
+						
+						
+							<a href="../index.html">Daniel Paul O&#039;Donnell</a>&#160;&#187;&#160;<a href="index.html">Blog</a>
+						
+					</p>
+				</div>
+<!-- end breadcrumb -->
+
+		<!-- content -->
+		<div class="content">
+			<p class="hideme">
+				<a class="hideme" id="content"></a>
+				<a href="#navigation" class="hideme">Forward to Navigation</a>
+			</p>
+			<!-- section logic begins -->
+			 <!-- debug #1 -->
+			
+				<!-- we are not on the default section -->
+				<!-- Debug #2 -->
+				
+					<!-- default page form begins -->
+
+
+
+<h2>Unlocking the Samsung YP-K3J for use with as a USB Mass Storage Device with OGG Vorbis Support</h2>
+<div style="background-color:light gray">
+<p><strong><a rel="author" href="../author/Daniel%2bPaul%2bO%27Donnell/index.html">Daniel Paul O&#039;Donnell</a></strong></p>
+<p>Posted: May 04, 2008 16:05;<br/>Last Modified: Apr 06, 2009 11:04<br/>
+Keywords: <seg onload="displayLinks()"></seg></p>
+
+<script>
+        // Place the JavaScript function here
+        function generateLinkTags(keywords) {
+            let linkTags = "'";
+            keywords.forEach(keyword => {
+                let link = `<a href='https://home.uleth.ca/~daniel.odonnell/tags/{encodeURIComponent(keyword)}'>${keyword}</a>`;
+                linkTags += link + "<br>";
+            });
+            return linkTags;
+        }
+
+        // This function will be called once the page is fully loaded
+        function displayLinks() {
+            let keywords = ["JavaScript", "OpenAI", "Web Development"];
+            let htmlLinks = generateLinkTags(keywords);
+            document.body.innerHTML = htmlLinks;
+        }
+    </script>
+
+
+
+
+</div>
+<img src="../images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<!--
+<img src="https://people.uleth.ca/~daniel.odonnell/images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+-->
+<!-- automatic TOC begins after this -->
+<div id="TOC">
+   <!--txp:soo_toc label="Contents" labeltag="h3"/-->
+</div>
+<!-- automatic TOC ends -->
+	<p style="color:black;background-color:yellow;"><strong>Note 1:</strong> Since the middle of September 2008, there have been mixed reports as to the success of this method: some people have reported having trouble, others a flawless experience (see the comments at the end of this page&#8212;and please report your experience so others can get a sense of the likelihood of success). I don&#8217;t know why this is&#8212;it could be that Samsung has changed something on the device in some markets to stop people from reflashing the firmware, for example. Once again: if you try this out, please report your results below so others can gauge how likely they are to have success.</p>
+
+	<p style="color:black;background-color:yellow;"><strong>Note 2:</strong> Although the instructions below indicate that you can only use tcctools with Windows, the author of tcctools indicates that the utility can be compiled with Linux&#8230; meaning you may not even need a windows machine (see comment 21).</p>
+
+	<p style="color:black;background-color:yellow;"><strong>Note 3:</strong> Please remember that as with all such posting on the web, I am simply sharing what worked for me. I gathered this information from other sites and posted it as a mnemonic for myself. Others are free to use it and initially nobody seemed to have anything other than my flawless experience. Recently some people have been reporting trouble. Since Samsung have tried in the past to make the firmware difficult to change, it is always possible that they might try again in the future. <strong>Whenever you try to hack an electronic device you need to be prepared to accept the risk that you might wreck things as well. You should never try to hack something if you are not prepared to accept failure.</strong></p>
+
+	<p><img src="../images/83.jpg" class="right" title="The Samsung YP-K3JAB" alt="The Samsung YP-K3JAB" /> I&#8217;m getting tired of flying on Air Canada and discovering that the on-board sound system is broken. So I went out and bought myself an digital audio (i.e. MP3) player.</p>
+
+	<p>I am a Linux user and as a result have a moderately large number of ripped CDs encoded using the open source <span class="caps">OGG</span> Vorbis standard, rather than the proprietary MP3 format. In looking for an audio player, therefore, I needed one that could play the open source standard alongside MP3s. And be used with a non-Windows operating system.</p>
+
+	<p>After a little research at the <a href="http://wiki.xiph.org/index.php/PortablePlayers">Vorbis site</a> and at the site for my local electronic retailer, I settled on the Samsung YP-K3JAB (4GB). According the retailer specs, this was supposed to play Vorbis format files. And while the specs suggested it might only be compatible with Windows operating systems, it is actually pretty rare to find a peripheral that really <em>only</em> works with Windows. Somebody has always created a workaround.</p>
+
+	<h3>Compatibility Problems</h3>
+
+	<p>When I got the player home, I was disappointed to make a couple of discoveries:</p>
+
+	<ol>
+		<li>Despite what the retailer&#8217;s spec sheet indicates, the Canadian version of the player could only handle MP3 and <span class="caps">WMA</span> (Windows Media) file formats.</li>
+		<li>Support for <span class="caps">MTP</span> in Linux is pretty poor: while Rhythm box can import from <span class="caps">MTP</span> devices, it can&#8217;t write to them, meaning it was next to impossible to get my music onto the device without going through Windows.</li>
+	</ol>
+
+	<h3>Why the K3 doesn&#8217;t work as advertised</h3>
+
+	<p>After some further research, I discovered both the problem and the solution. It turns out that Samsung ships two or three versions of the firmware that accompanies the K3</p>
+
+	<ol>
+		<li>a 1.xxx/3.xxx series firmware that plays only MP3/<span class="caps">WMA</span> formats and uses the <span class="caps">MTP</span> protocol that restricts the device for use with Windows</li>
+		<li>a 4xxx series firmware that plays Vorbis as well a MP3/<span class="caps">WMA</span> and allows the device to function as a standard <span class="caps">UMS</span> (Flash Memory) device and work with all operating systems.</li>
+	</ol>
+
+	<p>The 1.xxx/.3xxx series firmware is shipped with the K3 everywhere except Korea, where the 4.xxx series is used.</p>
+
+	<p>As an added complication, the most recent version of the 3.xxx series firmware (3.09) is designed to stop users from switching to the 4.xxx firmware. And my version of the K3 had the 3.09 firmware.</p>
+
+	<h3>The solution</h3>
+
+	<p style="color:black;background-color:yellow;">Please see the warnings above and the comments at the bottom. As with any hack, there is a chance that you will not succeed and that your machine will become useless. <strong>Do not attempt this if you are not prepared to accept failure!</strong></p>
+
+	<p>I found a solution to the problem at <a href="http://www.anythingbutipod.com/">anythingbutipod.com</a>. The relevant thread is <a href="http://www.anythingbutipod.com/forum/showthread.php?t=26947">http://www.anythingbutipod.com/forum/showthread.php?t=26947</a> (see also <a href="http://www.anythingbutipod.com/forum/showthread.php?t=14516">http://www.anythingbutipod.com/forum/showthread.php?t=14516</a> for earlier discussion).</p>
+
+	<p><img src="../images/84.png" class="left" title="Screenshot showing the YP-K3JAB as mountable USB Disk with OGG files" alt="Screenshot showing the YP-K3JAB as mountable USB Disk with OGG files" /> The instructions were very clear and the patching worked exactly as claimed. The only problem was that I couldn&#8217;t find a copy of the 4.10 firmware and couldn&#8217;t find a manual copy of the 4.0 firmware. Since this required some modification of the instructions, I thought I&#8217;d post the version that worked for me here:</p>
+
+	<h4>Materials</h4>
+
+	<p>To patch your K3 from the 3.xx series to the 4.xx series, you will need the following material. Because the recovery driver tcctool is a windows executable, you will also need to use a windows box initially (see <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support-2.html#c000629">comment 21</a> below for information on how to get a linux version of tcctool).</p>
+
+	<ol>
+		<li><a href="http://download.rockbox.org/utils/tcctool/tcctool-win32.zip">tcctool-win32.zip</a> from <a href="http://www.rockbox.org/">Rockbox</a></li>
+		<li>Copies of the 4.xxx series firmware (at least version 4.03). Links to these seem to come and go. Here&#8217;s what I used:
+	<ol>
+		<li><a href="http://www.yepp.co.kr/support/support_file_down_sms.jsp?pds_num=1665&amp;seq_num=1">4.03 Firmware</a></li>
+		<li><a href="http://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=HQ&amp;CttFileID=1487170&amp;CDCttType=FM&amp;ModelType=N&amp;ModelName=YP-K3AB&amp;VPath=FM/200705/20070522141327468_MSC_WA.zip">4.06 Firmware Windows Executable</a></li>
+	</ol></li>
+	</ol>
+
+	<p>(<strong>Note</strong>: If you know somebody who has a South Korean Identity number, you can access the latest firmware directly from <a href="http://www.yepp.co.kr/">http://www.yepp.co.kr/</a>. The ID number is necessary for signing in).</p>
+
+	<h4>Instructions</h4>
+
+	<p style="color:black;background-color:yellow;">Please see the warnings above and the comments at the bottom. As with any hack, there is a chance that you will not succeed and that your machine will become useless. <strong>Do not attempt this if you are not prepared to accept failure!</strong></p>
+
+	<ol>
+		<li>On a windows computer, extract <code>tcctool-win32.zip</code> to a new folder on your Desktop</li>
+		<li>On a windows computer, add the new tcctools directory to your path, or, copy the file <code>tcctool.exe</code> from the new directory to <code>c:\windows\system32\</code>.</li>
+		<li>On a windows computer, extract the 4.03 firmware to a directory on your desktop</li>
+		<li>On a windows computer, copy the files <code>YPK3.rom</code> and <code>YPK3.IMG</code> to your root directory (<code>c:\</code>)</li>
+		<li>On a windows computer, plug the K3 into the computer via the <span class="caps">USB</span> cable</li>
+		<li>Set your K3 to Recovery Mode
+	<ol>
+		<li>Slide the power button down (in the direction opposite the arrow) as if you were turning the K3 on.</li>
+		<li>While holding the power button in the on position, use a paperclip or tooth pick to press the reset button on the back of the K3.</li>
+		<li>You will hear (and see) Windows recognise the K3 as a new hardware device.</li>
+	</ol></li>
+		<li>On a windows computer, in the New Hardware window choose manual installation of drivers (depending on your system this may involve several steps).</li>
+		<li>On a windows computer, when you are allowed to browse for drivers, browse to the tcctool folder you just extracted to your desktop. When an .inf file is selected, click next. This installs the tcctool drivers on your k3.</li>
+		<li>Boot the K3 in recovery mode using the new firmware by running the following command from the command line (Start>Run): <code>tcctool -d ypk3 c:\YPK3.rom</code></li>
+		<li>You will see the Samsung Logo and the K3 will indicate that it is installing the necessary firmware and disk image. <span style="background-color:yellow"><strong>Since February 2009, many people have been reporting that the device hangs irrecoverably at this point. See the comments below and be warned!</strong></span>.</li>
+		<li>On a windows computer, using Windows Explorer, locate and open the K3&#8217;s disc. Format the disk as FAT32 if you are asked and accept all defaults.</li>
+		<li>On a windows computer, once your K3 is formatted, use Windows Explorer to copy the 4.03 firmware you stored in <code>c:\</code> to the root (i.e. top level) folder of your K3.</li>
+		<li>Set your K3 into recovery mode again by holding the on-switch and pressing reset.</li>
+		<li>On a windows computer, boot the device again using from Start/run using the command <code>tcctool -d ypk3 c:\YPK3.rom</code>. </li>
+		<li><strong>Important</strong>: On the screen of your K3 you will see a ball and then the Samsung Logo. <em><strong>Pull out the <span class="caps">USB</span> cable from your K3 as soon as the Samsung Logo appears</strong></em>.</li>
+		<li>If you were able to do this, the K3 will permanently install the new firmware. If you are too late pulling the <span class="caps">USB</span> cable, you&#8217;ll need to start all over again.</li>
+		<li>Once the K3 has installed the new firmware, it will turn off. You can now update the firmware to later versions of the 4.xx series using the windows executables supplied by Samsung.</li>
+		<li>Your K3 is now a <span class="caps">USB</span> Mass Storage Device that can be connected to computers running any operating system just like any other flash drive: you can add new music files to it by dragging and dropping them on the K3&#8217;s music folder; and you can now play your <span class="caps">VORBIS</span> files. As added bonuses, you have a better EQ utility on your K3 and an additional text file viewer.</li>
+	</ol>
+<!-- <img src="https://people.uleth.ca/~daniel.odonnell/images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<p>Posted: Sunday May  4, 2008. 16:27.</p> 
+<p>Last modified: Monday April 6, 2009. 11:50.</p> -->
+<div class="comments">
+<img src="../images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+<!-- txp:comments_invite wraptag="p" / -->
+<!-- txp:comments_form / -->
+&#x00A0;
+</div>
+<!-- default page form ends --><h3 id="comment">Comment [87]</h3>
+
+<ol class="comments"><li><seg class="small"><strong>Bruce (Sat May 24, 2008 (21:13:04)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000362" id="c000362">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks,<br />
+I corrupted my yp-k3 whislt trying to flash it previously. I couldn&#8217;t get windows to recognise it until I used the tcctool drivers. Then I followed your instructions and it&#8217;s working.</p>
+
+	<p>Thanks again.</p>
+
+
+</li>
+<li><seg class="small"><strong>Jonah (Sun Jul  6, 2008 (23:38:44)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000448" id="c000448">[PermLink]</a>:</strong></seg>
+
+	<p>thanks!<br />
+it worked perfectly for me too.<br />
+i think ill try it again with a new colour =D</p>
+
+
+</li>
+<li><seg class="small"><strong> (Tue Jul 22, 2008 (16:29:57)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000499" id="c000499">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks!<br />
+somehow the player wasnt recognised with the original firmware. (didn`t boot / charge etc)<br />
+thanks to your guide the player works.</p>
+
+
+</li>
+<li><seg class="small"><strong>Eli (Fri Jul 25, 2008 (14:22:22)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000513" id="c000513">[PermLink]</a>:</strong></seg>
+
+	<p>Thank you soo much! I&#8217;ve trying to update my firmware ever since I&#8217;ve got my yP-K3 and I finally did!!! Thank you very much.</p>
+
+
+</li>
+<li><seg class="small"><strong>Framer (Wed Aug  6, 2008 (04:19:21)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000560" id="c000560">[PermLink]</a>:</strong></seg>
+
+	<p>Hallo Daniel Paul.<br />
+I have some questions for you.<br />
+1. After upgrade to firmware 4.03 do you have work FM radio ?<br />
+I flash my yp-k3jab/xee from 3.05 to 4.10 and FM Radio was lost :(<br />
+2. What type of 4.03 firm ware do you use ?</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Thu Aug  7, 2008 (14:52:48)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000565" id="c000565">[PermLink]</a>:</strong></seg>
+
+	<p>1. Yes, I have FM Radio. As far as I can tell nothing is broken on my machine (I&#8217;ve not tried the picture gallery, though it claims it is there), and I acquired a new utility, &#8220;Text.&#8221; But remember, I went from 4.03 right through to 4.06.</p>
+
+	<p>2. I used the 4.03 firmware at the <span class="caps">URL</span> listed above. http://www.yepp.co.kr/support/support_file_down_sms.jsp?pds_num=1665&#38;seq_num=1</p>
+
+
+</li>
+<li><seg class="small"><strong>happy (Tue Aug 19, 2008 (07:40:12)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000593" id="c000593">[PermLink]</a>:</strong></seg>
+
+	<p>You&#8217;re a champ! I made the same assumption as you when I bought the device &#8211; there&#8217;d be a way around the  <span class="caps">MTP</span> issue&#8230; and whaddya know &#8211; you&#8217;re it! :) Cheers mate.</p>
+
+
+</li>
+<li><seg class="small"><strong>MJ (Tue Sep  2, 2008 (05:10:56)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000606" id="c000606">[PermLink]</a>:</strong></seg>
+
+	<p>Ya man! thanks a lot. <br />
+at long last i can use my mp3 player with my linux OS&#8230;.</p>
+
+	<p>have a nice day.</p>
+
+
+</li>
+<li><seg class="small"><strong>Paul (Mon Sep 15, 2008 (10:16:56)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000612" id="c000612">[PermLink]</a>:</strong></seg>
+
+	<p>Hi, I followed all the steps but, tho is working, the screen turns to white and can only move through the menus by my imagination. Windows is now not allowing me to start the procedure again, does not recognize the device as <span class="caps">USB</span> and do not allow new formating. What can I do? I normally use Linux (Ubuntu), but the device is not visible in Linux</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Sep 15, 2008 (10:38:30)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000613" id="c000613">[PermLink]</a>:</strong></seg>
+
+	<p>I don&#8217;t know the answer to this. When I did my research on the issue, the only problems people reported were missing pulling the plug out as it rebooted. And the answer to that was to repeat the steps. All examples of even quite bricked devices seemed to restore from repeating.</p>
+
+	<p>The fact that windows is not seeing it as <span class="caps">USB</span> and that it isn&#8217;t working in linux means that it has not been turned into a mass storage device, <span class="caps">AFAIK</span>. Is it being recognised as an MP3 player? Also what firmware did you start with and do you now have?</p>
+
+
+</li>
+<li><seg class="small"><strong>Nogg (Mon Sep 15, 2008 (15:30:35)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000614" id="c000614">[PermLink]</a>:</strong></seg>
+
+	<p>well done and thanks a lot!<br />
+had to reboot a few times but now works a treat under linux</p>
+
+	<p>so happy now, and many thanks again</p>
+
+
+</li>
+<li><seg class="small"><strong>Paul (Tue Sep 16, 2008 (16:01:50)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000615" id="c000615">[PermLink]</a>:</strong></seg>
+
+	<p>Dan,<br />
+Many thanks for your help. Yes, it works as an MP3 and can use the radio as well. For sure I have done something wrong, but I followed the steps and cannot figure out what was wrong. Bad luck I seem to be the only one messing up the device</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Wed Sep 17, 2008 (17:40:08)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000616" id="c000616">[PermLink]</a>:</strong></seg>
+
+	<p>I looked around again. People who had players that weren&#8217;t recognised by windows &#8216;as is&#8217; (either before or after) seem to have been able to get things going again using the TCTools utilities. Have you tried starting at step 0 again and using it?</p>
+
+	<p>Otherwise, and I wish I could help more, I don&#8217;t know the answer.</p>
+
+
+</li>
+<li><seg class="small"><strong>Paul (Sat Sep 20, 2008 (15:19:32)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000617" id="c000617">[PermLink]</a>:</strong></seg>
+
+	<p>I think the first problem comes from the driver that is not allowing windows to format and start again. How can I get rid of this without reinstalling windows?</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Sat Sep 20, 2008 (16:37:22)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000618" id="c000618">[PermLink]</a>:</strong></seg>
+
+	<p>Don&#8217;t know. If you mean the Samsung driver, then I think it is TCCTools you need to start with again. But if the issue is with TCCTools, then I don&#8217;t know at all, since I just downloaded and used it.</p>
+
+
+</li>
+<li><seg class="small"><strong>Paul (Sun Sep 21, 2008 (07:00:32)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000620" id="c000620">[PermLink]</a>:</strong></seg>
+
+	<p>Many thanks for your help. If I finally solve will post the tips.</p>
+
+
+</li>
+<li><seg class="small"><strong>Francois (Thu Oct  2, 2008 (21:34:57)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000625" id="c000625">[PermLink]</a>:</strong></seg>
+
+	<p>To Paul: exact same problem here, white screen after doing all the steps. If/when you have figured it out, I&#8217;ll be very interested in your solution. I&#8217;ll post if I find one too. Cheers.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Oct  3, 2008 (10:16:24)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000626" id="c000626">[PermLink]</a>:</strong></seg>
+
+	<p>Could there be a new firmware version? What version did you have, Paul and Francois? Are they new devices? Could there be a geographical difference?</p>
+
+
+</li>
+<li><seg class="small"><strong>Paul (Fri Oct  3, 2008 (15:12:32)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000627" id="c000627">[PermLink]</a>:</strong></seg>
+
+	<p>Hi Dan. I have been lucky: bored of been unable to solve the problem, I went to the dealer and after trying to update the software without success he decided to replace my K3 without asking! Firmware is 3.09 WA JN. Well, if someone discloses what is going on and how to solve it, I may try again.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Oct  3, 2008 (15:19:18)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000628" id="c000628">[PermLink]</a>:</strong></seg>
+
+	<p>Really too bad that you and François had this problem: when it is changed over to the OGG-compatible firmware, it is a wonderful machine.</p>
+
+
+</li>
+<li><seg class="small"><strong>linuxstb (Sat Oct  4, 2008 (17:06:07)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000629" id="c000629">[PermLink]</a>:</strong></seg>
+
+	<p>Hi.  I&#8217;m the author of tcctool and glad you&#8217;ve found an unintended use for it &#8211; it was written to help port the Rockbox open source firmware to devices using the same <span class="caps">CPU</span> as your Samsung.</p>
+
+	<p>tcctool works fine in Linux (and anywhere else libusb runs, including OS X), you just need to download and compile the source yourself &#8211; available via the Rockbox svn repository (in utils/tcctool/).</p>
+
+	<p>See http://www.rockbox.org for more info about Rockbox.</p>
+
+	<p>To checkout and compile the tcctool source, do:</p>
+
+	<p>svn co svn://svn.rockbox.org/rockbox/trunk/utils/tcctool tcctool<br />
+cd tcctool<br />
+make</p>
+
+	<p>You need libusb (and headers &#8211; i.e. the libusb-dev package) installed.</p>
+
+
+</li>
+<li><seg class="small"><strong>Francois (Sun Oct  5, 2008 (01:07:15)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000630" id="c000630">[PermLink]</a>:</strong></seg>
+
+	<p>My firmware was 3.05, and I bought the machine in Australia. I&#8217;ll go back to the dealer too and hope for the best. In any case, many thanks for your initiative Dan, I&#8217;m sure I&#8217;ll find a way to make it work somehow. Cheers.</p>
+
+
+</li>
+<li><seg class="small"><strong>Me (Sun Oct  5, 2008 (16:09:54)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000633" id="c000633">[PermLink]</a>:</strong></seg>
+
+	<p>This didn’t work, and Saboo’s formula was poorly explained. His only solution was to re-read the instructions. Someone please offer a third alternative, because I’ve tried these about 5 times and got nothing but bullshit. Thanks.</p>
+<p><strong>Note:</strong> I edited a vulgarism in this posting because it seemed to be attracting the comment-spammers to the page.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Sun Oct  5, 2008 (16:13:51)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000634" id="c000634">[PermLink]</a>:</strong></seg>
+
+	<p>I&#8217;m thankful Saboo posted at all (my instructions are just a precis of his). And I&#8217;m afraid that&#8217;s the way things go if you start hacking hardware: there&#8217;s no guarantees and people are simply sharing what worked for them. Sound like your real beef is with Samsung&#8230; the guys who disabled features on the device.</p>
+
+	<p>I&#8217;m beginning to think that Samsung has changed something in the last month to month and a half.</p>
+
+
+</li>
+<li><seg class="small"><strong>mrme (Sun Oct  5, 2008 (17:32:55)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000635" id="c000635">[PermLink]</a>:</strong></seg>
+
+	<p>I followed the instructions and it worked fine for me on yesterday October 5th, 2008. I upgraded from 3.09 successfully, Thanks.</p>
+
+
+</li>
+<li><seg class="small"><strong>Ian (Wed Oct 29, 2008 (01:58:13)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000709" id="c000709">[PermLink]</a>:</strong></seg>
+
+	<p>Great advice &#8211; worked first time on a YP-K3JQB (UK).<br />
+Thanks</p>
+
+
+</li>
+<li><seg class="small"><strong>flo (Wed Oct 29, 2008 (04:31:55)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000710" id="c000710">[PermLink]</a>:</strong></seg>
+
+	<p>i&#8217;ve tried the method,but after that the player shows me on the screen when i turn off <span class="caps">CHARGING</span>,what should i do?</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Wed Oct 29, 2008 (10:54:09)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000711" id="c000711">[PermLink]</a>:</strong></seg>
+
+	<p>I don&#8217;t quite understand (do you mean the &#8220;on screen&#8221;)? But I also confess I don&#8217;t know. The extent of my knowledge of this goes no farther than the contents of the page and comments.</p>
+
+
+</li>
+<li><seg class="small"><strong>catalin (Wed Oct 29, 2008 (14:12:16)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000712" id="c000712">[PermLink]</a>:</strong></seg>
+
+	<p>when I use in start&#62;run the command tcctool -d ypk3 c:\YPK3.rom it opens a folder and that&#8217;s all. it doesn&#8217;t boot my ypk3.</p>
+
+
+</li>
+<li><seg class="small"><strong>flo (Thu Oct 30, 2008 (03:20:14)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000713" id="c000713">[PermLink]</a>:</strong></seg>
+
+	<p>i mean after i turn off the player,it appears on the screen &#8220;charging&#8221; and it;s stay that way.I turn on the player it&#8217;s ok,i turn off the same &#8220;charging&#8221;.</p>
+
+
+</li>
+<li><seg class="small"><strong>oliver (Sun Dec 14, 2008 (06:43:02)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000787" id="c000787">[PermLink]</a>:</strong></seg>
+
+	<p>I&#8217;ve found an easy way just put it in recovery mode and then do steps 7&#38;8 ,drag and drop the firmware in the unplug it and plug it back in format it then drag and drop the firmware in there u have it the easy way 2 do it</p>
+
+
+</li>
+<li><seg class="small"><strong>pap (Tue Dec 16, 2008 (02:42:01)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000791" id="c000791">[PermLink]</a>:</strong></seg>
+
+	<p>Worked like a charm. Thank you!</p>
+
+
+</li>
+<li><seg class="small"><strong>Joch (Sat Dec 27, 2008 (22:56:16)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000799" id="c000799">[PermLink]</a>:</strong></seg>
+
+	<p>Well thanks work very well for me</p>
+
+
+</li>
+<li><seg class="small"><strong>cindy (Sun Dec 28, 2008 (11:10:08)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000800" id="c000800">[PermLink]</a>:</strong></seg>
+
+	<p>Can you help me?  The Samsung won&#8217;t hold a charge.  It says charging, but then I unplug and not charged.  Help!!!!!  Thank you</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Sun Dec 28, 2008 (22:34:32)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000801" id="c000801">[PermLink]</a>:</strong></seg>
+
+	<p>Sorry. Don&#8217;t know anything about that.</p>
+
+
+</li>
+<li><seg class="small"><strong>Callum (Tue Dec 30, 2009 (03:05:55)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000802" id="c000802">[PermLink]</a>:</strong></seg>
+
+	<p>Nice tut. I tried it and after I pulled out the usb in the final stage (before the logo comes on) it says &#8220;not enough DB. please delete more than 18 mb&#8221; or something like that o_O. i dont understand. where is the problem, there 3.5gb of free space on it. o and another thing, when I try to start over again (step 7), my windows box either doesnt recognize the device or installs driver anyway on in making it impossible for me to chose the directory to install the driver. I tried uninstalling and installing but it said &#8220;cant find drivers that are latest then the ones that are already install&#8221; or something along the lines. Anyway sorry for the babbling, nice tut. I hope it had worked for me, but i still wont give up I&#8217;ll try again until i succeed</p>
+
+
+</li>
+<li><seg class="small"><strong>JB (Fri Jan 16, 2009 (14:16:03)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000806" id="c000806">[PermLink]</a>:</strong></seg>
+
+	<p>I just tried it on my year old YP-K3 with v. 3.09 originally installed. v4.06 now works perfectly fine! I&#8217;m Canadian as well :)</p>
+
+
+</li>
+<li><seg class="small"><strong>Fabio (Tue Feb 10, 2009 (21:26:30)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000821" id="c000821">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks a lot!!  Works great for me. But the mp3player doesn&#8217;t have the music library feature anymore :( That sucks :(</p>
+
+
+</li>
+<li><seg class="small"><strong>Kisama (Mon Feb 23, 2009 (17:59:42)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000824" id="c000824">[PermLink]</a>:</strong></seg>
+
+	<p>Anyone figured out the steps involved for a non-windows system (ie Fedora)?</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Feb 23, 2009 (20:59:05)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000825" id="c000825">[PermLink]</a>:</strong></seg>
+
+	<p>See note #2 and Comment 21. I&#8217;ve not tried implementing it, but the TCTools is supposed to be platform independent.</p>
+
+
+</li>
+<li><seg class="small"><strong>Haruki (Sat Feb 28, 2009 (17:51:30)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000837" id="c000837">[PermLink]</a>:</strong></seg>
+
+	<p>I can&#8217;t seem to pull the plug out at the right time&#8230; This is the only problem I&#8217;m having with your method. I pull the plug out, and it&#8217;s stuck to where the Samsung logo and the blue ball become one (i can&#8217;t explain it any other way) Please help?</p>
+
+
+</li>
+<li><seg class="small"><strong>petter (Sun Mar  1, 2009 (04:58:50)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000839" id="c000839">[PermLink]</a>:</strong></seg>
+
+	<p>Thanks for your great job first. But: your recipe worked fine until step 10. I can see the logo but instead of instlling anything the system hangs. It´s an K3JQB (2GB) bought in Germany. Does memory size matter? Any idea? :o(</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Tue Mar  3, 2009 (10:54:14)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000844" id="c000844">[PermLink]</a>:</strong></seg>
+
+	<p>Sorry Haruki and Petter. I don&#8217;t know the answer to either of your questions :-(</p>
+
+
+</li>
+<li><seg class="small"><strong>gabi (Tue Mar 10, 2009 (14:20:45)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000849" id="c000849">[PermLink]</a>:</strong></seg>
+
+	<p>I try this metod&#8230;and now my mp3 doesen`t start ..I didn`t pull the cable &#8230;and this metod doese`nt work for 2 times..pls I <span class="caps">NEED</span> HELP</p>
+
+
+</li>
+<li><seg class="small"><strong>joe (Thu Mar 12, 2009 (10:48:37)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000851" id="c000851">[PermLink]</a>:</strong></seg>
+
+	<p>hey my yp-k3 player keeps saying that i have &#8220;no files&#8221; whenever i wanna access pictures music or text. but when i go on the comp there is clearly songs and pictures and stuff stored inside. any way to fix this? </p>
+
+	<p>thnks.</p>
+
+
+</li>
+<li><seg class="small"><strong>alex (Mon Apr  6, 2009 (01:40:35)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000877" id="c000877">[PermLink]</a>:</strong></seg>
+
+	<p>...so i did this and the player froze on &#8220;transferring files&#8221; in step 10. After 5 hours i finally unplugged it. Now when i try to repeat the steps, windows wont recognize the fact the new hardware or anything.. and my mp3 player starts with a white screen. Please help! (R3ssurection@gmail.com or xxsolitudexx143[yahoo])</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Apr  6, 2009 (11:46:47)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000878" id="c000878">[PermLink]</a>:</strong></seg>
+
+	<p>Hey Alex, sorry to hear about it. People seem to be having really mixed results for the last six months to a year, which is when I started adding the warnings. I don&#8217;t what the issue is: with me, I did mess it up once, but I was able to redo it all without any problems. Some people report that they can, other report that things brick. I&#8217;ve no idea if it is different interpretations of the instructions here or different firmware floating around.</p>
+
+	<p>Let us know here if you find an answer.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Apr  6, 2009 (11:55:05)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000879" id="c000879">[PermLink]</a>:</strong></seg>
+
+	<p>Actually, Alex, as I was adding additional wrnings I just thought of something: did you try going on to step 11? It has been a long time since I reflashed by own device, but I don&#8217;t say that you are to wait for something to end at step 10, only that it starts moving the stuff over. Maybe if you go on to step 11 and open the device up in your windows machine, you can continue?</p>
+
+	<p>Just a guess. Since many people are hanging here and yet others are making it through, I wonder if the distinction is that some just move on to step 11 and others get stuck waiting for step 10 to stop. <strong>This is not a claim or a guarantee that going on will solve things</strong>. Everybody using these instructions is doing so at their own risk.</p>
+
+
+</li>
+<li><seg class="small"><strong>TN (Wed Apr 15, 2009 (02:14:15)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000881" id="c000881">[PermLink]</a>:</strong></seg>
+
+	<p>..Awsome!...<br />
+I bricked my yp-k3 and was about to give up!. But luckily I found this! ..Oddly instead of using firmware 4.03 (as in your guide) I used 4.10 that&#8217;s right <span class="caps">FOUR</span> <span class="caps">POINT</span> <span class="caps">ONE</span> <span class="caps">ZERO</span> (4.10) and it fully installed it (4.10) without having to do a second firmware upgrade!. worked Like a charm. I wonder if people that are having a hard time upgrading, have newerly built YPK3&#8217;s , mine&#8217;s made in 2007/07 (check the back lower sticker), and firmware 3.xx (xx can&#8217;t remember now) maybe the 2008-2009&#8217;s have protection&#8230;?..If this doesn&#8217;t work for them.?</p>
+
+	<p>All-and-all Thank you for sharing this with us, your damn SMART! :)...You Canadians are smart, that must make me smart too.    ;)</p>
+
+
+</li>
+<li><seg class="small"><strong>TN (Wed Apr 15, 2009 (02:29:23)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000882" id="c000882">[PermLink]</a>:</strong></seg>
+
+	<p>Forgot to ask if I should remove Tcctool form system 32 after installation or is it ok to be left in there? (won&#8217;t interfere with anything right?)</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Wed Apr 15, 2009 (12:24:55)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000883" id="c000883">[PermLink]</a>:</strong></seg>
+
+	<p>I&#8217;m glad it worked TN. That&#8217;s a good point about checking the date of the machine.</p>
+
+	<p>I can&#8217;t imagine TCTools does anything to the windows machine.</p>
+
+
+</li>
+<li><seg class="small"><strong>TN (Thu Apr 16, 2009 (03:46:00)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c000884" id="c000884">[PermLink]</a>:</strong></seg>
+
+	<p>I&#8217;ve just recently add photos to my K3 and the pictures look off color (alittle more bluish)..is that normal?, anyone else have that problem?..it&#8217;s not the firmware is it?<br />
+I even used the Samsung Media Studio 5 to transfer them to my K3 and still they looked off color. I cleaned off my screen and still&#8230;</p>
+
+	<p>Any answers?</p>
+
+
+</li>
+<li><seg class="small"><strong>Russ Herald (Sat May 30, 2009 (13:13:35)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001011" id="c001011">[PermLink]</a>:</strong></seg>
+
+	<p>Just used your advice to upgrade my daughter&#8217;s K3, which has become totally unusable. Many thanks!<br />
+By the way, I was also able to upgrade straight to 4.10.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Tue Jun  2, 2009 (08:35:41)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001028" id="c001028">[PermLink]</a>:</strong></seg>
+
+	<p>Hi Russ, I hope you mean that you managed to rescue a wrecked K3 rather than wreck your daughter&#8217;s working one&#8212;I wouldn&#8217;t want to be responsible for what happened to a father who destroyed his duaghters MP3 player!</p>
+
+
+</li>
+<li><seg class="small"><strong>Roger (Thu Jun  4, 2009 (01:01:17)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001030" id="c001030">[PermLink]</a>:</strong></seg>
+
+	<p>Hey I&#8217;m stuck please help!</p>
+
+	<p>I don&#8217;t know where to get the YPK3.rom and image! Tried samsung sites and stuff but those are korean and I can&#8217;t surf through it.</p>
+
+	<p>Pleaes give direct links to these files (upload if you can). Rapidshare would be good.</p>
+
+	<p>But so far soo good i just need those files.</p>
+
+	<p>Thanks!</p>
+
+
+</li>
+<li><seg class="small"><strong>Pal (Tue Jun  9, 2009 (03:26:24)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001040" id="c001040">[PermLink]</a>:</strong></seg>
+
+	<p>I used this technique to upgrade my 2007 built YP k3. worked like a charm. Thanks.</p>
+
+	<p>I think new version of the hardware are ones who face trouble. Or simply not following instructions.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Jun 12, 2009 (09:08:44)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001048" id="c001048">[PermLink]</a>:</strong></seg>
+
+	<p>Hi Roger, I wouldn&#8217;t have copies of the files: I used an old windows computer that has since been reformatted and single boots linux. I remember that they were hard to find, but I got them by googling around I think.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Jun 12, 2009 (09:11:46)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001049" id="c001049">[PermLink]</a>:</strong></seg>
+
+	<p>Hi Pal,</p>
+
+	<p>I don&#8217;t want to say that people aren&#8217;t following the instructions correctly, though they are very finicky, and, given the mixed results, that may explain things.</p>
+
+	<p>But it is also quite possible that Samsung is not sending identical firmware/hardware versions to all the markets.</p>
+
+	<p>Either way, it is clear that it doesn&#8217;t always work&#8212;either because the instructions are such that not everybody can follow them or because the machines are different sometimes.</p>
+
+	<p>There&#8217;s been less trouble since I added the big yellow and red warnings!</p>
+
+
+</li>
+<li><seg class="small"><strong>Pal (Sun Jun 14, 2009 (10:14:32)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001052" id="c001052">[PermLink]</a>:</strong></seg>
+
+	<p>Roger,</p>
+
+	<p>Try anythingbutipod forums dan gave credits to. They have a sticky thread with all firmwares. I am not sure if I am allowed to post links. So just look it up</p>
+
+
+</li>
+<li><seg class="small"><strong>Paul (Mon Jul 13, 2009 (06:54:14)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001085" id="c001085">[PermLink]</a>:</strong></seg>
+
+	<p>Огромное человеческое спасибо. <br />
+Thanks a lot!! It&#8217;s works.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Wed Jul 15, 2009 (00:59:11)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001088" id="c001088">[PermLink]</a>:</strong></seg>
+
+	<p>Good thing Огромное человеческое спасибо doesn&#8217;t mean something obscene!</p>
+
+
+</li>
+<li><seg class="small"><strong>levy (Thu Jul 23, 2009 (14:40:39)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001096" id="c001096">[PermLink]</a>:</strong></seg>
+
+	<p>I can&#8217;t even get the thing into recovery mode. Hold the power switch and press reset. Simple. Except I&#8217;ve done it literally 100 times now. It just keeps resetting in <span class="caps">MTP</span> mode. I must be retarded.</p>
+
+
+</li>
+<li><seg class="small"><strong>Samsung unlocking (Mon Jul 27, 2009 (03:02:59)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001097" id="c001097">[PermLink]</a>:</strong></seg>
+
+	<p>Hi,<br />
+Well every function is clear in Samsung mobile phone that every can be perform its task well and can be safe from misuse.</p>
+
+
+</li>
+<li><seg class="small"><strong>mx (Wed Aug 26, 2009 (17:47:40)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001102" id="c001102">[PermLink]</a>:</strong></seg>
+
+	<p><span class="caps">THANK</span>. <span class="caps">YOU</span>. SO <span class="caps">MUCH</span>. you rock.</p>
+
+
+</li>
+<li><seg class="small"><strong>Kam (Fri Aug 28, 2009 (03:57:39)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001106" id="c001106">[PermLink]</a>:</strong></seg>
+
+	<p>I can&#8217;t thank you enough! When i used a different guide it kept showing up with a white screen. But when i saw this it was like an angel had given me a chance! This was done 28th August 2009!</p>
+
+
+</li>
+<li><seg class="small"><strong>Julio  (Sun Sep 20, 2009 (15:53:09)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001113" id="c001113">[PermLink]</a>:</strong></seg>
+
+	<p>thanks!<br />
+it worked perfectly for me too this technique to upgrade my 2007 built YP k3. From Spain THANK</p>
+
+
+</li>
+<li><seg class="small"><strong>Gabor (Mon Nov 16, 2009 (11:01:42)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001136" id="c001136">[PermLink]</a>:</strong></seg>
+
+	<p>Hello!</p>
+
+	<p>Please somebody upload the 4.03 firmware somewhere, becouse i can&#8217;t download it! I think that site don&#8217;t like my ip region! Please help! Thanx</p>
+
+
+</li>
+<li><seg class="small"><strong>Gabor (Tue Nov 17, 2009 (05:38:58)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001138" id="c001138">[PermLink]</a>:</strong></seg>
+
+	<p>it works! thank you for the tutorial!</p>
+
+
+</li>
+<li><seg class="small"><strong>Frank (Sat Dec  5, 2009 (06:19:02)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001154" id="c001154">[PermLink]</a>:</strong></seg>
+
+	<p>I have a k3 that I bought in the UK, model no. <span class="caps">JQB</span>. I mistakenly upgraded the firmware to version 4.1 for the QB and this doesn&#8217;t find the play lists I save. I tried this method to get back to version 3.09 of the firmware but I get an error message that image file is the wrong size.</p>
+
+
+</li>
+<li><seg class="small"><strong>Clayton (Mon Dec 14, 2009 (13:54:11)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001162" id="c001162">[PermLink]</a>:</strong></seg>
+
+	<p>Worked a charm thanks a bunch. I had a white screen and now it is fixed I am jumping for joy (literally)</p>
+
+
+</li>
+<li><seg class="small"><strong>Clayton (Mon Dec 14, 2009 (13:56:09)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001163" id="c001163">[PermLink]</a>:</strong></seg>
+
+	<p>Here is a link to the 4.10 firmware </p>
+
+	<p>http://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=sg&CttFileID=1476388&CDCttType=FM&ModelType=N&ModelName=YP-K3QB&VPath=FM/200712/20071210144103718_YP_K3_4_10_MSC_WA.zip</p>
+
+	<p>Hope it works for u guys</p>
+
+
+</li>
+<li><seg class="small"><strong> (Thu Jan 14, 2010 (18:45:47)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001179" id="c001179">[PermLink]</a>:</strong></seg>
+
+	<p>mine got bricked doing this, i followed each step and now after the samsung logo it just has a blue screen. any way out of this or is it gone forever?</p>
+
+
+</li>
+<li><seg class="small"><strong> (Thu Jan 14, 2010 (18:49:42)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001180" id="c001180">[PermLink]</a>:</strong></seg>
+
+	<p>also i get this error:</p>
+
+	<p>A service installation section in this <span class="caps">INF</span> is invalid.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Mon Jan 18, 2010 (19:59:33)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001184" id="c001184">[PermLink]</a>:</strong></seg>
+
+	<p>#72 and #73: I also had problems at first; in the end I think it had to do with timing and I ultimately managed to pull the cord correctly—but it was a long time ago.</p>
+
+	<p>I honestly don’t know what to make of the mixed success people have been having. I confess I suspect that the differential is how clear my instructions have appeared to the reader—perhaps my writing style is easier to understand for some people than others. But it could also be that there are different models out there or that Samsung has changed something somewhere.</p>
+
+	<p>It’s not helpful, I know, but this is why the article is so heavily labelled with warning statements. It is clear that some people end up wrecking their player: it might be that somebody else could fix it for them; but as far as they are concerned, they aren’t able to use it any more after they try this. </p>
+
+	<p>Clearly, this is something you should  try only if you can afford to fail.</p>
+
+	<p>Could you let us know if you manage to solve the problem?</p>
+
+<p>-dan</p>
+<p>P.S.: Have you looked your error message up on Google to see if there are any solutions? Here's the Google search: <a href="http://www.google.ca/search?q=A+service+installation+section+in+this+INF+is+invalid">http://www.google.ca/search?q=A+service+installation+section+in+this+INF+is+invalid</a>
+</li>
+<li><seg class="small"><strong>john (Wed Feb 10, 2010 (07:55:53)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001197" id="c001197">[PermLink]</a>:</strong></seg>
+
+	<p>i also have yp-k3jqb, 2gb, german.<br />
+the player hang up everytime when i used the 4.03 firmare.<br />
+so i tried only with 4.1 (in every step) an worked pefectly!!!!°</p>
+
+
+</li>
+<li><seg class="small"><strong>Juanl (Wed Feb 10, 2010 (14:01:33)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001198" id="c001198">[PermLink]</a>:</strong></seg>
+
+	<p>Y me olvidaba.</p>
+
+	<p>My ypk it&#8217;s broken, i format all the files and after that it don&#8217;t work anymore, but with this tutorial it works again and better. </p>
+
+	<p>Yupi!</p>
+
+
+</li>
+<li><seg class="small"><strong>Sara (Sat Jun 26, 2010 (14:50:21)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001245" id="c001245">[PermLink]</a>:</strong></seg>
+
+	<p>It worked perfectly!!! Thanks a lot!!!<br />
+I managed to install firmware version 4.10 downloaded from http://kr.samsungmobile.com.<br />
+(Google Chrome can make korean friendly! ;) )</p>
+
+
+</li>
+<li><seg class="small"><strong>sorin (Fri Jul 30, 2010 (15:07:20)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001268" id="c001268">[PermLink]</a>:</strong></seg>
+
+	<p>i accidentally format the yp-k3 to ntfs. is there anything i can do to repair this? thanks</p>
+
+
+</li>
+<li><seg class="small"><strong>Harun (Mon Aug 30, 2010 (10:06:31)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001279" id="c001279">[PermLink]</a>:</strong></seg>
+
+	<p>sorin: on step 11? no problem, just format again but as fat32, then continue with step 12 etc.</p>
+
+
+</li>
+<li><seg class="small"><strong>Alex 2 (Mon Sep  6, 2010 (01:20:12)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001289" id="c001289">[PermLink]</a>:</strong></seg>
+
+	<p>hi,<br />
+How do you format in fat32?<br />
+also i got the&#8217;white screen of death&#8217; and now when i charge it it doesn&#8217;t show the charging animation.</p>
+
+
+</li>
+<li><seg class="small"><strong>Lucian (Mon Sep 27, 2010 (16:14:23)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001304" id="c001304">[PermLink]</a>:</strong></seg>
+
+	<p>i managed to find out why at point 10. some people have had problems with their player freeze &#8220;copying files.don&#8217;t unplug&#8220;or something like this.I waited a few minutes,and after that i went to device manager in windows and disabled the usb port in use with the player.After you disable,click enable&#8230;and voila! your player is recognized by the computer and you can continue with the next step</p>
+
+
+</li>
+<li><seg class="small"><strong>Tony (Thu Nov 25, 2010 (10:11:34)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001323" id="c001323">[PermLink]</a>:</strong></seg>
+
+	<p>I foolishly tried to upgrade but got &#8220;firmware update failed&#8221; and now I have nothing but a blank screen. I will try this solution but the firmware update on the Samsung Canada website is only 3.09..where do I get 4.xx?</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Wed Dec  1, 2010 (10:41:41)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001327" id="c001327">[PermLink]</a>:</strong></seg>
+
+	<p>Tony, I have some links under the &#8220;Materials&#8221; section above. These are the ones I used to get the Korean firmware updates; but I don&#8217;t know if they are active any more. I think somebody said something about updates in the comments above as well.</p>
+
+
+</li>
+<li><seg class="small"><strong>Sagun (Thu Dec  1, 2011 (06:51:41)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001525" id="c001525">[PermLink]</a>:</strong></seg>
+
+	<p>The link to download firmware isnt working please provide me a valid link</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Wed Jan 11, 2012 (11:02:08)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c001560" id="c001560">[PermLink]</a>:</strong></seg>
+
+	<p>Sorry Sagun, that&#8217;s all I know. If it is changed, maybe somebody else has the new <span class="caps">URL</span>. If you do find it, I&#8217;d be very grateful if you let me know so I can post it.</p>
+
+
+</li>
+<li><seg class="small"><strong>Megan (Sun Sep 20, 2015 (22:41:10)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c006631" id="c006631">[PermLink]</a>:</strong></seg>
+
+	<p>Hi guys, why not try this software developed by UnlockBase that uses Unlock by Cable: https://www.unlockbase.com/cable-unlock/  . It&#8217;s a new software that is very reliable in terms of cable unlocking. For now, only Samsung phones are supported but its always adding more models. Here&#8217;s the link: https://www.unlockbase.com/cable-unlock/unlockbase-software-faq/ for the Software Official <span class="caps">FAQ</span> for more details. Have a good day everyone!^^</p>
+</li>
+<li><seg class="small"><strong>abaumg (Mon May 21, 2018 (15:13:24)) <a href="unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support.html#c006709" id="c006709">[PermLink]</a>:</strong></seg>
+
+<p>Hello Dan,</p>
+
+<p>I just wanted to let you know that I successfully flashed my girlfriend&#8217;s YP-K3 thanks to your great instructions 
+</li></ol>
+
+
+
+
+<form id="txpCommentInputForm" method="post" action="https://people.uleth.ca/~daniel.odonnell/Blog/unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support#cpreview">
+<div class="comments-wrapper">
+
+<p><label for="name">Name</label>: 
+<input name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="25" value="" /><br/>
+<label for="email">Email</label>:  
+<input name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="25" value="" /><br/>
+<input class="checkbox" id="remember" name="remember" type="checkbox" value="1" /> <label for="remember">Remember</label> 
+<input name="checkbox_type" type="hidden" value="remember" /><br/>
+<label for="message">Message</label>:<br/><textarea class="txpCommentInputMessage" id="message" name="message" cols="25" rows="5" required="required"></textarea> 
+<input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview" /> 
+<input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit" /><br/>
+<a id="txpCommentHelpLink" href="https://rpc.textpattern.com/help/?item=textile_comments&amp;language=en-gb" onclick="window.open(this.href, 'popupwindow', 'width=300,height=400,scrollbars,resizable'); return false;">Textile help</a></p>
+
+<input name="parentid" type="hidden" value="88" />
+
+<input name="backpage" type="hidden" value="/~daniel.odonnell/Blog/unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support" />
+</div>
+</form>
+
+				<!-- #2cl -->
+				
+			<!-- #1cl -->
+			
+		</div>
+
+		<!-- Right bar -->
+		<!--googleoff: all-->
+		<!-- this stops google indexing the tweets and other static information -->
+		<div class="rightbar">
+			<p class="hideme">
+				<a class="hideme" id="navigation"></a>
+				<a href="#content" class="hideme">Back to content</a>
+			</p>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, autoDisplay: false, gaTrack: true, gaId: 'UA-32780614-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+			<h2>Search my site</h2>
+				<form role="search" method="get" action="https://people.uleth.ca/~daniel.odonnell/Search/">
+<p class="search_input">
+<input name="q" required="required" size="15" type="search" value="" /><input type="submit" value="Go!" /></p>
+</form>
+			<h2>Sections</h2>
+			<ul>
+<li><a href="https://outlook.office.com/bookwithme/user/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/meetingtype/vFTDmf-nQECoMYPMEtPS2A2?anonymous&amp;ep=mlink">Book a meeting time with me</a></li>				
+<li><a href="../Academic-Policies/current-academic-policies.html">Academic Policies (Current)</a></li>
+				<li><a href="index.html">Blog</a></li>
+<li><a href="../contact/index.html">Contact</a></li>
+<li><a href="../research/index.html">Research</a></li>
+<li><a href="../teaching/index-2.html">Teaching</a></li>
+<li><a href="../tutorials/index.html">Tutorials</a></li>
+			</ul>
+<!-- h2>Schedule</h2>
+
+<iframe 
+name="My calendar"
+title="My calendar"
+width="75%"
+scrolling="yes"
+marginheight="0"
+marginwidth="0"
+src="https://outlook.office365.com/owa/calendar/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/2c4f66847b2042dfb7db8ba348396f3c14689327663406417309/calendar.html"/>
+-->
+<h2>Current teaching</h2>
+			<ul>
+
+<li><a href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a></li>
+
+<li><a href="../teaching/english-4850a-7850a-beowulf-spring-2024.html">English 4850a/7850a: Advanced Old English (Spring 2024)</a></li>
+
+
+
+			</ul>
+			<h2>Recent changes to this site</h2>
+			<ul>
+				<li><strong><a rel="bookmark" href="calm-slippery-and-sadistic-my-silent-war-by-kim-philby-and-a-spy-among-friends-by-ben-macintyre.html">Calm, Slippery, and sadistic: My Silent War by Kim Philby and A Spy among Friends by Ben MacIntyre</a> </strong></li><li><strong><a rel="bookmark" href="chatbot-prompt-thyself.html">ChatBot prompt thyself</a> </strong></li><li><strong><a rel="bookmark" href="what-a-fuss-about-an-omlette-why-lies-are-protected-speech-in-the-us.html">What a fuss about an omlette! Why lies are protected speech in the U.S. (Liar in a crowded theater; Kosseff 2023)</a> </strong></li><li><strong><a rel="bookmark" href="blow-by-blow-island-victory-sla-marshall-1944-2002.html">Blow by blow: Island Victory, S.L.A. Marshall 1944/2002</a> </strong></li><li><strong><a rel="bookmark" href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a> </strong></li>
+			</ul>
+			<h2>Tags</h2>
+			<a href="../tag/anglo-saxon%2bstudies/index.html" class="tagSizeMedium tagSize11" style="font-size: 135%;">anglo-saxon studies</a>, 
+<a href="../tag/caedmon/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">caedmon</a>, 
+<a href="../tag/citation%2bpractice/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">citation practice</a>, 
+<a href="../tag/composition/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">composition</a>, 
+<a href="../tag/computers/index.html" class="tagSizeMedium tagSize24" style="font-size: 182%;">computers</a>, 
+<a href="../tag/digital%2bhumanities/index.html" class="tagSizeLargest tagSize29" style="font-size: 200%;">digital humanities</a>, 
+<a href="../tag/digital%2bpedagogy/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">digital pedagogy</a>, 
+<a href="../tag/grammar/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">grammar</a>, 
+<a href="../tag/history/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">history</a>, 
+<a href="../tag/moodle/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">moodle</a>, 
+<a href="../tag/old%2benglish/index.html" class="tagSizeMedium tagSize6" style="font-size: 117%;">old english</a>, 
+<a href="../tag/pedagogy/index.html" class="tagSizeMedium tagSize13" style="font-size: 142%;">pedagogy</a>, 
+<a href="../tag/research/index.html" class="tagSizeMedium tagSize4" style="font-size: 110%;">research</a>, 
+<a href="../tag/students/index.html" class="tagSizeMedium tagSize7" style="font-size: 121%;">students</a>, 
+<a href="../tag/study%2btips/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">study tips</a>, 
+<a href="../tag/teaching/index.html" class="tagSizeMedium tagSize10" style="font-size: 132%;">teaching</a>, 
+<a href="../tag/tips/index.html" class="tagSizeMedium tagSize16" style="font-size: 153%;">tips</a>, 
+<a href="../tag/tutorials/index.html" class="tagSizeMedium tagSize12" style="font-size: 139%;">tutorials</a>, 
+<a href="../tag/unessay/index.html" class="tagSizeMedium tagSize8" style="font-size: 125%;">unessay</a>, 
+<a href="../tag/universities/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">universities</a><br /><br />
+			<a style="padding-left:1em;" href="../tag/index.html">See all...</a>
+			<!-- <h2>What I'm reading...</h2> -->
+			<!-- txp:aks_rss form="externalRSS" feed="https://api.zotero.org/groups/81065/items/" limit_per_feed="4" wraptag="ul" break="li" /> -->
+			<!-- <h2>Bibliography ticker...</h2> -->
+			<!-- txp:aks_rss form="citationTicker" feed="https://api.zotero.org/users/632779/items?key=lSavInnm7WmefW45BRO6f7uh" limit_per_feed="4" wraptag="p" break="<span />" /> -->
+			<h2>Follow me on <a href="https://twitter.com/#!/DanielPaulOD">Twitter</a></h2>
+			<ul class="arc_twitter"><li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I&#039;m afraid I don&#039;t. I thought it was one o&hellip; <a href='https://twitter.com/i/web/status/1673712143542390785'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 27, 09:17 AM</span></li>
+<li>RT <a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>: The results are in!
+
+<a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>&nbsp;members have voted 97% in favour of strike authorization, if necessary.
+
+The participation r&hellip; <span class="arc_twitter-posted">Jun 27, 08:33 AM</span></li>
+<li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I thought I heard talk of this at caut this year. <span class="arc_twitter-posted">Jun 27, 08:30 AM</span></li>
+<li>RT <a href='http://twitter.com/deelomas' rel='external'>@deelomas</a>: And, the official winner of the &lsquo;Not My Job&rsquo; award goes to&hellip; <a href='https://twitter.com/deelomas/status/1672611829967667202/photo/1'>pic.twitter.com/0sDes9D5oq</a> <span class="arc_twitter-posted">Jun 26, 09:34 PM</span></li>
+<li>I&#039;m beginning to think that electric vehicles are sort of a Linux of the car world at the moment. Except Teslas whi&hellip; <a href='https://twitter.com/i/web/status/1673344791856267271'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 26, 08:57 AM</span></li>
+<li>&quot;He felt that American children in recent generations have had too much parental protection and too little opportun&hellip; <a href='https://twitter.com/i/web/status/1670627745641172993'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 18, 09:01 PM</span></li>
+<li>I&#039;ve been going through Ernie Pyle&#039;s Brave Men (a collection of columns from the European front in WWII) looking up&hellip; <a href='https://twitter.com/i/web/status/1670263169556836354'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 17, 08:52 PM</span></li>
+<li>Traditionally, &ldquo;knowledge workers&rdquo; have had two productivity peaks in their workday: just before lunch and just aft&hellip; <a href='https://twitter.com/i/web/status/1667749991186833409'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 10, 10:25 PM</span></li>
+<li>RT <a href='http://twitter.com/JasonOnTheDrums' rel='external'>@JasonOnTheDrums</a>: <a href='http://twitter.com/search?q=%23Ableg' rel='external'>#Ableg</a>
+
+Today was within 97% of the record votes we record on Tuesday.
+
+We&rsquo;re on pace for 784,475 votes over and will&hellip; <span class="arc_twitter-posted">May 26, 08:08 PM</span></li>
+<li>So if we were doing bets,  here&#039;s mine: 
+
+NDP 45
+UCP 41
+IND (Child-hating poop-cookie) 1
+
+I think people are undere&hellip; <a href='https://twitter.com/i/web/status/1662279319685849088'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">May 26, 08:07 PM</span></li></ul>
+			<!--  <h2><form method="get" action="https://people.uleth.ca/~daniel.odonnell/"><div>
+
+<input name="s" type="hidden" value="blog" />
+Navigation<br />
+<select name="s" onchange="submit(this.form);">
+	<option value="">&#160;</option>
+	<option value="about">About</option>
+	<option value="academic-policies">Academic Policies</option>
+	<option value="archive">Archive</option>
+	<option value="blog" selected="selected">Blog</option>
+	<option value="contact">Contact</option>
+	<option value="drafts">Drafts</option>
+	<option value="research">Research</option>
+	<option value="search">Search</option>
+	<option value="tag">All Tags</option>
+	<option value="teaching">Teaching</option>
+	<option value="tutorials">Tutorials</option>
+</select>
+<noscript><div><input type="submit" value="Go" /></div></noscript>
+</div>
+</form></h2> -->
+			<!-- h2>At <a href="http://dpod.kakelbont.ca/">the dpod blog</a></h2 -->
+			<!-- txp:aks_rss form="externalRSS" feed="http://dpod.kakelbont.ca/feed/" limit_per_feed="10" wraptag="ul" break="li"/ -->
+		</div>
+		<div class="footer">
+<p>Our University’s Blackfoot name is Iniskim, meaning Sacred
+Buffalo Stone.<br/>The University is located in traditional Blackfoot Confederacy territory.<br/>We honour the Blackfoot
+people and their traditional ways of knowing in caring for this land, as well as all Aboriginal peoples who have
+helped shape and continue to strengthen our University community.</p>
+			<p><a href="http://www.uleth.ca/">University of Lethbridge</a> | <a href="http://www.uleth.ca/artsci/">Faculty of Arts and Science</a> | <a href="http://www.uleth.ca/artsci/english">Department of English</a> | <a href="http://www.uleth.ca/graduatestudies/">School of Graduate studies</a> | <a href="../textpattern/index.html">Site
+Administration</a><br />&copy; Date of publication or modification by Daniel Paul O'Donnell<br />Unless otherwise noted, the non-negotiated licence for all work on this site is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>.<br />If you want to use the work in some other fashion, feel free to contact me. </p>
+		</div>
+		<!--googleon: all-->
+	</body>
+
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/Blog/unlocking-the-samsung-yp-k3j-for-use-with-as-a-usb-mass-storage-device-with-ogg-vorbis-support by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:58:55 GMT -->
+</html>

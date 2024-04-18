@@ -1,0 +1,179 @@
+/*	    c) Element appearance: Controls the appearance (mostly
+	       colour) of elements of the screen.
+	    z) Temporary proofreading styles: Commented out section
+	       that contains styles used to check xhtml coding.
+*/
+
+/* c) General Styles */
+
+*[title] {
+	 cursor: help;
+}
+
+h1, h2, h3, h4, h5, h6, strong	{
+    color:maroon;
+}
+
+a[href]:hover	{
+	cursor: pointer;
+	text-decoration: underline;
+	background-color: #FFEFD5;
+}
+
+a[href]:focus	{
+		font-weight: bold;
+		background-color: yellow;
+}
+
+.accesskeylabel	{
+		background-color: yellow;
+		font-decoration: underline;
+		font-color: red;
+		font-weight: bold;
+}
+
+/* table of contents (div.toc) element appearance */
+
+div.toc, div.colophon {
+	font-family: sans-serif;
+	border: thin solid gray;
+	font-size:70%;
+	background-color: #FFEFD5;
+	padding: 2px;
+}
+
+div.toc {
+	text-align: left;
+}
+
+div.quickmenu {
+	margin-bottom: 1ex;
+}
+
+div.colophon ul {
+	     padding: auto;
+	     margin: auto;
+	     text-align: center;	     
+}
+div.colophon ul li {
+	     list-style-type: none;
+	     display: block;
+	     padding-bottom: .5em;
+}
+div.toc h1, div.toc h2, div.colophon h2 {
+	display: none;
+	font-size: 110%;	
+}
+
+div.toc h3 {
+	font-size: 110%;	
+	text-align: left;
+	line-height: 90%;
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+}
+
+div.toc select {
+	width: 100%;
+	line-height: 90%;
+	font-size: smaller;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div.toc ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div.toc ul li {
+	margin-left: -23px;
+	margin-right: 0;
+	list-style-position: outside;
+	list-style: square;
+	line-height:1.2;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div.toc ul li ul li {
+	margin-left: -23px;
+	margin-right: 0;
+	list-style: disc;
+	margin-top: 0;
+	margin-bottom: 0;	
+}
+
+div.toc ul li ul li ul li {
+	display: none;
+	margin-left: -23px;
+	margin-right: 0;
+	list-style: disc;
+	margin-top: 0;
+	margin-bottom: 0;	
+}
+
+div.toc ul li ul li ul li ul {
+	display: none;
+}
+
+div.toc ul li ul li ul li ul li ul {
+	display: none;
+}
+
+div.toc ul li ul li ul li ul li ul li {
+	display: none;
+}
+
+div.toc a[href]:hover {
+	background-color: white;
+	width: 100%;
+}
+
+
+
+/* Z) TEMPORARY PROOF READING STYLES
+
+*[lang|="ANG"]	{
+		background-color: yellow;
+
+}
+
+*[lang|="LAT"]	{
+		background-color: pink;
+}
+
+*[lang|="ARA"]	{
+		background-color: green;
+}
+
+*[lang|="DEU"]	{
+		background-color: maroon;
+}
+
+*[lang|="GOH"]	{
+		background-color: brown;
+}
+
+*[lang|="SGA"]	{
+		background-color: cyan;
+}
+
+*[lang|="NON"]	{
+		background-color: gold;
+}
+
+*[lang|="FAS"]	{
+		background-color: olive;
+}
+*[lang|="SAN"]	{
+		background-color: gray;
+}
+
+*[lang|="XHO"]	{
+		background-color: blue;
+}
+
+
+*/
+

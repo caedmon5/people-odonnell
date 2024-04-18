@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!-- head -->
+	
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/blog/overriding-screen-resolution-on-xorg-in-ubuntu by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:51:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="9ZHP1FDttD1YeXYP4jrDb8KmwNTGqQgRb92Y1B3M_Ro" />
+		<title>
+			Overriding Screen Resolution on Xorg in Ubuntu | Daniel Paul O&#039;Donnell
+		</title>
+
+		<!-- txp:feed_link flavor="atom" format="link" label="Atom"/ -->
+		<!-- txp:feed_link flavor="rss" format="link" label="RSS"/ -->
+		<link rel="shortcut icon" href="../transparent.ico" />
+		<style type="text/css" media="screen" title="Default"> @import url(../css/txpscreen.css); </style>
+		<style type="text/css" media="print,mobile" title="Default"> @import url(../css/txpprint.css); </style>
+		<style type="text/css" media="all" title="Default"> @import url(../css/txpcommonstyles.css); </style>
+
+<!-- hypothes.is enabled via the following. See https://hypothes.is/for-publishers/ -->
+
+<!-- the following disables default show highlighting -->
+<!-- <script>window.hypothesisConfig = function () { return {showHighlights: false}; };</script> -->
+<!-- the following loads the annotator -->
+<script defer async src="http://hypothes.is/embed.js"></script>
+
+<!-- end hypothes.is enabling -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-32780614-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<!-- body -->
+	<body>
+		<div class="body">
+
+			<!-- Top bar -->
+			<div class="head">
+				<div>
+					<h1 style="vertical-align:center">
+						<a href="../index.html">
+							<img src="../images/11.png" alt="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." title="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." id="logoimage" width="10%"/></a> <span style="vertical-align:center">Daniel Paul O&#039;Donnell</span>
+					</h1>
+				</div>
+			</div>
+
+		</div>
+<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<p>
+						
+						
+							<a href="../index.html">Daniel Paul O&#039;Donnell</a>&#160;&#187;&#160;<a href="index.html">Blog</a>
+						
+					</p>
+				</div>
+<!-- end breadcrumb -->
+
+		<!-- content -->
+		<div class="content">
+			<p class="hideme">
+				<a class="hideme" id="content"></a>
+				<a href="#navigation" class="hideme">Forward to Navigation</a>
+			</p>
+			<!-- section logic begins -->
+			 <!-- debug #1 -->
+			
+				<!-- we are not on the default section -->
+				<!-- Debug #2 -->
+				
+					<!-- default page form begins -->
+
+
+
+<h2>Overriding Screen Resolution on Xorg in Ubuntu</h2>
+<div style="background-color:light gray">
+<p><strong><a rel="author" href="../author/Daniel%2bPaul%2bO%27Donnell/index.html">Daniel Paul O&#039;Donnell</a></strong></p>
+<p>Posted: Apr 27, 2008 12:04;<br/>Last Modified: Dec 25, 2009 15:12<br/>
+Keywords: <seg onload="displayLinks()"></seg></p>
+
+<script>
+        // Place the JavaScript function here
+        function generateLinkTags(keywords) {
+            let linkTags = "'";
+            keywords.forEach(keyword => {
+                let link = `<a href='https://home.uleth.ca/~daniel.odonnell/tags/{encodeURIComponent(keyword)}'>${keyword}</a>`;
+                linkTags += link + "<br>";
+            });
+            return linkTags;
+        }
+
+        // This function will be called once the page is fully loaded
+        function displayLinks() {
+            let keywords = ["JavaScript", "OpenAI", "Web Development"];
+            let htmlLinks = generateLinkTags(keywords);
+            document.body.innerHTML = htmlLinks;
+        }
+    </script>
+
+
+
+
+</div>
+<img src="../images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<!--
+<img src="https://people.uleth.ca/~daniel.odonnell/images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+-->
+<!-- automatic TOC begins after this -->
+<div id="TOC">
+   <!--txp:soo_toc label="Contents" labeltag="h3"/-->
+</div>
+<!-- automatic TOC ends -->
+	<h2>The setup</h2>
+
+	<p>One of my computers is used for a general family computer. It is an old Dell Optiplex GX 240 that I bought surplus from the University of Lethbridge. It is used for homework and games (well mostly the other way round) by our children and dual boots Windows XP Professional and Ubuntu 8.04 (Hardy Heron).</p>
+
+	<p>The computer is connected to two monitors through a video splitter: a Dell E153FPc (a monitor that originally came with a Dell Dimension 3000) and a Toshiba 32HL57 Wide Screen High Definition TV. The Video Splitter is a Star Tech ConvergeAV ST122LE. This is <strong>not</strong> a Dual Head setup: when both monitors are on they show the same screen. The video card seems to be some kind of generic <span class="caps">VESA</span> compatible.</p>
+
+	<h2>The problem</h2>
+
+	<p>The problem I was having involved screen resolution. When connected to the Dell monitor alone, Ubuntu (actually xorg) would default on login to 1024&#215; 768 (the correct resolution). When connected via the splitter or to the Toshiba, however, it would default on login to 800 &#215; 600. If I logged with only the Dell monitor attached, and then put the splitter in, both monitors would run at 1024 &#215; 768&#8212;until I logged out and tried to log in again, at which point it would revert to 800 &#215; 600. If instead of logging out I switched sessions (i.e. logged in as a new user while leaving my old session running using the &#8220;switch user&#8221; option on the log out screen), the resolution remained the same.</p>
+
+	<h2>The solution</h2>
+
+	<p>As the issue with logging in and logging out suggests, the problem lies in the detection of screen resolution on login. And that means it is an xorg.conf problem.</p>
+
+	<p>The relevant part of xorg.conf is the <code>monitor</code> section. In Ubuntu 8.04 it looks like this on a clean install:</p>
+
+<pre><code>Section &#34;Monitor&#34;
+        Identifier      &#34;Configured Monitor&#34;
+EndSection
+</code></pre>
+
+	<p>(On earlier versions of xorg there is often additional information there.)</p>
+
+	<p>In my particular case, I needed to change this to the following:</p>
+
+<pre><code>Section &#34;Monitor&#34;
+        Identifier      &#34;Configured Monitor&#34;
+        Vendorname      &#34;Generic LCD Display&#34;
+        Modelname       &#34;LCD Panel 1024x768&#34;
+        Horizsync       31.5-48.0
+        Vertrefresh     56.0 - 65.0
+        modeline  &#34;1024x768@60&#34; 65.0 1024 1048 1184 1344 768 771 777 806 -vsync -hsync
+        Gamma   1.0
+EndSection
+</code></pre>
+
+	<p>Once this substitution was made and the computer rebooted, both screens displayed at 1024&#215;768 on bootup/login.</p>
+
+	<h2>How do you generate these numbers?</h2>
+
+	<p>If this doesn&#8217;t work for you, or if you have a different setup or require a different resolution or other details, you may want to know how I came up with these numbers. The following is a summary of the steps I took to generate them. There may well be a more elegant method: the one I&#8217;m explaining here is a resume of my trial and error.</p>
+
+	<p><div style="background-color:yellow"></p>
+
+	<h3>Step 1: Backup your <code>/etc/X11/xorg.conf</code> file</h3>
+
+	<p>In a terminal:</p>
+
+<pre><code>sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.original
+</code></pre>
+
+	<p><strong>Do this!</strong> It is very likely that you will wreck something and need to restore your old <code>xorg.conf</code>. If it is gone you&#8217;ll have a terrible time.</p>
+
+	<p><code>/etc/X11/xorg.conf.original</code> is your backup file (you will edit <code>/etc/X11/xorg.conf</code>). If you need to restore <code>xorg.conf</code> (you&#8217;ll probably have to do it from a shell, since xorg won&#8217;t be working), all you have to do is:</p>
+
+<pre><code>sudo cp /etc/X11/xorg.conf.original /etc/X11/xorg.conf
+</code></pre>
+
+	<p></div></p>
+
+	<h3>Step 2: Add the appropriate device size the <code>monitor</code> section of <code>/etc/X11/xorg.conf</code></h3>
+
+	<ol>
+		<li>Backup your <code>xorg.conf</code> (as in step 1 above). <strong>This is really important</strong></li>
+		<li>Open <code>/etc/X11/xorg.conf</code> in an editor (e.g. in a terminal using nano): </li>
+	</ol>
+
+	<blockquote>
+		<p>sudo nano /etc/X11/xorg.conf</p>
+	</blockquote>
+
+	<p>or using gedit:</p>
+
+	<blockquote>
+		<p>gksudo gedit /etc/X11/xorg.conf</p>
+	</blockquote>
+
+	<ol>
+		<li>Find the section <code>Section &#34;Monitor&#34;</code> in xorg.conf</li>
+		<li>Add <code>DeviceSize 1024 768</code> at the end (i.e. right before <code>EndSection</code>)</li>
+		<li>Reboot</li>
+	</ol>
+
+	<h3>Use Xorg&#8217;s native utility to override the plug &#8216;n play setting</h3>
+
+	<p>On reboot, and before the login screen, you should get a warning that Ubuntu is running in low graphics mode.</p>
+
+	<ol>
+		<li>Choose configure</li>
+		<li>Click on the drop-down menu box that says &#8220;Plug &#8216;n Play&#8221;</li>
+		<li>Select an appropriate monitor (in my case, &#8220;Generic&#8221; and &#8220;<span class="caps">LCD</span> Panel 1024 &#215; 768&#8221; were already highlighted; I tried &#8220;Dell&#8221; and &#8220;E153FPc&#8221; but I received an subsequent error message when I rebooted).</li>
+		<li>Click on &#8220;OK&#8221; and then when you are back to the original screen, &#8220;Test.&#8221; </li>
+		<li>Your screen will then probably go funny&#8212;lines, dots, etc. If you have an appropriate setting, you will ultimately get a window asking you if you want to keep the current configuration. (If you don&#8217;t get this window, the configuration is not appropriate and you&#8217;ll be returned to screen with the &#8220;test button&#8221;; in this case repeat steps 2, 3, and 4 until you get the &#8220;keep current configuration&#8221; dialogue.</li>
+		<li>Save the new monitor configuration by selecting &#8220;Ok&#8221; on the dialogue that initially read &#8220;Plug &#8216;n Play&#8221; and now reads whatever monitor you selected. You should see a warning that Xorg is backing up your current <code>xorg.conf</code> file</li>
+		<li>reboot</li>
+	</ol>
+
+	<h3>Fine tune <code>/etc/X11/xorg.conf</code></h3>
+
+	<p>At this point you will probably have the original low resolution login screen and desktop. This is because xorg is giving your video card a choice of resolutions including the lower one you want to get rid of. What you now need to do is restrict the options available to xorg. You do this by opening up <code>/etc/X11/xorg.conf</code> again and removing all options except the resolution you want.</p>
+
+	<ol>
+		<li>Open <code>/etc/X11/xorg.conf</code> in an editor: <code>sudo nano /etc/X11/xorg.conf</code></li>
+		<li>Go to the section &#8220;Section Monitor&#8221; (which should now have much more information that the last version you edited).</li>
+		<li>Find the series of modelines (they will read something like this: <code>   modeline  "640x480@60" 25.2 640 656 752 800 480 490 492 525 -vsync -hsync  </code> )</li>
+		<li>Delete all the modelines except for the one you want to use as default (in my case <code> modeline  "1024x768@60" 65.0 1024 1048 1184 1344 768 771 777 806 -vsync -hsync </code></li>
+		<li>Save and reboot the computer</li>
+	</ol>
+
+	<p>From now on your computer should boot/login with the desired screen resolution as its default.</p>
+<!-- <img src="https://people.uleth.ca/~daniel.odonnell/images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<p>Posted: Sunday April 27, 2008. 12:58.</p> 
+<p>Last modified: Friday December 25, 2009. 15:48.</p> -->
+<div class="comments">
+<img src="../images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+<!-- txp:comments_invite wraptag="p" / -->
+<!-- txp:comments_form / -->
+&#x00A0;
+</div>
+<!-- default page form ends --><h3 id="comment">Comment [12]</h3>
+
+<ol class="comments"><li><seg class="small"><strong>Lyndon (Sun May  4, 2008 (23:04:25)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c000341" id="c000341">[PermLink]</a>:</strong></seg>
+
+	<p>Thank you so much! This works like a charm. </p>
+
+	<p>Previously I could only get &#8216;visual effects&#8217; at 640&#215;480 on my 52 inch plasma, which totally sucked. Now I&#8217;m never going back to windows :)</p>
+
+
+</li>
+<li><seg class="small"><strong>Jim (Mon Jul  7, 2008 (11:17:32)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c000449" id="c000449">[PermLink]</a>:</strong></seg>
+
+	<p>I would like to use this space to express how much I appreciate this blog, both for its content, but more pointedly, for its literary style and composition. Seldom, on the internet, does one actually enjoy reading through the murdered prose, emasculated punctuation, text-speak spelling and less-than-logical development of the subject to finally reach an &#8220;uninformative&#8221; conclusion. This article is a pleasurable exception to that indictment. So, please, keep up the good work!</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Thu Jul 10, 2008 (17:06:53)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c000456" id="c000456">[PermLink]</a>:</strong></seg>
+
+	<p>Well that&#8217;s enough praise to make me fix the typos. Thanks (blush).</p>
+
+
+</li>
+<li><seg class="small"><strong>Nick (Sun Jul 27, 2008 (11:46:30)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c000517" id="c000517">[PermLink]</a>:</strong></seg>
+
+	<p>Dan! You really helped a Linux Newbie out here! On day 2 of Linux, this is a pretty daunting task, even for someone who considers themselves pretty PC literate (in the Windows world, anyway). Your description doesnt assume you know anything about Ubuntu (which I dont!) and that means it worked first time! All this now means that I can actually <span class="caps">SEE</span> the login screen! Thanks again!</p>
+
+
+</li>
+<li><seg class="small"><strong>Matthew (Sun Dec 14, 2008 (23:42:35)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c000788" id="c000788">[PermLink]</a>:</strong></seg>
+
+	<p>looked all over for what I needed. Finally found it here. <span class="caps">THANK</span> YOU!!!!</p>
+
+
+</li>
+<li><seg class="small"><strong>seek8&quot; (Tue Feb  3, 2009 (04:41:44)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c000813" id="c000813">[PermLink]</a>:</strong></seg>
+
+	<p>what&#8217;s best for my netbooks with 8&#8221; lcd??<br />
+how to set? thank you.</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Feb  6, 2009 (20:58:32)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c000817" id="c000817">[PermLink]</a>:</strong></seg>
+
+	<p>I don&#8217;t know the answer. My netbook screen works as is.</p>
+
+
+</li>
+<li><seg class="small"><strong>Landob-Jamaica (Fri Dec 18, 2009 (12:56:21)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c001167" id="c001167">[PermLink]</a>:</strong></seg>
+
+	<p>Bredren you are the boss. Worked like a charm. My mistakes were from the start where I was adding an additional monitor and making reference to it in the screens section. This was really helpful.</p>
+
+
+</li>
+<li><seg class="small"><strong>Don (Wed Dec 23, 2009 (13:36:03)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c001168" id="c001168">[PermLink]</a>:</strong></seg>
+
+	<p>When I did step 2, I added &#8220;DeviceSize 1280 1024&#8221;.  When Ubuntu 9.10 booted it, put me into a shell to login (newbie may not be the right term). But I could not get into Ubuntu.  I reverted to your great backup of the original!  Any ideas?</p>
+
+
+</li>
+<li><seg class="small"><strong>dan (Fri Dec 25, 2009 (15:45:03)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c001169" id="c001169">[PermLink]</a>:</strong></seg>
+
+	<p>Don, That&#8217;s usually a sign that something is seriously wrong with your xorg.conf&#8212;meaning that whatever you did, it didn&#8217;t just mess up the bit you think you changed.</p>
+
+	<p>What editor did you use? I once had hours of trouble because the editor I was using (nano) was truncating lines when I cut and pasted text in my configuration file (not its fault: that is the expected behaviour, I just didn&#8217;t realise what the problem was). It took me hours to find the problem.</p>
+
+
+</li>
+<li><seg class="small"><strong>matt (Tue Feb  2, 2010 (16:15:36)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c001195" id="c001195">[PermLink]</a>:</strong></seg>
+
+	<p>I <span class="caps">NEED</span> HELP! i put the resolution on my computer higher and now the screen doesnt work!! I need to change the resolution back but dont know how! <span class="caps">BECAUSE</span> <span class="caps">WHEN</span> I <span class="caps">LOG</span> IN the monitor screen doesnt work!!!! HELP????? you can write me at lilspeedymat@hotmail.com<br />
+please help me</p>
+
+
+</li>
+<li><seg class="small"><strong>matt (Thu Feb  4, 2010 (11:16:49)) <a href="overriding-screen-resolution-on-xorg-in-ubuntu.html#c001196" id="c001196">[PermLink]</a>:</strong></seg>
+
+	<p>Have you tried a remote login? I.e. via ssh? This sounds like a monitor problem. You should always have the option of going to a shell or safe gnome. If you log in remotely, you won&#8217;t have any issues with the monitor not working.</p>
+
+
+</li></ol>
+
+
+
+
+<form id="txpCommentInputForm" method="post" action="https://people.uleth.ca/~daniel.odonnell/blog/overriding-screen-resolution-on-xorg-in-ubuntu#cpreview">
+<div class="comments-wrapper">
+
+<p><label for="name">Name</label>: 
+<input name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="25" value="" /><br/>
+<label for="email">Email</label>:  
+<input name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="25" value="" /><br/>
+<input class="checkbox" id="remember" name="remember" type="checkbox" value="1" /> <label for="remember">Remember</label> 
+<input name="checkbox_type" type="hidden" value="remember" /><br/>
+<label for="message">Message</label>:<br/><textarea class="txpCommentInputMessage" id="message" name="message" cols="25" rows="5" required="required"></textarea> 
+<input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview" /> 
+<input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit" /><br/>
+<a id="txpCommentHelpLink" href="https://rpc.textpattern.com/help/?item=textile_comments&amp;language=en-gb" onclick="window.open(this.href, 'popupwindow', 'width=300,height=400,scrollbars,resizable'); return false;">Textile help</a></p>
+
+<input name="parentid" type="hidden" value="83" />
+
+<input name="backpage" type="hidden" value="/~daniel.odonnell/blog/overriding-screen-resolution-on-xorg-in-ubuntu" />
+</div>
+</form>
+
+				<!-- #2cl -->
+				
+			<!-- #1cl -->
+			
+		</div>
+
+		<!-- Right bar -->
+		<!--googleoff: all-->
+		<!-- this stops google indexing the tweets and other static information -->
+		<div class="rightbar">
+			<p class="hideme">
+				<a class="hideme" id="navigation"></a>
+				<a href="#content" class="hideme">Back to content</a>
+			</p>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, autoDisplay: false, gaTrack: true, gaId: 'UA-32780614-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+			<h2>Search my site</h2>
+				<form role="search" method="get" action="https://people.uleth.ca/~daniel.odonnell/Search/">
+<p class="search_input">
+<input name="q" required="required" size="15" type="search" value="" /><input type="submit" value="Go!" /></p>
+</form>
+			<h2>Sections</h2>
+			<ul>
+<li><a href="https://outlook.office.com/bookwithme/user/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/meetingtype/vFTDmf-nQECoMYPMEtPS2A2?anonymous&amp;ep=mlink">Book a meeting time with me</a></li>				
+<li><a href="../Academic-Policies/current-academic-policies.html">Academic Policies (Current)</a></li>
+				<li><a href="index.html">Blog</a></li>
+<li><a href="../contact/index.html">Contact</a></li>
+<li><a href="../research/index.html">Research</a></li>
+<li><a href="../teaching/index-2.html">Teaching</a></li>
+<li><a href="../tutorials/index.html">Tutorials</a></li>
+			</ul>
+<!-- h2>Schedule</h2>
+
+<iframe 
+name="My calendar"
+title="My calendar"
+width="75%"
+scrolling="yes"
+marginheight="0"
+marginwidth="0"
+src="https://outlook.office365.com/owa/calendar/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/2c4f66847b2042dfb7db8ba348396f3c14689327663406417309/calendar.html"/>
+-->
+<h2>Current teaching</h2>
+			<ul>
+
+<li><a href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a></li>
+
+<li><a href="../teaching/english-4850a-7850a-beowulf-spring-2024.html">English 4850a/7850a: Advanced Old English (Spring 2024)</a></li>
+
+
+
+			</ul>
+			<h2>Recent changes to this site</h2>
+			<ul>
+				<li><strong><a rel="bookmark" href="calm-slippery-and-sadistic-my-silent-war-by-kim-philby-and-a-spy-among-friends-by-ben-macintyre.html">Calm, Slippery, and sadistic: My Silent War by Kim Philby and A Spy among Friends by Ben MacIntyre</a> </strong></li><li><strong><a rel="bookmark" href="chatbot-prompt-thyself.html">ChatBot prompt thyself</a> </strong></li><li><strong><a rel="bookmark" href="what-a-fuss-about-an-omlette-why-lies-are-protected-speech-in-the-us.html">What a fuss about an omlette! Why lies are protected speech in the U.S. (Liar in a crowded theater; Kosseff 2023)</a> </strong></li><li><strong><a rel="bookmark" href="blow-by-blow-island-victory-sla-marshall-1944-2002.html">Blow by blow: Island Victory, S.L.A. Marshall 1944/2002</a> </strong></li><li><strong><a rel="bookmark" href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a> </strong></li>
+			</ul>
+			<h2>Tags</h2>
+			<a href="../tag/anglo-saxon%2bstudies/index.html" class="tagSizeMedium tagSize11" style="font-size: 135%;">anglo-saxon studies</a>, 
+<a href="../tag/caedmon/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">caedmon</a>, 
+<a href="../tag/citation%2bpractice/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">citation practice</a>, 
+<a href="../tag/composition/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">composition</a>, 
+<a href="../tag/computers/index.html" class="tagSizeMedium tagSize24" style="font-size: 182%;">computers</a>, 
+<a href="../tag/digital%2bhumanities/index.html" class="tagSizeLargest tagSize29" style="font-size: 200%;">digital humanities</a>, 
+<a href="../tag/digital%2bpedagogy/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">digital pedagogy</a>, 
+<a href="../tag/grammar/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">grammar</a>, 
+<a href="../tag/history/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">history</a>, 
+<a href="../tag/moodle/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">moodle</a>, 
+<a href="../tag/old%2benglish/index.html" class="tagSizeMedium tagSize6" style="font-size: 117%;">old english</a>, 
+<a href="../tag/pedagogy/index.html" class="tagSizeMedium tagSize13" style="font-size: 142%;">pedagogy</a>, 
+<a href="../tag/research/index.html" class="tagSizeMedium tagSize4" style="font-size: 110%;">research</a>, 
+<a href="../tag/students/index.html" class="tagSizeMedium tagSize7" style="font-size: 121%;">students</a>, 
+<a href="../tag/study%2btips/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">study tips</a>, 
+<a href="../tag/teaching/index.html" class="tagSizeMedium tagSize10" style="font-size: 132%;">teaching</a>, 
+<a href="../tag/tips/index.html" class="tagSizeMedium tagSize16" style="font-size: 153%;">tips</a>, 
+<a href="../tag/tutorials/index.html" class="tagSizeMedium tagSize12" style="font-size: 139%;">tutorials</a>, 
+<a href="../tag/unessay/index.html" class="tagSizeMedium tagSize8" style="font-size: 125%;">unessay</a>, 
+<a href="../tag/universities/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">universities</a><br /><br />
+			<a style="padding-left:1em;" href="../tag/index.html">See all...</a>
+			<!-- <h2>What I'm reading...</h2> -->
+			<!-- txp:aks_rss form="externalRSS" feed="https://api.zotero.org/groups/81065/items/" limit_per_feed="4" wraptag="ul" break="li" /> -->
+			<!-- <h2>Bibliography ticker...</h2> -->
+			<!-- txp:aks_rss form="citationTicker" feed="https://api.zotero.org/users/632779/items?key=lSavInnm7WmefW45BRO6f7uh" limit_per_feed="4" wraptag="p" break="<span />" /> -->
+			<h2>Follow me on <a href="https://twitter.com/#!/DanielPaulOD">Twitter</a></h2>
+			<ul class="arc_twitter"><li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I&#039;m afraid I don&#039;t. I thought it was one o&hellip; <a href='https://twitter.com/i/web/status/1673712143542390785'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 27, 09:17 AM</span></li>
+<li>RT <a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>: The results are in!
+
+<a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>&nbsp;members have voted 97% in favour of strike authorization, if necessary.
+
+The participation r&hellip; <span class="arc_twitter-posted">Jun 27, 08:33 AM</span></li>
+<li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I thought I heard talk of this at caut this year. <span class="arc_twitter-posted">Jun 27, 08:30 AM</span></li>
+<li>RT <a href='http://twitter.com/deelomas' rel='external'>@deelomas</a>: And, the official winner of the &lsquo;Not My Job&rsquo; award goes to&hellip; <a href='https://twitter.com/deelomas/status/1672611829967667202/photo/1'>pic.twitter.com/0sDes9D5oq</a> <span class="arc_twitter-posted">Jun 26, 09:34 PM</span></li>
+<li>I&#039;m beginning to think that electric vehicles are sort of a Linux of the car world at the moment. Except Teslas whi&hellip; <a href='https://twitter.com/i/web/status/1673344791856267271'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 26, 08:57 AM</span></li>
+<li>&quot;He felt that American children in recent generations have had too much parental protection and too little opportun&hellip; <a href='https://twitter.com/i/web/status/1670627745641172993'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 18, 09:01 PM</span></li>
+<li>I&#039;ve been going through Ernie Pyle&#039;s Brave Men (a collection of columns from the European front in WWII) looking up&hellip; <a href='https://twitter.com/i/web/status/1670263169556836354'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 17, 08:52 PM</span></li>
+<li>Traditionally, &ldquo;knowledge workers&rdquo; have had two productivity peaks in their workday: just before lunch and just aft&hellip; <a href='https://twitter.com/i/web/status/1667749991186833409'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 10, 10:25 PM</span></li>
+<li>RT <a href='http://twitter.com/JasonOnTheDrums' rel='external'>@JasonOnTheDrums</a>: <a href='http://twitter.com/search?q=%23Ableg' rel='external'>#Ableg</a>
+
+Today was within 97% of the record votes we record on Tuesday.
+
+We&rsquo;re on pace for 784,475 votes over and will&hellip; <span class="arc_twitter-posted">May 26, 08:08 PM</span></li>
+<li>So if we were doing bets,  here&#039;s mine: 
+
+NDP 45
+UCP 41
+IND (Child-hating poop-cookie) 1
+
+I think people are undere&hellip; <a href='https://twitter.com/i/web/status/1662279319685849088'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">May 26, 08:07 PM</span></li></ul>
+			<!--  <h2><form method="get" action="https://people.uleth.ca/~daniel.odonnell/"><div>
+
+<input name="s" type="hidden" value="blog" />
+Navigation<br />
+<select name="s" onchange="submit(this.form);">
+	<option value="">&#160;</option>
+	<option value="about">About</option>
+	<option value="academic-policies">Academic Policies</option>
+	<option value="archive">Archive</option>
+	<option value="blog" selected="selected">Blog</option>
+	<option value="contact">Contact</option>
+	<option value="drafts">Drafts</option>
+	<option value="research">Research</option>
+	<option value="search">Search</option>
+	<option value="tag">All Tags</option>
+	<option value="teaching">Teaching</option>
+	<option value="tutorials">Tutorials</option>
+</select>
+<noscript><div><input type="submit" value="Go" /></div></noscript>
+</div>
+</form></h2> -->
+			<!-- h2>At <a href="http://dpod.kakelbont.ca/">the dpod blog</a></h2 -->
+			<!-- txp:aks_rss form="externalRSS" feed="http://dpod.kakelbont.ca/feed/" limit_per_feed="10" wraptag="ul" break="li"/ -->
+		</div>
+		<div class="footer">
+<p>Our University’s Blackfoot name is Iniskim, meaning Sacred
+Buffalo Stone.<br/>The University is located in traditional Blackfoot Confederacy territory.<br/>We honour the Blackfoot
+people and their traditional ways of knowing in caring for this land, as well as all Aboriginal peoples who have
+helped shape and continue to strengthen our University community.</p>
+			<p><a href="http://www.uleth.ca/">University of Lethbridge</a> | <a href="http://www.uleth.ca/artsci/">Faculty of Arts and Science</a> | <a href="http://www.uleth.ca/artsci/english">Department of English</a> | <a href="http://www.uleth.ca/graduatestudies/">School of Graduate studies</a> | <a href="../textpattern/index.html">Site
+Administration</a><br />&copy; Date of publication or modification by Daniel Paul O'Donnell<br />Unless otherwise noted, the non-negotiated licence for all work on this site is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>.<br />If you want to use the work in some other fashion, feel free to contact me. </p>
+		</div>
+		<!--googleon: all-->
+	</body>
+
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/blog/overriding-screen-resolution-on-xorg-in-ubuntu by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:51:39 GMT -->
+</html>

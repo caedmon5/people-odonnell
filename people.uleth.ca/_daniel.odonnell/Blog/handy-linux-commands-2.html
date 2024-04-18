@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!-- head -->
+	
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/Blog/handy-linux-commands by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:58:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="9ZHP1FDttD1YeXYP4jrDb8KmwNTGqQgRb92Y1B3M_Ro" />
+		<title>
+			Handy Linux Commands | Daniel Paul O&#039;Donnell
+		</title>
+
+		<!-- txp:feed_link flavor="atom" format="link" label="Atom"/ -->
+		<!-- txp:feed_link flavor="rss" format="link" label="RSS"/ -->
+		<link rel="shortcut icon" href="../transparent.ico" />
+		<style type="text/css" media="screen" title="Default"> @import url(../css/txpscreen.css); </style>
+		<style type="text/css" media="print,mobile" title="Default"> @import url(../css/txpprint.css); </style>
+		<style type="text/css" media="all" title="Default"> @import url(../css/txpcommonstyles.css); </style>
+
+<!-- hypothes.is enabled via the following. See https://hypothes.is/for-publishers/ -->
+
+<!-- the following disables default show highlighting -->
+<!-- <script>window.hypothesisConfig = function () { return {showHighlights: false}; };</script> -->
+<!-- the following loads the annotator -->
+<script defer async src="http://hypothes.is/embed.js"></script>
+
+<!-- end hypothes.is enabling -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-32780614-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<!-- body -->
+	<body>
+		<div class="body">
+
+			<!-- Top bar -->
+			<div class="head">
+				<div>
+					<h1 style="vertical-align:center">
+						<a href="../index.html">
+							<img src="../images/11.png" alt="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." title="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." id="logoimage" width="10%"/></a> <span style="vertical-align:center">Daniel Paul O&#039;Donnell</span>
+					</h1>
+				</div>
+			</div>
+
+		</div>
+<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<p>
+						
+						
+							<a href="../index.html">Daniel Paul O&#039;Donnell</a>&#160;&#187;&#160;<a href="index.html">Blog</a>
+						
+					</p>
+				</div>
+<!-- end breadcrumb -->
+
+		<!-- content -->
+		<div class="content">
+			<p class="hideme">
+				<a class="hideme" id="content"></a>
+				<a href="#navigation" class="hideme">Forward to Navigation</a>
+			</p>
+			<!-- section logic begins -->
+			 <!-- debug #1 -->
+			
+				<!-- we are not on the default section -->
+				<!-- Debug #2 -->
+				
+					<!-- default page form begins -->
+
+
+
+<h2>Handy Linux Commands</h2>
+<div style="background-color:light gray">
+<p><strong><a rel="author" href="../author/Daniel%2bPaul%2bO%27Donnell/index.html">Daniel Paul O&#039;Donnell</a></strong></p>
+<p>Posted: Oct 12, 2008 14:10;<br/>Last Modified: Dec 13, 2010 18:12<br/>
+Keywords: <seg onload="displayLinks()"></seg></p>
+
+<script>
+        // Place the JavaScript function here
+        function generateLinkTags(keywords) {
+            let linkTags = "'";
+            keywords.forEach(keyword => {
+                let link = `<a href='https://home.uleth.ca/~daniel.odonnell/tags/{encodeURIComponent(keyword)}'>${keyword}</a>`;
+                linkTags += link + "<br>";
+            });
+            return linkTags;
+        }
+
+        // This function will be called once the page is fully loaded
+        function displayLinks() {
+            let keywords = ["JavaScript", "OpenAI", "Web Development"];
+            let htmlLinks = generateLinkTags(keywords);
+            document.body.innerHTML = htmlLinks;
+        }
+    </script>
+
+
+
+
+</div>
+<img src="../images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<!--
+<img src="https://people.uleth.ca/~daniel.odonnell/images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+-->
+<!-- automatic TOC begins after this -->
+<div id="TOC">
+   <!--txp:soo_toc label="Contents" labeltag="h3"/-->
+</div>
+<!-- automatic TOC ends -->
+	<p>This is a list of handy linux commands (and sites) with sources.</p>
+
+	<h3><span class="caps">TOC</span></h3>
+
+	<ul>
+		<li><a href="#bash_prompt">Bash Prompt Customisations</a></li>
+		<li><a href="#sshd_config">Change/Add <span class="caps">SSH</span> Port</a></li>
+		<li><a href="#df">Check disk space</a></li>
+		<li><a href="#lsb_release">Check distribution information</a></li>
+		<li><a href="#uname">Check kernel version</a></li>
+		<li><a href="#vol_id">Discover disk volume information</a></li>
+		<li><a href="#mogrify">mogrify &#8212; Comand-line image editing</a></li>
+		<li><a href="#wget">wget</a></li>
+		<li><a href="#datestamp">Add datestamp to filenames</a></li>
+		<li><a href="#touch">Change file datestamp with touch</a></li>
+		<li><a href="#IP">Discover IP address of local computer</a></li>
+		<li><a href="#ddclient">Updating Dyndns addresses with ddclient</a></li>
+		<li><a href="#patch">Patch Kernel</a></li>
+	</ul>
+
+<hr/>
+
+	<h4 id="bash_prompt">Bash Prompt</h4>
+
+	<p>Here&#8217;s a site with more than you ever wanted to know about modifying the bash prompt: <a href="http://www.linuxselfhelp.com/howtos/Bash-Prompt/Bash-Prompt-HOWTO.html">http://www.linuxselfhelp.com/howtos/Bash-Prompt/Bash-Prompt-<span class="caps">HOWTO</span>.html</a></p>
+
+<hr/>
+
+	<h4 id="sshd_config">Change/Add <span class="caps">SSH</span> Port</h4>
+
+	<h5>Comment</h5>
+
+	<ul>
+		<li>Edit <code>/etc/ssh/sshd_config</code>.</li>
+		<li>Add the desired port in the section <code>[Ports]</code>.</li>
+		<li>Reload <code>/etc/init.d/sshd</code></li>
+	</ul>
+
+	<h5>Source</h5>
+
+	<p><a href="_http_/forums.spry.com/showthreadb484-2.html?t=98">http://forums.spry.com/showthread.php?t=98</a>"</p>
+
+<hr/>
+
+	<h4 id="df">Check Disk Space</h4>
+
+	<h5>Command</h5>
+
+<pre><code>df
+</code></pre>
+
+	<p>or (for human units)</p>
+
+<pre><code>df -h
+</code></pre>
+
+	<h5>Output</h5>
+
+<pre><code>Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/sda1             29063196   4422116  23176356  17% /
+varrun                 1031260       132   1031128   1% /var/run
+varlock                1031260         0   1031260   0% /var/lock
+udev                   1031260        60   1031200   1% /dev
+devshm                 1031260        56   1031204   1% /dev/shm
+lrm                    1031260     39976    991284   4% /lib/modules/2.6.24-21-rt/volatile
+/dev/sdb1            197572288  52957424 134657780  29% /home
+/dev/sda2             43598860    928936  40472636   3% /var
+</code></pre>
+
+	<p>or with @-h option:</p>
+
+<pre><code>Filesystem            Size  Used Avail Use% Mounted on
+/dev/sda1              28G  4.3G   23G  17% /
+varrun               1008M  132K 1007M   1% /var/run
+varlock              1008M     0 1008M   0% /var/lock
+udev                 1008M   60K 1008M   1% /dev
+devshm               1008M   56K 1008M   1% /dev/shm
+lrm                  1008M   40M  969M   4% /lib/modules/2.6.24-21-rt/volatile
+/dev/sdb1             189G   51G  129G  29% /home
+/dev/sda2              42G  908M   39G   3% /var
+gvfs-fuse-daemon       28G  4.3G   23G  17% /home/dan/.gvfs
+</code></pre>
+
+	<h5>Additional common options</h5>
+
+	<p>If you give the file name of a device (e.g. /dev/sda1), output will be restricted to that device. See <code>man df</code> for a list of more obscure and specialised options.</p>
+
+	<h5>Comment</h5>
+
+	<p>Forevergeek has a handy script:</p>
+
+<pre><code>    #!/bin/sh
+</code>
+<code>    DISC=$1
+    PARTITION=`df -h |grep $DISC |awk ‘{print $1}’`
+    SIZE=`df -h|grep $DISC|awk ‘{print $2}’`
+    USED=`df -h|grep $DISC|awk ‘{print $3}’`
+    FREE=`df -h|grep $DISC|awk ‘{print $4}’`
+</code>
+<code>    echo “Partition: $PARTITION”
+    echo “Total size: $SIZE”
+    echo “Used space: $USED”
+    echo “Free space: $FREE”
+</code></pre>
+
+	<p>Presumably this could be modified to accept human disk names, as well.</p>
+
+	<h5>Source</h5>
+
+	<p><a href="_http_/forevergeek.com/linux/check_disk_space_in_linux-2.html">http://forevergeek.com/linux/check_disk_space_in_linux.php</a>"</p>
+
+<hr/>
+
+	<h4 id="lsb_release">Check Distribution Version</h4>
+
+	<h5>Command</h5>
+
+	<p><code>lsb_release -a</code></p>
+
+	<h5>Output</h5>
+
+<pre><code>Distributor ID:	Ubuntu
+Description:	Ubuntu 8.04.1
+Release:	8.04
+Codename:	hardy
+</code></pre>
+
+	<h5>Additional common options</h5>
+
+<pre><code>       -i, --id
+              Display the distributor’s ID.
+</code>
+<code>       -d, --description
+              Display a description of the currently installed distribution.
+</code>
+<code>       -r, --release
+              Display the release number of the currently installed  distribu‐
+              tion.
+</code>
+<code>       -c, --codename
+              Display the code name of the currently installed distribution.
+</code>
+<code>       -a, --all
+</code></pre>
+
+	<h5>Comment</h5>
+
+	<p>This provides certain <span class="caps">LSB</span> (Linux Standard Base) and distribution-specific information. It doesn&#8217;t seem to provide kernel information (see <a href="#uname">uname</a>).</p>
+
+	<h5>Source</h5>
+
+	<p><a href="http://www.cse.psu.edu/~lstclair/Howtos/release.html">http://www.cse.psu.edu/~lstclair/Howtos/release.html</a>. See also <a href="http://www.linuxmanpages.com/man1/uname.1.php">man page</a></p>
+
+<hr/>
+
+	<h4 id="uname">Check kernel version</h4>
+
+	<h5>Command</h5>
+
+	<p><code>uname -r</code></p>
+
+	<h5>Output</h5>
+
+<pre><code>2.6.22-14-generic
+</code></pre>
+
+	<h5>Additional common options</h5>
+
+<pre><code>       -a, --all
+              print  all  information,  in the following order, except omit -p
+              and -i if unknown:
+</code>
+<code>       -s, --kernel-name
+              print the kernel name
+</code>
+<code>       -n, --nodename
+              print the network node hostname
+</code>
+<code>       -r, --kernel-release
+              print the kernel release
+</code>
+<code>       -v, --kernel-version
+              print the kernel version
+</code>
+<code>       -m, --machine
+              print the machine hardware name
+</code>
+<code>       -p, --processor
+              print the processor type or &#34;unknown&#34;
+</code>
+<code>       -i, --hardware-platform
+              print the hardware platform or &#34;unknown&#34;
+</code>
+<code>       -o, --operating-system
+              print the operating system
+</code></pre>
+
+	<h5>Comment</h5>
+
+	<p>This checks the kernel version, but even with the -a option doesn&#8217;t provide the distribution information (for which see: <a href="#lsb_release">lsb_release</a>).</p>
+
+	<h5>Source</h5>
+
+	<p>None. See <a href="http://www.linuxmanpages.com/man1/uname.1.php">man page</a>.</p>
+
+<hr/>
+
+	<h4 id="voluid">Discover Volume Information</h4>
+
+	<h5>Command</h5>
+
+	<p><code>vol_id /dev/sdb1</code></p>
+
+	<h5>Output</h5>
+
+<pre><code>ID_FS_USAGE=filesystem
+ID_FS_TYPE=ext3
+ID_FS_VERSION=1.0
+ID_FS_UUID=1384715c-0842-45eb-ac19-6da68568aaa3
+ID_FS_UUID_ENC=1384715c-0842-45eb-ac19-6da68568aaa3
+ID_FS_LABEL=
+ID_FS_LABEL_ENC=
+ID_FS_LABEL_SAFE=
+</code></pre>
+
+	<h5>Additional common options</h5>
+
+<pre><code>-u Display UUID only
+</code></pre>
+
+	<h5>Comment</h5>
+
+	<p>UUIDs are now used to identify volumes in things like /etc/fstab; by identifying them by <span class="caps">UUID</span> instead of dev, you don&#8217;t have the problem of disks changing name if they are installed in a different order next time.</p>
+
+	<h5>Source</h5>
+
+	<p><a href="_http_/ubuntuforums.org/showpost7fa2-2.html?p=1942898&amp;postcount=8">http://ubuntuforums.org/showpost.php?p=1942898&postcount=8</a>":</p>
+
+<hr/>
+
+	<h4 id="mogrify">mogrify Command line image editing</h4>
+
+	<h5>Command</h5>
+
+	<p><code>mogrify {options} filename</code></p>
+
+	<h5>Output</h5>
+
+	<p>Mogrify overwrites the original image unless you specify a path option. It always uses the same file name unless you change it with an extension.</p>
+
+	<p>Use -path &#8211; to write to standard input or output</p>
+
+	<h5>Additional common options</h5>
+
+	<p>-scale xx%<br />
+-path</p>
+
+	<h5>Comment</h5>
+
+	<p>This is part of <strong>imagemagick</strong>.</p>
+
+	<h5>Source</h5>
+
+<hr/>
+
+	<h4 id="wget">wget</h4>
+
+	<h5>Command</h5>
+
+	<p><code>wget {options} URL</code></p>
+
+	<h5>Output</h5>
+
+	<p>Wget gets remote files and copies them to output file. Use <code>-O -</code> to write to standard output.</p>
+
+	<h5>Additional common options</h5>
+
+	<h5>Comment</h5>
+
+	<h5>Source</h5>
+
+<hr/>
+
+	<h4 id="datestamp">Add datestamp to filenames (bulk)</h4>
+
+	<p>from: <a href="http://www.linuxquestions.org/questions/linux-newbie-8/script-add-date-to-filename-188760/">http://www.linuxquestions.org/questions/linux-newbie-8/script-add-date-to-filename-188760/</a></p>
+
+<pre><code># script=dname
+#parameter  $1 is the existing file name
+dt=`date +%y%m%d`
+mv $1 $1$dt
+</code></pre>
+
+	<h4 id="touch">Change file datestamp with touch</h4>
+
+	<p><code>touch -t 199903190000 *</code></p>
+
+	<p>(Changes all the files in a given directory to datestamp 19990319T0000)</p>
+
+<hr/>
+
+	<h4 id="IP">Discover IP address of local computer</h4>
+
+	<p>from: http://ubuntuforums.org/showpost.php?p=1133053&postcount=2</p>
+
+<pre><code>ifconfig / iwconfig
+</code></pre>
+
+	<p>or</p>
+
+<pre><code>ip addr show
+</code></pre>
+
+	<p>or</p>
+
+<pre><code>ip route
+</code></pre>
+
+<hr/>
+
+	<h4 id="ddclient">Update DynDNS addresses with ddclient</h4>
+
+	<p>From: http://www.dyndns.com/support/kb/using_ddclient_with_dyndns_services.html http://ubuntuguide.org/wiki/Dynamic_IP_servers and https://help.ubuntu.com/community/DynamicDNS</p>
+
+<hr/>
+
+	<h4 id="patch">Patching Kernel.</h4>
+
+	<p>See <a href="http://www.question-defense.com/2010/09/26/how-to-recompile-your-ubuntu-10-10-kernel-for-patching-or-to-add-support-for-a-specific-device">http://www.question-defense.com/2010/09/26/how-to-recompile-your-ubuntu-10-10-kernel-for-patching-or-to-add-support-for-a-specific-device</a></p>
+
+	<p>This method worked well for me, except that in the last couple of steps, the names weren;t obviously what the discussion led me to believe (the .deb files had very long extensions and the files in <code>/lib/modules/</code> used &#8211; rather than + as the connector. I&#8217;m also not sure that I ended up with the most recent kernel&#8212;I need to discover how the number in the kernel revisions system works. When the patching was over and I rebooted, the appearance was different.</p>
+<!-- <img src="https://people.uleth.ca/~daniel.odonnell/images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<p>Posted: Sunday October 12, 2008. 14:13.</p> 
+<p>Last modified: Monday December 13, 2010. 18:56.</p> -->
+<div class="comments">
+<img src="../images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+<!-- txp:comments_invite wraptag="p" / -->
+<!-- txp:comments_form / -->
+&#x00A0;
+</div>
+<!-- default page form ends --><h3 id="comment">Comment</h3>
+
+
+
+
+
+
+<form id="txpCommentInputForm" method="post" action="https://people.uleth.ca/~daniel.odonnell/Blog/handy-linux-commands#cpreview">
+<div class="comments-wrapper">
+
+<p><label for="name">Name</label>: 
+<input name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="25" value="" /><br/>
+<label for="email">Email</label>:  
+<input name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="25" value="" /><br/>
+<input class="checkbox" id="remember" name="remember" type="checkbox" value="1" /> <label for="remember">Remember</label> 
+<input name="checkbox_type" type="hidden" value="remember" /><br/>
+<label for="message">Message</label>:<br/><textarea class="txpCommentInputMessage" id="message" name="message" cols="25" rows="5" required="required"></textarea> 
+<input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview" /> 
+<input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit" /><br/>
+<a id="txpCommentHelpLink" href="https://rpc.textpattern.com/help/?item=textile_comments&amp;language=en-gb" onclick="window.open(this.href, 'popupwindow', 'width=300,height=400,scrollbars,resizable'); return false;">Textile help</a></p>
+
+<input name="parentid" type="hidden" value="123" />
+
+<input name="backpage" type="hidden" value="/~daniel.odonnell/Blog/handy-linux-commands" />
+</div>
+</form>
+
+				<!-- #2cl -->
+				
+			<!-- #1cl -->
+			
+		</div>
+
+		<!-- Right bar -->
+		<!--googleoff: all-->
+		<!-- this stops google indexing the tweets and other static information -->
+		<div class="rightbar">
+			<p class="hideme">
+				<a class="hideme" id="navigation"></a>
+				<a href="#content" class="hideme">Back to content</a>
+			</p>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, autoDisplay: false, gaTrack: true, gaId: 'UA-32780614-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+			<h2>Search my site</h2>
+				<form role="search" method="get" action="https://people.uleth.ca/~daniel.odonnell/Search/">
+<p class="search_input">
+<input name="q" required="required" size="15" type="search" value="" /><input type="submit" value="Go!" /></p>
+</form>
+			<h2>Sections</h2>
+			<ul>
+<li><a href="https://outlook.office.com/bookwithme/user/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/meetingtype/vFTDmf-nQECoMYPMEtPS2A2?anonymous&amp;ep=mlink">Book a meeting time with me</a></li>				
+<li><a href="../Academic-Policies/current-academic-policies.html">Academic Policies (Current)</a></li>
+				<li><a href="index.html">Blog</a></li>
+<li><a href="../contact/index.html">Contact</a></li>
+<li><a href="../research/index.html">Research</a></li>
+<li><a href="../teaching/index-2.html">Teaching</a></li>
+<li><a href="../tutorials/index.html">Tutorials</a></li>
+			</ul>
+<!-- h2>Schedule</h2>
+
+<iframe 
+name="My calendar"
+title="My calendar"
+width="75%"
+scrolling="yes"
+marginheight="0"
+marginwidth="0"
+src="https://outlook.office365.com/owa/calendar/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/2c4f66847b2042dfb7db8ba348396f3c14689327663406417309/calendar.html"/>
+-->
+<h2>Current teaching</h2>
+			<ul>
+
+<li><a href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a></li>
+
+<li><a href="../teaching/english-4850a-7850a-beowulf-spring-2024.html">English 4850a/7850a: Advanced Old English (Spring 2024)</a></li>
+
+
+
+			</ul>
+			<h2>Recent changes to this site</h2>
+			<ul>
+				<li><strong><a rel="bookmark" href="calm-slippery-and-sadistic-my-silent-war-by-kim-philby-and-a-spy-among-friends-by-ben-macintyre.html">Calm, Slippery, and sadistic: My Silent War by Kim Philby and A Spy among Friends by Ben MacIntyre</a> </strong></li><li><strong><a rel="bookmark" href="chatbot-prompt-thyself.html">ChatBot prompt thyself</a> </strong></li><li><strong><a rel="bookmark" href="what-a-fuss-about-an-omlette-why-lies-are-protected-speech-in-the-us.html">What a fuss about an omlette! Why lies are protected speech in the U.S. (Liar in a crowded theater; Kosseff 2023)</a> </strong></li><li><strong><a rel="bookmark" href="blow-by-blow-island-victory-sla-marshall-1944-2002.html">Blow by blow: Island Victory, S.L.A. Marshall 1944/2002</a> </strong></li><li><strong><a rel="bookmark" href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a> </strong></li>
+			</ul>
+			<h2>Tags</h2>
+			<a href="../tag/anglo-saxon%2bstudies/index.html" class="tagSizeMedium tagSize11" style="font-size: 135%;">anglo-saxon studies</a>, 
+<a href="../tag/caedmon/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">caedmon</a>, 
+<a href="../tag/citation%2bpractice/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">citation practice</a>, 
+<a href="../tag/composition/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">composition</a>, 
+<a href="../tag/computers/index.html" class="tagSizeMedium tagSize24" style="font-size: 182%;">computers</a>, 
+<a href="../tag/digital%2bhumanities/index.html" class="tagSizeLargest tagSize29" style="font-size: 200%;">digital humanities</a>, 
+<a href="../tag/digital%2bpedagogy/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">digital pedagogy</a>, 
+<a href="../tag/grammar/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">grammar</a>, 
+<a href="../tag/history/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">history</a>, 
+<a href="../tag/moodle/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">moodle</a>, 
+<a href="../tag/old%2benglish/index.html" class="tagSizeMedium tagSize6" style="font-size: 117%;">old english</a>, 
+<a href="../tag/pedagogy/index.html" class="tagSizeMedium tagSize13" style="font-size: 142%;">pedagogy</a>, 
+<a href="../tag/research/index.html" class="tagSizeMedium tagSize4" style="font-size: 110%;">research</a>, 
+<a href="../tag/students/index.html" class="tagSizeMedium tagSize7" style="font-size: 121%;">students</a>, 
+<a href="../tag/study%2btips/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">study tips</a>, 
+<a href="../tag/teaching/index.html" class="tagSizeMedium tagSize10" style="font-size: 132%;">teaching</a>, 
+<a href="../tag/tips/index.html" class="tagSizeMedium tagSize16" style="font-size: 153%;">tips</a>, 
+<a href="../tag/tutorials/index.html" class="tagSizeMedium tagSize12" style="font-size: 139%;">tutorials</a>, 
+<a href="../tag/unessay/index.html" class="tagSizeMedium tagSize8" style="font-size: 125%;">unessay</a>, 
+<a href="../tag/universities/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">universities</a><br /><br />
+			<a style="padding-left:1em;" href="../tag/index.html">See all...</a>
+			<!-- <h2>What I'm reading...</h2> -->
+			<!-- txp:aks_rss form="externalRSS" feed="https://api.zotero.org/groups/81065/items/" limit_per_feed="4" wraptag="ul" break="li" /> -->
+			<!-- <h2>Bibliography ticker...</h2> -->
+			<!-- txp:aks_rss form="citationTicker" feed="https://api.zotero.org/users/632779/items?key=lSavInnm7WmefW45BRO6f7uh" limit_per_feed="4" wraptag="p" break="<span />" /> -->
+			<h2>Follow me on <a href="https://twitter.com/#!/DanielPaulOD">Twitter</a></h2>
+			<ul class="arc_twitter"><li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I&#039;m afraid I don&#039;t. I thought it was one o&hellip; <a href='https://twitter.com/i/web/status/1673712143542390785'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 27, 09:17 AM</span></li>
+<li>RT <a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>: The results are in!
+
+<a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>&nbsp;members have voted 97% in favour of strike authorization, if necessary.
+
+The participation r&hellip; <span class="arc_twitter-posted">Jun 27, 08:33 AM</span></li>
+<li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I thought I heard talk of this at caut this year. <span class="arc_twitter-posted">Jun 27, 08:30 AM</span></li>
+<li>RT <a href='http://twitter.com/deelomas' rel='external'>@deelomas</a>: And, the official winner of the &lsquo;Not My Job&rsquo; award goes to&hellip; <a href='https://twitter.com/deelomas/status/1672611829967667202/photo/1'>pic.twitter.com/0sDes9D5oq</a> <span class="arc_twitter-posted">Jun 26, 09:34 PM</span></li>
+<li>I&#039;m beginning to think that electric vehicles are sort of a Linux of the car world at the moment. Except Teslas whi&hellip; <a href='https://twitter.com/i/web/status/1673344791856267271'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 26, 08:57 AM</span></li>
+<li>&quot;He felt that American children in recent generations have had too much parental protection and too little opportun&hellip; <a href='https://twitter.com/i/web/status/1670627745641172993'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 18, 09:01 PM</span></li>
+<li>I&#039;ve been going through Ernie Pyle&#039;s Brave Men (a collection of columns from the European front in WWII) looking up&hellip; <a href='https://twitter.com/i/web/status/1670263169556836354'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 17, 08:52 PM</span></li>
+<li>Traditionally, &ldquo;knowledge workers&rdquo; have had two productivity peaks in their workday: just before lunch and just aft&hellip; <a href='https://twitter.com/i/web/status/1667749991186833409'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 10, 10:25 PM</span></li>
+<li>RT <a href='http://twitter.com/JasonOnTheDrums' rel='external'>@JasonOnTheDrums</a>: <a href='http://twitter.com/search?q=%23Ableg' rel='external'>#Ableg</a>
+
+Today was within 97% of the record votes we record on Tuesday.
+
+We&rsquo;re on pace for 784,475 votes over and will&hellip; <span class="arc_twitter-posted">May 26, 08:08 PM</span></li>
+<li>So if we were doing bets,  here&#039;s mine: 
+
+NDP 45
+UCP 41
+IND (Child-hating poop-cookie) 1
+
+I think people are undere&hellip; <a href='https://twitter.com/i/web/status/1662279319685849088'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">May 26, 08:07 PM</span></li></ul>
+			<!--  <h2><form method="get" action="https://people.uleth.ca/~daniel.odonnell/"><div>
+
+<input name="s" type="hidden" value="blog" />
+Navigation<br />
+<select name="s" onchange="submit(this.form);">
+	<option value="">&#160;</option>
+	<option value="about">About</option>
+	<option value="academic-policies">Academic Policies</option>
+	<option value="archive">Archive</option>
+	<option value="blog" selected="selected">Blog</option>
+	<option value="contact">Contact</option>
+	<option value="drafts">Drafts</option>
+	<option value="research">Research</option>
+	<option value="search">Search</option>
+	<option value="tag">All Tags</option>
+	<option value="teaching">Teaching</option>
+	<option value="tutorials">Tutorials</option>
+</select>
+<noscript><div><input type="submit" value="Go" /></div></noscript>
+</div>
+</form></h2> -->
+			<!-- h2>At <a href="http://dpod.kakelbont.ca/">the dpod blog</a></h2 -->
+			<!-- txp:aks_rss form="externalRSS" feed="http://dpod.kakelbont.ca/feed/" limit_per_feed="10" wraptag="ul" break="li"/ -->
+		</div>
+		<div class="footer">
+<p>Our University’s Blackfoot name is Iniskim, meaning Sacred
+Buffalo Stone.<br/>The University is located in traditional Blackfoot Confederacy territory.<br/>We honour the Blackfoot
+people and their traditional ways of knowing in caring for this land, as well as all Aboriginal peoples who have
+helped shape and continue to strengthen our University community.</p>
+			<p><a href="http://www.uleth.ca/">University of Lethbridge</a> | <a href="http://www.uleth.ca/artsci/">Faculty of Arts and Science</a> | <a href="http://www.uleth.ca/artsci/english">Department of English</a> | <a href="http://www.uleth.ca/graduatestudies/">School of Graduate studies</a> | <a href="../textpattern/index.html">Site
+Administration</a><br />&copy; Date of publication or modification by Daniel Paul O'Donnell<br />Unless otherwise noted, the non-negotiated licence for all work on this site is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>.<br />If you want to use the work in some other fashion, feel free to contact me. </p>
+		</div>
+		<!--googleon: all-->
+	</body>
+
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/Blog/handy-linux-commands by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:58:55 GMT -->
+</html>

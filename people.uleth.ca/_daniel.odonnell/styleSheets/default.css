@@ -1,0 +1,112 @@
+BODY { 
+	BACKGROUND-COLOR:#FAF0E6; 
+	MARGIN-LEFT:3%; 
+	MARGIN-RIGHT:3%; 
+	MARGIN-TOP:3%; 
+	FONT-FAMILY: 'Times New Roman', Times, SERIF; 
+	FONT-SIZE:12pt; 
+	COLOR:BLACK; 
+	} 
+
+.big { 
+	FONT-SIZE:15pt 
+	} 
+table { 
+	FONT-SIZE:12pt; 
+	} 
+BODY.SCHEDULE { 
+	FONT-SIZE:10pt; 
+	} 
+BODY.MENU { 
+	MARGIN-LEFT:2%; 
+	MARGIN-RIGHT:2%; 
+	MARGIN-TOP:2%; 
+	FONT-FAMILY: 'Arial', SAN-SERIF; 
+	FONT-SIZE:10pt; 
+	BACKGROUND-COLOR:#FFEFD5; 
+	} 
+H1, H2, H3, H4, H5 { 
+	FONT-FAMILY: 'Arial', Arial, SANS-SERIF; 
+	COLOR:green; 
+	FONT-WEIGHT:BOLD; 
+	} 
+H1 { 
+	TEXT-ALIGN:CENTER; 
+	FONT-SIZE: 180% 
+	}
+H2 { 
+	TEXT-ALIGN:CENTER; 
+	FONT-SIZE: 140% 
+	} 
+H3 { 
+	FONT-SIZE: 110% 
+	} 
+H4 { 
+	FONT-SIZE: 100% 
+	} 
+H4.navLink { 
+	LINE-HEIGHT: 3pt; 
+	} 
+H5 { 
+	FONT-SIZE: 100% 
+	} 
+A.navLink { 
+	FONT-SIZE: 10pt 
+	} 
+A:LINK, A:VISITED { 
+	color:blue; 
+	text-decoration:none; 
+	} 
+A:HOVER { 
+	color:red; 
+	text-decoration:underline; 
+	} 
+.foreign, .note, .warning, .strongWarning, .titleM, .emphasis, .comment, .cited { 
+	FONT-STYLE:ITALIC; 
+	} 
+.strongWarning { 
+	color:red 
+	} 
+.term, .title { 
+	FONT-WEIGHT:BOLD 
+	} 
+.title { 
+	FONT-FAMILY: 'Arial', Arial, SANSERIF; 
+	} #warning, 
+.warning { 
+	} 
+.update, .exampleCode { 
+	FONT-FAMILY: 'Courier', Courier, MONOSPACE; 
+	} 
+.update { 
+	TEXT-ALIGN:CENTER; 
+	FONT-SIZE: 60%; 
+	} 
+.greeting { 
+	TEXT-ALIGN:CENTER; 
+	FONT-WEIGHT: BOLD; } 
+DIV { 
+	DISPLAY:INLINE 
+	} 
+.COMMENT { 
+	FONT-FAMILY: 'Times New Roman', Times, SERIF; 
+	FONT-SIZE:90%; 
+	COLOR:BLACK; 
+	FONT-WEIGHT:NORMAL; 
+	} 
+.TOC1 { 
+	FONT-WEIGHT:BOLD; 
+	} 
+.exerciseSuggestion { 
+	BACKGROUND-COLOR:YELLOW 
+	} 
+.bibNote { 
+	margin-left:6%; 
+	font-size:80%; 
+	color:red; 
+	} 
+.copyright { 
+	TEXT-ALIGN:CENTER ; 
+	TEXT-DECORATION:UNDERLINE ; 
+	COLOR:gray; 
+	}

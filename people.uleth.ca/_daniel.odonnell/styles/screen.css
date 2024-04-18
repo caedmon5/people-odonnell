@@ -1,0 +1,83 @@
+/*
+			/htm/stylesheet/screen.css
+	This stylesheet controls aspects of layout and appearance that
+	are specific to screen media.  This involves for the most part
+	block layout and (font and background) colours, but also other
+	incidental features.
+	
+	The stylesheet is broken into {{}} main parts:
+	    a) @import(s): Imports stylesheet(s) containing core style
+	       information common to most stylesheets in the project.
+	    b) Screen Geography: Controls the size and location of
+	       the major content blocks).
+	    c) Element appearance: Controls the appearance (mostly
+	       colour) of elements of the screen.
+	    z) Temporary proofreading styles: Commented out section
+	       that contains styles used to check xhtml coding.
+
+*/
+
+
+
+/* a) @import(s) */
+
+@import url(core.css);
+@import url(screenelements.css);
+
+
+/*
+b) Screen Geography
+*/
+
+body {					/* controls width and location of all blocks except div.toc and children */
+		    margin-left: 220px;
+		    max-width: 35em;
+}
+
+div.colophon {
+	     margin: auto;
+	     width: 20em;
+}
+
+div.toc {				/* controls width and location of div.toc */
+	margin-left: 0;
+	position: absolute;		/* position: absolute is for MSIE only; the style is removed below */
+	top: 4px;
+	left: 4px;
+	width: 200px;
+}
+
+div.quickmenu, div.thischapter {	/* controls width and location of div.toc children */
+	margin-left: 2px;
+}
+
+/* MSIE workaround */			/* This instruction hides "position:fixed" from MSIE5.5~6.0 */
+body>div.toc {
+	     position: fixed;
+}
+
+span.query {
+	   display: block;
+	position: absolute;
+	margin: 4px;
+	padding: 2px;
+	left: 4px;
+	font-size: 60%;
+	max-width: 200 px;
+}
+
+/*
+
+div.proofing h2 {
+	     font-size:70%;
+	     margin: 4px;
+	     line-height: 70%;
+}
+*/
+
+
+.proofing, .query {
+	    color:red;
+	    background-color:yellow;
+}
+

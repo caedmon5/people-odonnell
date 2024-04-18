@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+people.uleth.ca	TRUE	/	FALSE	1999999999	txp_test_cookie	1
+people.uleth.ca	TRUE	/	FALSE	1999999999	samesite	Lax
+

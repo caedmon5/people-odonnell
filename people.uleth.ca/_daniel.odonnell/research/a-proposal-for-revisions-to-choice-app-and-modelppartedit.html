@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!-- head -->
+	
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/research/a-proposal-for-revisions-to-choice-app-and-modelppartedit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:52:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="9ZHP1FDttD1YeXYP4jrDb8KmwNTGqQgRb92Y1B3M_Ro" />
+		<title>
+			A Proposal for Revisions to choice, app, and model.pPartEdit | Daniel Paul O&#039;Donnell
+		</title>
+
+		<!-- txp:feed_link flavor="atom" format="link" label="Atom"/ -->
+		<!-- txp:feed_link flavor="rss" format="link" label="RSS"/ -->
+		<link rel="shortcut icon" href="../transparent.ico" />
+		<style type="text/css" media="screen" title="Default"> @import url(../css/txpscreen.css); </style>
+		<style type="text/css" media="print,mobile" title="Default"> @import url(../css/txpprint.css); </style>
+		<style type="text/css" media="all" title="Default"> @import url(../css/txpcommonstyles.css); </style>
+
+<!-- hypothes.is enabled via the following. See https://hypothes.is/for-publishers/ -->
+
+<!-- the following disables default show highlighting -->
+<!-- <script>window.hypothesisConfig = function () { return {showHighlights: false}; };</script> -->
+<!-- the following loads the annotator -->
+<script defer async src="http://hypothes.is/embed.js"></script>
+
+<!-- end hypothes.is enabling -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-32780614-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<!-- body -->
+	<body>
+		<div class="body">
+
+			<!-- Top bar -->
+			<div class="head">
+				<div>
+					<h1 style="vertical-align:center">
+						<a href="../index.html">
+							<img src="../images/11.png" alt="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." title="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." id="logoimage" width="10%"/></a> <span style="vertical-align:center">Daniel Paul O&#039;Donnell</span>
+					</h1>
+				</div>
+			</div>
+
+		</div>
+<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<p>
+						
+						
+							<a href="../index.html">Daniel Paul O&#039;Donnell</a>&#160;&#187;&#160;<a href="index.html">Research</a>
+						
+					</p>
+				</div>
+<!-- end breadcrumb -->
+
+		<!-- content -->
+		<div class="content">
+			<p class="hideme">
+				<a class="hideme" id="content"></a>
+				<a href="#navigation" class="hideme">Forward to Navigation</a>
+			</p>
+			<!-- section logic begins -->
+			 <!-- debug #1 -->
+			
+				<!-- we are not on the default section -->
+				<!-- Debug #2 -->
+				
+					<!-- default page form begins -->
+
+
+
+<h2>A Proposal for Revisions to choice, app, and model.pPartEdit</h2>
+<div style="background-color:light gray">
+<p><strong><a rel="author" href="../author/Daniel%2bPaul%2bO%27Donnell/index.html">Daniel Paul O&#039;Donnell</a></strong></p>
+<p>Posted: Jul 20, 2007 16:07;<br/>Last Modified: Jul 22, 2007 18:07<br/>
+Keywords: <seg onload="displayLinks()"></seg></p>
+
+<script>
+        // Place the JavaScript function here
+        function generateLinkTags(keywords) {
+            let linkTags = "'";
+            keywords.forEach(keyword => {
+                let link = `<a href='https://home.uleth.ca/~daniel.odonnell/tags/{encodeURIComponent(keyword)}'>${keyword}</a>`;
+                linkTags += link + "<br>";
+            });
+            return linkTags;
+        }
+
+        // This function will be called once the page is fully loaded
+        function displayLinks() {
+            let keywords = ["JavaScript", "OpenAI", "Web Development"];
+            let htmlLinks = generateLinkTags(keywords);
+            document.body.innerHTML = htmlLinks;
+        }
+    </script>
+
+
+
+
+</div>
+<img src="../images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<!--
+<img src="https://people.uleth.ca/~daniel.odonnell/images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+-->
+<!-- automatic TOC begins after this -->
+<div id="TOC">
+   <!--txp:soo_toc label="Contents" labeltag="h3"/-->
+</div>
+<!-- automatic TOC ends -->
+	<p>This document proposes a series of related revisions affecting
+	<ul>
+		<li>choice</li>
+		<li>model.choicePart</li>
+		<li>model.listLike</li>
+		<li>model.pPartTranscriptional</li>
+	</ul></p>
+
+	<h2>&lt;choice&gt;</h2>
+
+	<h3>Description</h3>
+
+	<p>Currently our description of <code>&#60;choice&#62;</code> in Appendix B claims that the element &#8220;groups a number of alternative encodings for the same point in a text&#8221;; later, it suggests that <code>&#60;app&#62;</code> is &#8220;a specialized version of <code>&#60;choice&#62;</code> for encoding multiple witnesses of a single work.&#8221;</p>
+
+	<p>In actual fact, however, neither claim is fully accurate. </p>
+
+	<p>First of all, <code>&#60;choice&#62;</code> is far more specialised than its description suggests. The content model for <code>&#60;choice&#62;</code> limits its content to itself and members of <code>model.choicePart</code> (<code>&#60;abbr&#62; &#60;corr&#62; &#60;expan&#62; &#60;orig&#62; &#60;reg&#62; &#60;seg&#62; &#60;sic&#62; &#60;unclear&#62;</code>). These elements, in turn are a subset of those found in <code>model.pPartEditorial</code> (<code>&#60;abbr&#62; &#60;choice&#62; &#60;expan&#62;</code>) and <code>model.pPartTranscriptional</code> (<code>&#60;add&#62; &#60;app&#62; &#60;corr&#62; &#60;damage&#62; &#60;del&#62; &#60;orig&#62; &#60;reg&#62; &#60;restore&#62; &#60;sic&#62; &#60;supplied&#62; &#60;unclear&#62;</code>). </p>
+
+	<p>What this means is that the use of <code>&#60;choice&#62;</code> in the following example is illegal, even though the text clearly represents &#8220;a number of alternative encodings for the same point in a text&#8221;[1]:</p>
+
+	<blockquote>
+		<p><code>&#60;choice&#62;</code></p>
+		<p><code>&#60;div&#62;</code></p>
+		<p><code>&#60;p&#62;The Text Encoding Initiative is a consortium responsible for maintaining the TEI guidelines. The TEI is currently hosted by four universities and directed by a board. Technical work is carried out by an elected council, specially appointed workgroups, and two editors.&#60;/p&#62;</code></p>
+		<p><code>&#60;/div&#62;</code></p>
+		<p><code>&#60;div&#62;</code></p>
+		<p><code>&#60;p&#62;The Text Encoding Initiative is a consortium responsible for maintaining the TEI guidelines.&#60;/p&#62;</code></p>
+		<p><code>&#60;p&#62;The TEI is currently hosted by four universities and directed by a board. Technical work is carried out by an elected council, specially appointed workgroups, and two editors.&#60;/p&#62;</code></p>
+		<p><code>&#60;/div&#62;</code></p>
+		<p><code>&#60;/choice&#62;</code></p>
+	</blockquote>
+
+	<p>In fact, as the narrative description and content model of the element in §3.4 makes clear, <code>&#60;choice&#62;</code> is actually intended &#8220;to represent simultaneously a text in its ‘original’ uncorrected and unaltered form, and also one or more ‘edited’ forms.&#8221; All the members of <code>model.choicePart</code> except <code>&#60;unclear&#62;</code> and the generic phrase element <code>&#60;seg&#62;</code> belong to the so-called Janus tags. Janus tags are elements like <code>&#60;abbr&#62;</code> and <code>&#60;expan&#62;</code> that represent &#8220;original&#8221; and &#8220;mediated&#8221; textual states and are logical and exclusive alternates to each other. In earlier versions of the Guidelines, these elements used attributes that indicated the &#8220;alternate&#8221; state for the text: <code>&#60;abbr&#62;</code> had an <code>expan</code> attribute that could be used to indicate the expanded form of the abbreviation, <code>&#60;expan&#62;</code> had an <code>abbr</code> attribute that could be used to indicate the abbreviated form. This content model suggests that the narrative description of the element is actually the correct form: <code>&#60;choice&#62;</code> is a highly specialised element used to group original and editorial states of the same span of text.</p>
+
+	<p>The claim that <code>&#60;app&#62;</code> is a specialised form of <code>&#60;choice&#62;</code> is also not true given this restrictive content model. <code>&#60;app&#62;</code> associates readings with each other (and optionally with lemmas, which are just a semantically differentiated kind of reading). While it is true that readings exist as alternates to each other at specific points in the text, the difference is neither primarily one of original vs. editorial states (since all readings are by definition &#8220;original&#8221; to the witness in which they appear), nor one of markup: the point of an apparatus is not that the encoding of the readings is different, but that their content is.</p>
+
+	<p>Given the above, it seems to me that we should rewrite our definition of <code>choice</code> in Appendix B to match that in §3.4: </p>
+
+	<blockquote>
+		<p><code>&#60;choice&#62;</code> groups alternative encodings representing ‘original’ (missing, uncorrected and/or unaltered) and one or more ‘edited’ (corrected, supplied and/or emended) forms for the same point in a text.</p>
+	</blockquote>
+
+	<h3>&lt;gap&gt;, &lt;damage&gt;, &lt;unclear&gt;, &lt;supplied&gt;, and &lt;del&gt;</h3>
+
+	<p>As noted above, with the exception of <code>&#60;unclear&#62;</code> and <code>&#60;seg&#62;</code>, <code>&#60;choice&#62;</code> can contain itself or the old &#8220;Janus tags&#8221; now found in <code>model.pPartEditorial</code> and <code>model.pPartTranscriptional</code>.</p>
+
+	<p><code>&#60;unclear&#62;</code>, however, belongs to a different set of elements, the &#8220;closely allied&#8221; (see §14.2.3) <code>&#60;gap&#62;</code>, <code>&#60;damage&#62;</code>, <code>&#60;unclear&#62;</code>, <code>&#60;supplied&#62;</code>, and <code>&#60;del&#62;</code>.</p>
+
+	<p>These elements are like the former Janus elements in that they can be used to reflect alternate original and editorial encodings of a span of text (For examples showing that these tags can be used in this way, see §14.2.3.). They are unlike them, however, in that earlier versions of the Guidelines did not provide them with an attribute to indicate the &#8220;other&#8221; state&#8212;i.e. <code>&#60;gap&#62;</code>, <code>&#60;damage&#62;</code>, <code>&#60;unclear&#62;</code>, and <code>&#60;del&#62;</code> have never had a <code>supplied</code> attribute; <code>&#60;supplied&#62;</code> has never had an attribute for representing the pre-supplied state.</p>
+
+	<p>If we are serious about including <code>&#60;unclear&#62;</code> in the content model for <code>&#60;choice&#62;</code>, then we should also have the other members of this group of elements: <code>&#60;supplied&#62;</code> is the element the Guidelines recommend for encoding editorial suggestions for unclear text, and <code>&#60;damage&#62;</code>, <code>&#60;gap&#62;</code>, <code>&#60;del&#62;</code>, and <code>&#60;unclear&#62;</code> are used in combination with <code>&#60;supplied&#62;</code> in §§ 14.2.3-4 to create some very fine distinctions&#x2014;none of which can be encoded if the parent is <code>&#60;choice&#62;</code>, however.</p>
+
+	<p>Given the above, it makes little sense not to add <code>&#60;gap&#62;</code>, <code>&#60;damage&#62;</code>, <code>&#60;supplied&#62;</code>, and <code>&#60;del&#62;</code> model.choicePart.</p>
+
+	<h3>&lt;add&gt;</h3>
+
+	<p>If we follow Recommendation 2, then the content model for <code>&#60;choice&#62;</code> will contain the complete contents of <code>model.pPartEditorial</code> and all members of <code>model.pPartTranscriptional</code> except <code>&#60;app&#62;</code>, <code>&#60;restore&#62;</code>, and <code>&#60;add&#62;</code>.</p>
+
+	<p>Of these three, <code>&#60;add&#62;</code> is perhaps the most obvious candidate for inclusion in <code>model.choicePart</code>. Although its does not represent an <em>editorial</em> state to contrast with <code>&#60;del&#62;</code>, the element is, as we note in §14.3.4, &#8220;is often associated with addition&#8221; in manuscripts and typescripts. This means that a deletion correction sequence such as the following can also be thought of as representing alternating states in the history of the text: </p>
+
+	<blockquote>
+		<p><code>&#60;l&#62;
+  &#60;del type=&#34;overstrike&#34;&#62;Inviolable&#60;/del&#62;
+  &#60;add place=&#34;infralinear&#34;&#62;Inexplicable&#60;/add&#62;
+ splendour of Corinthian white and gold&#60;/l&#62;</code></p>
+	</blockquote>
+
+	<p>vs (currently illegal)</p>
+
+	<blockquote>
+		<p><code>&#60;l&#62;
+&#60;choice&#62;
+  &#60;del type=&#34;overstrike&#34;&#62;Inviolable&#60;/del&#62;
+  &#60;add place=&#34;infralinear&#34;&#62;Inexplicable&#60;/add&#62;
+&#60;/choice&#62;
+ splendour of Corinthian white and gold&#60;/l&#62;</code></p>
+	</blockquote>
+
+	<p>The main difference between this use of <code>&#60;del&#62;</code> : <code>&#60;add&#62;</code> and  <code>&#60;sic&#62;</code> : <code>&#60;corr&#62;</code> is semantic: if the error identified and corrected by a modern editor, we use <code>&#60;sic&#62;</code> : <code>&#60;corr&#62;</code> within <code>&#60;choice&#62;</code>; if the deletion and addition is done in the witness itself, however, it is tagged with <code>&#60;del&#62;</code> and <code>&#60;add&#62;</code> and, currently, not allowed inside <code>&#60;choice&#62;</code>.</p>
+
+	<p>For this reason I see little reason not to add <code>&#60;add&#62;</code> to <code>model.choicePart</code>.</p>
+
+	<h3>&lt;restore&gt;</h3>
+
+	<p><code>&#60;restore&#62;</code> is used to indicate &#8220;restoration of text to an earlier state by cancellation of an editorial or authorial marking or instruction.&#8221; </p>
+
+	<blockquote>
+		<p><code>For I hate this  &#60;restore hand=&#34;#dhl&#34; means=&#34;marginalStetNote&#34;&#62;
+  &#60;del&#62;my&#60;/del&#62;
+ &#60;/restore&#62;
+body</code></p>
+	</blockquote>
+
+	<p>The element is thus like all the other model.pPartTranscriptional elements discussed thus far in that it encodes alternate markup reflecting alternate document states (in this case pre- and post cancellation). But it is unique in that the alternation is expressed by a parent child rather than sibling relationship: here the pre-state is contained within rather than alongside the post-state. A purist might argue that <code>&#60;restore&#62;</code> is really a shorthand method for indicating a choice as in the following (illegal) example:</p>
+
+	<blockquote>
+		<p><code>For I hate this  &#60;restore hand=&#34;#dhl&#34; means=&#34;marginalStetNote&#34;&#62;
+&#60;choice&#62;
+  &#60;del&#62;my&#60;/del&#62;
+ &#60;restore&#62;my&#60;/restore&#62;
+&#60;choice&#62;
+body</code></p>
+	</blockquote>
+
+	<p>But this approach seems counter-intuitive, is less easy to understand than the current model, and causes trouble with atomisation of data, since the textual content in the pre- and post-restoration states will always be, by definition, be identical.</p>
+
+	<h4>The &lt;restore&gt; content model</h4>
+
+	<p>Even if <code>&#60;restore&#62;</code> probably should not be added to <code>model.choicePart</code>, its own content could be improved: currently <code>&#60;restore&#62;</code> can contain <code>macro.paraContent</code> (<code>&#60;ab&#62; &#60;add&#62; &#60;camera&#62; &#60;caption&#62; &#60;case&#62; &#60;cell&#62; &#60;colloc&#62; &#60;corr&#62; &#60;damage&#62; &#60;def&#62; &#60;del&#62; &#60;docEdition&#62; &#60;emph&#62; &#60;gen&#62; &#60;gram&#62; &#60;head&#62; &#60;hi&#62; &#60;hyph&#62; &#60;iType&#62; &#60;imprimatur&#62; &#60;l&#62; &#60;lang&#62; &#60;lbl&#62; &#60;mood&#62; &#60;number&#62; &#60;orig&#62; &#60;orth&#62; &#60;p&#62; &#60;per&#62; &#60;pos&#62; &#60;pron&#62; &#60;ref&#62; &#60;reg&#62; &#60;restore&#62; &#60;rhyme&#62; &#60;seg&#62; &#60;sic&#62; &#60;sound&#62; &#60;stress&#62; &#60;subc&#62; &#60;supplied&#62; &#60;syll&#62; &#60;tech&#62; &#60;title&#62; &#60;titlePart&#62; &#60;tns&#62; &#60;unclear&#62; &#60;usg&#62; &#60;writing&#62;</code>). </p>
+
+	<p>In actual fact, very few of these elements are really open to cancellation: <code>&#60;add&#62;</code>, <code>&#60;corr&#62;</code>, <code>&#60;del&#62;</code>, <code>&#60;emph&#62;</code>, <code>&#60;hi&#62;</code>, <code>&#60;sic&#62;</code>, and perhaps <code>&#60;reg&#62;</code> are the only elements I can see where an author/editor could mark something one way and this wish to undo this mark. All the other states can only be restored if some other markup is applied to them (i.e. you can&#8217;t restore a <code>&#60;head&#62;</code> unless you delete it first; in which case what you are really cancelling is <code>&#60;del&#62;</code>).</p>
+
+	<p>Restore seems to me to be a unique enough type of element that it is worth while building a class of &#8220;restorable&#8221; elements for use in its content model. The members of this class (<code>model.restorePart</code>) should include <code>&#60;add&#62;</code>, <code>&#60;corr&#62;</code>, <code>&#60;del&#62;</code>, <code>&#60;emph&#62;</code>, <code>&#60;hi&#62;</code>, <code>&#60;sic&#62;</code>, and perhaps <code>&#60;reg&#62;</code>.</p>
+
+	<h3>&lt;app&gt;</h3>
+
+	<p>The last member of <code>model.pPartTranscriptional</code> not found in <code>model.choicePart</code> is <code>&#60;app&#62;</code>. </p>
+
+	<p>This element is an odd fit in the class anyway, however. <code>model.pPartTranscriptional</code> is supposed to group &#8220;only phrase-level elements for simple editorial correction and transcription&#8221; (Appendix B). <code>&#60;app&#62;</code>, however, is not used for either task: while you can argue that it contains transcriptions (i.e. the content of its child <code>&#60;rdg&#62;</code>), and that it can provide evidence to support corrections (by collecting alternate/erroneous forms and sometimes associating them with corrected lemma), the element is not itself used directly to transcribe texts or indicate editorial decisions and changes.</p>
+
+	<p><code>&#60;app&#62;</code> also does not belong in the sibling of <code>model.pPartTranscriptional</code> (<code>model.pPartEditorial</code>). This very small class collects &#8220;phrase-level elements for simple editorial interventions that may be useful both in transcribing and in authoring&#8221; (n in fact, only <code>&#60;choice&#62;</code>, <code>&#60;abbr&#62;</code>, and <code>&#60;expan&#62;</code>), which is something <code>&#60;app&#62;</code> manifestly is not. Since <code>&#60;app&#62;</code> <em>is</em> used in editorial (rather than authoring) activity, however, we could move it up to the parent class <code>model.pPartEdit</code>  although the current definition of that class as one that &#8220;groups phrase-level elements for simple editorial correction and transcription&#8221; makes it an uneasy fit since in print sources, the apparatus is rarely if ever a phrase level element: it tends to appear as a separate division at the bottom of the page, at the back of the book, or, occasionally in a separate volume.</p>
+
+	<p>The answer to this problem is to remove <code>&#60;app&#62;</code> from <code>model.pPartEdit</code> entirely and place it in the newly expanded inter-level class <code>model.listLike</code>. Since an apparatus is also often called a &#8220;list of variants&#8221;, this move would not be counter-intuitive.</p>
+
+	<h3>Simplifying model.choicePart and the model.pPartEdit family</h3>
+
+	<p>The above has made a number of recommendations for changes to the class system, particularly involving <code>model.choicePart</code>, and <code>model.pPartEdit</code> and its children. The changes are not simply theoretically attractive, however: if we can carry them out, we can also simplify this area of the class system by getting rid of the children of <code>model.pPartEdit</code>: <code>model.pPartEditorial</code> and <code>model.pPartTranscriptional</code>. With the exception of <code>&#60;restore&#62;</code> in <code>model.pPartTranscriptional</code> and <code>&#60;choice&#62;</code> in <code>model.pPartEditorial</code>, all elements these classes contain after the proposed revisions above are also part of <code>model.choiceLike</code>. If we give up on the distinction &#8220;transcriptional/editorial elements useful for authors and editors&#8221; and &#8220;transcriptional/editorial elements useful to editors only&#8221; (a weak distinction, since <code>&#60;restore&#62;</code>&#8212;in the sense of <em>stet</em>, might well be considered useful to authors, even though it is currently in <code>model.pPartTranscriptional</code>) we could define the membership of <code>model.pPartEdit</code> therefore as simply <code>&#60;choice&#62;</code>, <code>&#60;restore&#62;</code>, and <code>model.choicePart</code>.</p>
+
+	<p>Moving <code>&#60;app&#62;</code> into <code>modelListLike</code> and changing it to an inter-level element will allow us to improve its content model as well. But that is a separate proposal.</p>
+
+	<p><hr/><br />
+fn1. The legal encoding for the above is as follows:</p>
+
+	<blockquote>
+		<p><code>&#60;div id=&#34;version1&#34; excludes=&#34;version2&#34;&#62;
+&#60;p&#62;The Text Encoding Initiative is a consortium responsible for maintaining the TEI guidelines. The TEI is currently hosted by four universities and directed by a board. Technical work is carried out by an elected council, specially appointed workgroups, and two editors.&#60;/p&#62;
+&#60;/div&#62;
+&#60;div id=&#34;version2&#34; excludes=&#34;version1&#34;&#62;
+&#60;p&#62;The Text Encoding Initiative is a consortium responsible for maintaining the TEI guidelines.&#60;/p&#62;
+&#60;p&#62;The TEI is currently hosted by four universities and directed by a board. Technical work is carried out by an elected council, specially appointed workgroups, and two editors.&#60;/p&#62;
+&#60;/div&#62;</code></p>
+	</blockquote>
+<!-- <img src="https://people.uleth.ca/~daniel.odonnell/images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<p>Posted: Friday July 20, 2007. 16:41.</p> 
+<p>Last modified: Sunday July 22, 2007. 18:23.</p> -->
+<div class="comments">
+<img src="../images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+<!-- txp:comments_invite wraptag="p" / -->
+<!-- txp:comments_form / -->
+&#x00A0;
+</div>
+<!-- default page form ends --><h3 id="comment">Comment</h3>
+
+
+
+
+
+
+<form id="txpCommentInputForm" method="post" action="https://people.uleth.ca/~daniel.odonnell/research/a-proposal-for-revisions-to-choice-app-and-modelppartedit#cpreview">
+<div class="comments-wrapper">
+
+<p><label for="name">Name</label>: 
+<input name="name" autocomplete="name" required="required" class="comment_name_input" id="name" type="text" size="25" value="" /><br/>
+<label for="email">Email</label>:  
+<input name="email" autocomplete="email" required="required" class="comment_email_input" id="email" type="text" size="25" value="" /><br/>
+<input class="checkbox" id="remember" name="remember" type="checkbox" value="1" /> <label for="remember">Remember</label> 
+<input name="checkbox_type" type="hidden" value="remember" /><br/>
+<label for="message">Message</label>:<br/><textarea class="txpCommentInputMessage" id="message" name="message" cols="25" rows="5" required="required"></textarea> 
+<input name="preview" class="button" id="txpCommentPreview" type="submit" value="Preview" /> 
+<input name="submit" class="button disabled" id="txpCommentSubmit" type="submit" disabled="disabled" value="Submit" /><br/>
+<a id="txpCommentHelpLink" href="https://rpc.textpattern.com/help/?item=textile_comments&amp;language=en-gb" onclick="window.open(this.href, 'popupwindow', 'width=300,height=400,scrollbars,resizable'); return false;">Textile help</a></p>
+
+<input name="parentid" type="hidden" value="64" />
+
+<input name="backpage" type="hidden" value="/~daniel.odonnell/research/a-proposal-for-revisions-to-choice-app-and-modelppartedit" />
+</div>
+</form>
+
+				<!-- #2cl -->
+				
+			<!-- #1cl -->
+			
+		</div>
+
+		<!-- Right bar -->
+		<!--googleoff: all-->
+		<!-- this stops google indexing the tweets and other static information -->
+		<div class="rightbar">
+			<p class="hideme">
+				<a class="hideme" id="navigation"></a>
+				<a href="#content" class="hideme">Back to content</a>
+			</p>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, autoDisplay: false, gaTrack: true, gaId: 'UA-32780614-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+			<h2>Search my site</h2>
+				<form role="search" method="get" action="https://people.uleth.ca/~daniel.odonnell/Search/">
+<p class="search_input">
+<input name="q" required="required" size="15" type="search" value="" /><input type="submit" value="Go!" /></p>
+</form>
+			<h2>Sections</h2>
+			<ul>
+<li><a href="https://outlook.office.com/bookwithme/user/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/meetingtype/vFTDmf-nQECoMYPMEtPS2A2?anonymous&amp;ep=mlink">Book a meeting time with me</a></li>				
+<li><a href="../Academic-Policies/current-academic-policies.html">Academic Policies (Current)</a></li>
+				<li><a href="../blog/index.html">Blog</a></li>
+<li><a href="../contact/index.html">Contact</a></li>
+<li><a href="index.html">Research</a></li>
+<li><a href="../teaching/index-2.html">Teaching</a></li>
+<li><a href="../tutorials/index.html">Tutorials</a></li>
+			</ul>
+<!-- h2>Schedule</h2>
+
+<iframe 
+name="My calendar"
+title="My calendar"
+width="75%"
+scrolling="yes"
+marginheight="0"
+marginwidth="0"
+src="https://outlook.office365.com/owa/calendar/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/2c4f66847b2042dfb7db8ba348396f3c14689327663406417309/calendar.html"/>
+-->
+<h2>Current teaching</h2>
+			<ul>
+
+<li><a href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a></li>
+
+<li><a href="../teaching/english-4850a-7850a-beowulf-spring-2024.html">English 4850a/7850a: Advanced Old English (Spring 2024)</a></li>
+
+
+
+			</ul>
+			<h2>Recent changes to this site</h2>
+			<ul>
+				<li><strong><a rel="bookmark" href="../blog/calm-slippery-and-sadistic-my-silent-war-by-kim-philby-and-a-spy-among-friends-by-ben-macintyre.html">Calm, Slippery, and sadistic: My Silent War by Kim Philby and A Spy among Friends by Ben MacIntyre</a> </strong></li><li><strong><a rel="bookmark" href="../blog/chatbot-prompt-thyself.html">ChatBot prompt thyself</a> </strong></li><li><strong><a rel="bookmark" href="../blog/what-a-fuss-about-an-omlette-why-lies-are-protected-speech-in-the-us.html">What a fuss about an omlette! Why lies are protected speech in the U.S. (Liar in a crowded theater; Kosseff 2023)</a> </strong></li><li><strong><a rel="bookmark" href="../blog/blow-by-blow-island-victory-sla-marshall-1944-2002.html">Blow by blow: Island Victory, S.L.A. Marshall 1944/2002</a> </strong></li><li><strong><a rel="bookmark" href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a> </strong></li>
+			</ul>
+			<h2>Tags</h2>
+			<a href="../tag/anglo-saxon%2bstudies/index.html" class="tagSizeMedium tagSize11" style="font-size: 135%;">anglo-saxon studies</a>, 
+<a href="../tag/caedmon/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">caedmon</a>, 
+<a href="../tag/citation%2bpractice/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">citation practice</a>, 
+<a href="../tag/composition/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">composition</a>, 
+<a href="../tag/computers/index.html" class="tagSizeMedium tagSize24" style="font-size: 182%;">computers</a>, 
+<a href="../tag/digital%2bhumanities/index.html" class="tagSizeLargest tagSize29" style="font-size: 200%;">digital humanities</a>, 
+<a href="../tag/digital%2bpedagogy/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">digital pedagogy</a>, 
+<a href="../tag/grammar/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">grammar</a>, 
+<a href="../tag/history/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">history</a>, 
+<a href="../tag/moodle/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">moodle</a>, 
+<a href="../tag/old%2benglish/index.html" class="tagSizeMedium tagSize6" style="font-size: 117%;">old english</a>, 
+<a href="../tag/pedagogy/index.html" class="tagSizeMedium tagSize13" style="font-size: 142%;">pedagogy</a>, 
+<a href="../tag/research/index.html" class="tagSizeMedium tagSize4" style="font-size: 110%;">research</a>, 
+<a href="../tag/students/index.html" class="tagSizeMedium tagSize7" style="font-size: 121%;">students</a>, 
+<a href="../tag/study%2btips/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">study tips</a>, 
+<a href="../tag/teaching/index.html" class="tagSizeMedium tagSize10" style="font-size: 132%;">teaching</a>, 
+<a href="../tag/tips/index.html" class="tagSizeMedium tagSize16" style="font-size: 153%;">tips</a>, 
+<a href="../tag/tutorials/index.html" class="tagSizeMedium tagSize12" style="font-size: 139%;">tutorials</a>, 
+<a href="../tag/unessay/index.html" class="tagSizeMedium tagSize8" style="font-size: 125%;">unessay</a>, 
+<a href="../tag/universities/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">universities</a><br /><br />
+			<a style="padding-left:1em;" href="../tag/index.html">See all...</a>
+			<!-- <h2>What I'm reading...</h2> -->
+			<!-- txp:aks_rss form="externalRSS" feed="https://api.zotero.org/groups/81065/items/" limit_per_feed="4" wraptag="ul" break="li" /> -->
+			<!-- <h2>Bibliography ticker...</h2> -->
+			<!-- txp:aks_rss form="citationTicker" feed="https://api.zotero.org/users/632779/items?key=lSavInnm7WmefW45BRO6f7uh" limit_per_feed="4" wraptag="p" break="<span />" /> -->
+			<h2>Follow me on <a href="https://twitter.com/#!/DanielPaulOD">Twitter</a></h2>
+			<ul class="arc_twitter"><li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I&#039;m afraid I don&#039;t. I thought it was one o&hellip; <a href='https://twitter.com/i/web/status/1673712143542390785'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 27, 09:17 AM</span></li>
+<li>RT <a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>: The results are in!
+
+<a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>&nbsp;members have voted 97% in favour of strike authorization, if necessary.
+
+The participation r&hellip; <span class="arc_twitter-posted">Jun 27, 08:33 AM</span></li>
+<li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I thought I heard talk of this at caut this year. <span class="arc_twitter-posted">Jun 27, 08:30 AM</span></li>
+<li>RT <a href='http://twitter.com/deelomas' rel='external'>@deelomas</a>: And, the official winner of the &lsquo;Not My Job&rsquo; award goes to&hellip; <a href='https://twitter.com/deelomas/status/1672611829967667202/photo/1'>pic.twitter.com/0sDes9D5oq</a> <span class="arc_twitter-posted">Jun 26, 09:34 PM</span></li>
+<li>I&#039;m beginning to think that electric vehicles are sort of a Linux of the car world at the moment. Except Teslas whi&hellip; <a href='https://twitter.com/i/web/status/1673344791856267271'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 26, 08:57 AM</span></li>
+<li>&quot;He felt that American children in recent generations have had too much parental protection and too little opportun&hellip; <a href='https://twitter.com/i/web/status/1670627745641172993'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 18, 09:01 PM</span></li>
+<li>I&#039;ve been going through Ernie Pyle&#039;s Brave Men (a collection of columns from the European front in WWII) looking up&hellip; <a href='https://twitter.com/i/web/status/1670263169556836354'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 17, 08:52 PM</span></li>
+<li>Traditionally, &ldquo;knowledge workers&rdquo; have had two productivity peaks in their workday: just before lunch and just aft&hellip; <a href='https://twitter.com/i/web/status/1667749991186833409'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 10, 10:25 PM</span></li>
+<li>RT <a href='http://twitter.com/JasonOnTheDrums' rel='external'>@JasonOnTheDrums</a>: <a href='http://twitter.com/search?q=%23Ableg' rel='external'>#Ableg</a>
+
+Today was within 97% of the record votes we record on Tuesday.
+
+We&rsquo;re on pace for 784,475 votes over and will&hellip; <span class="arc_twitter-posted">May 26, 08:08 PM</span></li>
+<li>So if we were doing bets,  here&#039;s mine: 
+
+NDP 45
+UCP 41
+IND (Child-hating poop-cookie) 1
+
+I think people are undere&hellip; <a href='https://twitter.com/i/web/status/1662279319685849088'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">May 26, 08:07 PM</span></li></ul>
+			<!--  <h2><form method="get" action="https://people.uleth.ca/~daniel.odonnell/"><div>
+
+<input name="s" type="hidden" value="research" />
+Navigation<br />
+<select name="s" onchange="submit(this.form);">
+	<option value="">&#160;</option>
+	<option value="about">About</option>
+	<option value="academic-policies">Academic Policies</option>
+	<option value="archive">Archive</option>
+	<option value="blog">Blog</option>
+	<option value="contact">Contact</option>
+	<option value="drafts">Drafts</option>
+	<option value="research" selected="selected">Research</option>
+	<option value="search">Search</option>
+	<option value="tag">All Tags</option>
+	<option value="teaching">Teaching</option>
+	<option value="tutorials">Tutorials</option>
+</select>
+<noscript><div><input type="submit" value="Go" /></div></noscript>
+</div>
+</form></h2> -->
+			<!-- h2>At <a href="http://dpod.kakelbont.ca/">the dpod blog</a></h2 -->
+			<!-- txp:aks_rss form="externalRSS" feed="http://dpod.kakelbont.ca/feed/" limit_per_feed="10" wraptag="ul" break="li"/ -->
+		</div>
+		<div class="footer">
+<p>Our University’s Blackfoot name is Iniskim, meaning Sacred
+Buffalo Stone.<br/>The University is located in traditional Blackfoot Confederacy territory.<br/>We honour the Blackfoot
+people and their traditional ways of knowing in caring for this land, as well as all Aboriginal peoples who have
+helped shape and continue to strengthen our University community.</p>
+			<p><a href="http://www.uleth.ca/">University of Lethbridge</a> | <a href="http://www.uleth.ca/artsci/">Faculty of Arts and Science</a> | <a href="http://www.uleth.ca/artsci/english">Department of English</a> | <a href="http://www.uleth.ca/graduatestudies/">School of Graduate studies</a> | <a href="../textpattern/index.html">Site
+Administration</a><br />&copy; Date of publication or modification by Daniel Paul O'Donnell<br />Unless otherwise noted, the non-negotiated licence for all work on this site is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>.<br />If you want to use the work in some other fashion, feel free to contact me. </p>
+		</div>
+		<!--googleon: all-->
+	</body>
+
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/research/a-proposal-for-revisions-to-choice-app-and-modelppartedit by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:52:14 GMT -->
+</html>

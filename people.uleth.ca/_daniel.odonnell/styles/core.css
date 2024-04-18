@@ -1,0 +1,198 @@
+/* core stylesheet */
+/* This stylesheet defines the core appearance of elements common to */
+/* most stylesheets (e.g. italics, bold, center, etc.) (except those for the titlepage)*/
+
+.hideme {
+	display:none;
+}
+
+/* PUBLICATION STYLES */
+
+.leftwrap {
+	     position: relative;
+	     float: left;
+	     margin-top: .5em;
+	     margin-right: .5em;
+	     clear: right;
+}
+
+.rightwrap {
+	     position: relative;
+	      float: right;
+	     margin-top: .5em;
+	     margin-left: .5em;
+	     clear: left;
+}
+
+
+body	 {
+	 text-align: justify;
+	 font-size: 13pt;
+	 line-height: 1.3;
+	 font-family: sans-serif;
+}
+
+img {
+    margin:auto;
+    text-align: center;
+    max-width:30em;
+}
+
+h1	{
+	font-size: 200%;
+}
+
+h2, h1.subtitle	{
+	font-size: 150%;
+}
+
+h3, div.footnotes h2, div.apparatus h2, div.glossary h1	{
+	font-size: 125%;
+}
+
+h4	{
+	font-size: 110%;
+}
+
+h5, h6	{
+	font-size: 100%;
+}
+h1	{
+	text-align: center;
+	font-weight: bold;
+}
+
+h1.subtitle	{
+	text-align: center;
+	font-weight: bold;
+}
+
+h2, h3, div.footnotes h2, div.apparatus h2, div.glossary h1	{
+	text-align: left;
+	font-weight: bold;
+}
+div.footnotes, div.diplomatictext {
+	display: block;
+}
+
+h4	{
+	text-align: left;
+	font-weight: bold;
+}
+
+h5	{
+	text-align: left;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+h6	{
+	text-align: left;
+	font-style: italic;
+	line-height: 1.2;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+a {
+     display:inline;
+     text-decoration: none;
+}
+
+span.term, span.foreign, span.mentioned, em, span.titlem, span.titlej,
+	   span.titles,
+	   .obliquelabel, .reading, .glossaryinstance, .expansion,
+	   span.quote, .italiclabel {
+	   font-style: italic;
+}
+
+span.paragraphnumber {
+		 padding-right: 1em;
+		 font-weight: bold;
+}
+
+p {
+  text-indent: 0;
+}
+
+span.code {
+ font-family:monospace;
+}
+
+.byline {
+	text-align: center;
+}
+
+.byline + .byline {
+	line-height: 0;
+	text-align: center;
+	margin-top:0;
+	margin-bottom: 2em;
+	padding-top: 0;
+}
+
+.epigraph {
+	font-style: oblique;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.citation {
+	  margin-left: 30%;
+	  text-align: right;
+	  margin-top: 0;
+	  padding-top: 0;
+	  font-size: 80%;
+}
+
+blockquote {
+      text-align: left;
+      font-size: 90%;
+}
+
+cite, p.caption {
+     display: block;
+     text-align: right;
+     font-style: normal;
+     line-height: 1;
+     padding: 0;
+     margin-top: 0;
+}
+
+cite {
+     font-size: 90%;
+}
+
+p.bibitem
+	{
+	 text-align: left;
+	margin-left: 3em;
+	text-indent: -3em;
+}
+
+p.note
+{
+	text-align: left;
+}
+
+
+table {
+   border: none;
+   border-collapse: collapse;
+   font-size: 90%;
+}
+
+td {
+text-align: center;
+   padding-right: 5pt;
+   vertical-align: top;
+ border: thin solid gray;
+}
+
+
+td.center {
+	  text-align: center;
+}
+
+
+

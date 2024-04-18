@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<!-- head -->
+	
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/research/the-ghost-in-the-machine by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:52:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google-site-verification" content="9ZHP1FDttD1YeXYP4jrDb8KmwNTGqQgRb92Y1B3M_Ro" />
+		<title>
+			The Ghost in the Machine: Revisiting an Old Model for the Dynamic Generation of Digital Editions | Daniel Paul O&#039;Donnell
+		</title>
+
+		<!-- txp:feed_link flavor="atom" format="link" label="Atom"/ -->
+		<!-- txp:feed_link flavor="rss" format="link" label="RSS"/ -->
+		<link rel="shortcut icon" href="../transparent.ico" />
+		<style type="text/css" media="screen" title="Default"> @import url(../css/txpscreen.css); </style>
+		<style type="text/css" media="print,mobile" title="Default"> @import url(../css/txpprint.css); </style>
+		<style type="text/css" media="all" title="Default"> @import url(../css/txpcommonstyles.css); </style>
+
+<!-- hypothes.is enabled via the following. See https://hypothes.is/for-publishers/ -->
+
+<!-- the following disables default show highlighting -->
+<!-- <script>window.hypothesisConfig = function () { return {showHighlights: false}; };</script> -->
+<!-- the following loads the annotator -->
+<script defer async src="http://hypothes.is/embed.js"></script>
+
+<!-- end hypothes.is enabling -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-32780614-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<!-- body -->
+	<body>
+		<div class="body">
+
+			<!-- Top bar -->
+			<div class="head">
+				<div>
+					<h1 style="vertical-align:center">
+						<a href="../index.html">
+							<img src="../images/11.png" alt="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." title="Reverse detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." id="logoimage" width="10%"/></a> <span style="vertical-align:center">Daniel Paul O&#039;Donnell</span>
+					</h1>
+				</div>
+			</div>
+
+		</div>
+<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<p>
+						
+						
+							<a href="../index.html">Daniel Paul O&#039;Donnell</a>&#160;&#187;&#160;<a href="index.html">Research</a>
+						
+					</p>
+				</div>
+<!-- end breadcrumb -->
+
+		<!-- content -->
+		<div class="content">
+			<p class="hideme">
+				<a class="hideme" id="content"></a>
+				<a href="#navigation" class="hideme">Forward to Navigation</a>
+			</p>
+			<!-- section logic begins -->
+			 <!-- debug #1 -->
+			
+				<!-- we are not on the default section -->
+				<!-- Debug #2 -->
+				
+					<!-- default page form begins -->
+
+
+
+<h2>The Ghost in the Machine: Revisiting an Old Model for the Dynamic Generation of Digital Editions</h2>
+<div style="background-color:light gray">
+<p><strong><a rel="author" href="../author/Daniel%2bPaul%2bO%27Donnell/index.html">Daniel Paul O&#039;Donnell</a></strong></p>
+<p>Posted: Dec 16, 2006 00:12;<br/>Last Modified: May 23, 2012 20:05<br/>
+Keywords: <seg onload="displayLinks()"></seg></p>
+
+<script>
+        // Place the JavaScript function here
+        function generateLinkTags(keywords) {
+            let linkTags = "'digital humanities','editorial studies','textual studies','computers','database','relational queries','anglo-saxon studies";
+            keywords.forEach(keyword => {
+                let link = `<a href='https://home.uleth.ca/~daniel.odonnell/tags/{encodeURIComponent(keyword)}'>${keyword}</a>`;
+                linkTags += link + "<br>";
+            });
+            return linkTags;
+        }
+
+        // This function will be called once the page is fully loaded
+        function displayLinks() {
+            let keywords = ["JavaScript", "OpenAI", "Web Development"];
+            let htmlLinks = generateLinkTags(keywords);
+            document.body.innerHTML = htmlLinks;
+        }
+    </script>
+
+
+
+
+</div>
+<img src="../images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<!--
+<img src="https://people.uleth.ca/~daniel.odonnell/images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+-->
+<!-- automatic TOC begins after this -->
+<div id="TOC">
+   <!--txp:soo_toc label="Contents" labeltag="h3"/-->
+</div>
+<!-- automatic TOC ends -->
+	<p><div class="colophon"></p>
+
+	<p class="publicationinformation">First Published: <em>HumanIT</em> 8.1 (2005): 51-71. <a href="http://www.hb.se/bhs/ith/1-8/dpo.pdf">http://www.hb.se/bhs/ith/1-8/dpo.pdf</a></p>
+
+	<p></div></p>
+
+	<h3>“The Electronic Cædmon’s Hymn Editorial Method” (1998)</h3>
+
+	<p>In 1998, a few months into the preparation of my electronic edition of the Old English poem Cædmon’s Hymn (O’Donnell forthcoming), I published a brief prospectus on the “editorial method” I intended to follow in my future work (O’Donnell 1998). Less a true editorial method than a proposed workflow and list of specifications, the prospectus called for the development of an interactive edition-processor by which “users will [&#8230;] be able to generate mediated (‘critical’) texts on the fly by choosing the editorial approach which best suits their individual research<br />
+or study needs” (O’Donnell 1998, ¶ 1).</p>
+
+	<p>The heart of the prospectus was a diagram of the “Editorial Process Schema” I intended to follow (figure 1). The edition was to be based on <span class="caps">TEI</span> (P2) <span class="caps">SGML</span>-encoded diplomatic transcriptions of all twenty-one known witnesses to the poem. Its output was to consist of dynamically generated “HTML/XML” display texts that would allow users access to different views of the underlying textual data depending on their specific interests: e.g. editions containing reconstructions of archetypal texts, student texts based on witnesses showing the simplest vocabulary and grammar, “best text” editions of individual witnesses or recensions, etc. The production of these display texts was to be handled by a series of <span class="caps">SGML</span> “filters” or “virtual editions” that would be populated by the<br />
+unspecified processor used to format and display the final output. [Begin p. 51]</p>
+
+	<p>Figure 1. Editorial Process Schema (O’Donnell 1998)</p>
+
+	<h3>Goals</h3>
+
+	<p>The initial impetus for this approach was practical. Although it is quite short, Cædmon’s Hymn has a relatively complex textual history for an Anglo-Saxon poem. Even in print, it has always been edited as a multitext. The standard print edition (Dobbie 1942) reproduces two editorial versions of the poem without commenting on their relative priority. Few other studies have managed to be even this decisive. Dobbie’s text was the last (before my forthcoming edition) to attempt to produce critical texts based on the entire manuscript tradition. Most editions before and<br />
+since have concentrated on individual recensions or groups of witnesses[1[. Anticipating great difficulty in proof-reading an electronic edition that might have several editorial texts and multiple textual apparatus<sup id="fnrev16344388834fbd96bf3b4e1" class="footnote"><a href="#fn16344388834fbd96bf3b4e1">2</a></sup>. I was at this early stage keenly interested in reducing the opportunity for typographical error. A workflow that would allow me to generate a number of [Begin p. 52] different critical texts from a single set of diplomatic transcriptions without retyping was for this reason an early desideratum.</p>
+
+	<p>This convenience, however, was not to come at the expense of editorial content: a second important goal of my prospectus was to find an explicit home for the editor in what Murray McGillivray recently had described as a “post-critical” world (McGillivray 1994; see also Ross 1996; McGann 1997). In medieval English textual studies in 1998, indeed, this post-critical world seemed to be fast approaching: the first volume of the Canterbury Tales Project, with its revolutionary approach to electronic collation and stemmatics and a lightly-edited guide text, had been published two years earlier (Robinson 1996). Forthcoming publications from the Piers Plowman Electronic Archive (Adams et al. 2000) and Electronic Beowulf (Kiernan 1999) projects, similarly, promised a much heavier emphasis on the manuscript archive (and less interest in the critical text) than their more traditional predecessors. My initial work with the Cædmon’s Hymn manuscripts (e.g. O’Donnell<br />
+1996a; O’Donnell 1996b), however, had convinced me that there was a significant need in the case of this text for both user access to the witness archive and editorial guidance in the interpretation of this primary evidence – or, as Mats Dahlström later would point out, that the two approaches had complementary strengths and weaknesses:</p>
+
+	<blockquote>
+		<p>The single editor’s authoritative control in the printed SE [Scholarly Edition], manifested in e.g. the versional prerogative, isn’t necessarily of a tyrannical nature. Conversely, the much spoken-of hypermedia database exhibiting all versions of a work, enabling the user to choose freely between them and to construct his or her “own” version or edition, presupposes a most highly competent user, and puts a rather heavy burden on him or her. Rather, this kind of ultra-eclectic archive can result in the user feeling disoriented and even lost in hyperspace. Where printed SE:s tend to bury rival versions deep down in the variant apparatuses, the document architecture of extreme hypertext SE:s, consequential to the very nature of digitally realised hypertext, threatens to bury the user deep among the mass of potential virtuality. (Dahlström 2000, 17) [Begin p. 53]</p>
+	</blockquote>
+
+	<p>Keen as I was to spare myself some unnecessary typing, I did not want this saving to come at the expense of providing access to the “insights and competent judgement” (Dahlström 2000, 17) I hoped to acquire in several years’ close contact with the manuscript evidence. What I needed, in other words, was a system in which the computer would generate, but a human edit, the final display texts presented to the reader. </p>
+
+	<h3>Theory</h3>
+
+	<p>In order to accomplish these goals, the prospectus proposed splitting the editorial process into distinct phases: a transcription phase, in which human scholars recorded information about the text as it appeared in the primary sources (the “Witness Archive”); an editorial (“Filtering”) phase, in which a human editor designed a template by which a display text was to be produced from the available textual evidence (“Virtual Editions”); a processing phase, in which a computer applied these filters to the Witness Archive; and a presentation phase, in which the resultant output was presented to the reader. The first and second stages were to be the domains of the human editor; the third and fourth that of the computer. An important element of this approach was the assumption that the human editor, even in traditional print sources, functioned largely as a rules-based interpreter of textual data – or as I (in retrospect unfortunately) phrased it, could be “reduced to a set of programming instructions”<sup id="fnrev12484098684fbd96bf3dbe7" class="footnote"><a href="#fn12484098684fbd96bf3dbe7">3</a></sup> – in much the same way as a database report extracts and format specific information from the underlying data table of a database:</p>
+
+	<p>bq..In my view, the editor of a critical edition is understood as being functionally equivalent to a filter separating the final reader from the uninterpreted data contained in the raw witnesses. Depending on the nature of the instructions this processor is given, different types of manipulation will occur in producing the final critical edition. An editor interested in producing a student edition of the poem, for example, can be understood to be manipulating the data according to the instructions “choose the easiest (most sensible) readings and ignore those which raise advanced textual problems”; an editor interested in producing the “original” text can be seen as a processor performing the instruction “choose readings from the earliest manuscript(s) when these are available [Begin p. 54] and sensible; emend or normalise readings as required”; and an editor interested in producing an edition of a specific dialectal version of a text is working to the instruction “choose readings from manuscripts belong to dialect x; when these are not available, reconstruct or emend readings from other manuscripts, ensuring that they conform to the spelling rules of the dialect”. (O’Donnell 1998, ¶¶ 4 f.)</p>
+
+	<h3>Advantages</h3>
+
+	<p>From a theoretical perspective, the main advantage of this approach was that it provided an explicit location for the encoding of editorial knowledge – as distinct from textual information about primary sources, or formatting information about the final display. By separating the markup used to describe a text’s editorial form from that used to describe its physical manifestation in the witnesses, or its final appearance to the end user, this method made it easier in principle both to describe phenomena at a given level in intrinsically appropriate terms and to modify, reuse, or revise information at each level without necessarily having to alter other aspects of the edition design – in much the same way as the development of structural markup languages themselves had freed text encoders from worrying unduly about final display. Scholars working on a diplomatic transcription of a manuscript in this model would be able to describe its contents without having to ensure that their markup followed the same semantic conventions (or even <span class="caps">DTD</span>) as that used at the editorial or display levels.</p>
+
+	<p>Just as importantly, the approach was, in theory at least, infinitely extensible. Because it separated transcription from editorial activity, and because it attempted to encode editorial activity as a series of filters, users were, in principle, free to ignore, adapt, add to, or replace the work of the original editor. Scholars interested in statistical or corpus work might choose to work with raw <span class="caps">SGML</span> data collected in the witness archive; those interested in alternative editorial interpretations might wish to provide their own filters; those wishing to output the textual data to different media or using different display formats were free to adapt or substitute a different processor. Espen S. Ore recently has discussed how well-made and suitably-detailed transcriptions of source material might be used or adapted profitably by other scholars and projects as the basis [Begin p. 55] for derivative work (Ore 2004); from a theoretical perspective the “Editorial Method” proposed for use in Cædmon’s Hymn offered an early model for how such a process might be built into an edition’s design. Indeed, the method in principle allowed editors of new works to operate in the other direction as well: by building appropriate filters, editors of original electronic editions could attempt to model the editorial decisions of their print-based predecessors, or apply techniques developed for other texts to their own material<sup id="fnrev3213873864fbd96bf500e1" class="footnote"><a href="#fn3213873864fbd96bf500e1">4</a></sup>.</p>
+
+	<h3>Implementation (1998)</h3>
+
+	<p>Despite its theoretical attractiveness, the implementation of this model proved, in 1998, to be technically quite difficult. The main problem was access to technology capable of the type of filtering envisioned at the Virtual Edition level. In the original model, these “editions” were supposed to be able both to extract readings from multiple source documents (the individual witness transcriptions) and to translate their markup from the diplomatic encoding used in the original transcriptions to that required by the new context – as a reading used in the main text of a critical edition, say, or a form cited in an apparatus entry, textual note, or introductory paragraph. This type of transformation was not in and of itself impossible to carry out at the time: some <span class="caps">SGML</span> production environments and several computer languages (e.g. <span class="caps">DSSSL</span> or, more generally, Perl and other scripting languages) could be used to support most of what I wanted to do; in the days before <span class="caps">XSL</span>, however, such solutions were either very much cutting edge, or very expensive in time and/or resources. As a single scholar without a dedicated technical staff or funding to purchase commercial operating systems, I was unable to take full advantage of the relatively few transformation options then available.</p>
+
+	<p>The solution I hit upon instead involved dividing the transformation task into two distinct steps (extraction and translation) and adding an extra processing level between the witness and virtual edition levels in my original schema: [Begin p. 56]</p>
+
+	<p>Figure 2. Implemented Schema</p>
+
+	<p>Instead of acting as the locus of the transformation, the editorial filters in this revised model provided a context for text that had been previously extracted from the witness archive and transformed for use in such circumstances. The text these filters called upon was stored in a textual database as part of the project’s entity extension file (project.ent, see Sperberg-McQueen and Burnard 2004, § 3.3), and hence resident in the project <span class="caps">DTD</span>. The database itself was built by extracting marked-up readings from the original witness transcription files (using grep) and converting them (using macros and similar scripts) to entities that could be called by name anywhere in the project. Transformations involving a change in markup syntax or semantics (e.g. from a diplomatic-linguistic definition of a word in witness transcriptions to a syntactic and morphological definition in the edition files) also generally were performed in this <span class="caps">DTD</span> extension file. [Begin p. 57]</p>
+
+	<p>First two lines of a <span class="caps">TEI</span> <span class="caps">SGML</span> transcription of Cædmon’s Hymn witness T1:</p>
+
+	<blockquote class="code">
+		<p class="code">〈l id=&#8220;t1.1&#8221; n=&#8220;1&#8220;〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.1a.1&#8220;〉Nu〈space extent=&#8220;0&#8220;〉〈/seg〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.1a.2&#8220;〉〈damage type=&#8220;stain&#8221; degree=&#8220;moderate&#8220;〉sculon〈/damage〉〈space〉〈/seg〉<br />
+&#x00A0;〈note id=&#8220;t1.1a.3.n&#8221; type=&#8220;transcription&#8221; target=&#8220;t1.1a.2 t1.1a.4 t1.1b.1 t1.2b.3 t1.3a.1 t1.4a.1 t1.4a.2 t1.4b.1 t1.6a.1 t1.6a.2 t1.7b.1 t1.7b.2 t1.9b.2&#8220;〉&amp;copyOft1.1a.2;&#8230;&amp;copyOft1.9b.2;] Large stain obscures some text down inside (right) margin of p. 195 in facsimile. Most text is readable, however.〈/note〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.1a.3&#8220;〉〈damage type=&#8220;stain&#8221; degree=&#8220;moderate&#8220;〉herigean〈/damage〉〈space〉〈/seg〉<br />
+&#x00A0;〈caesura〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.1b.1&#8220;〉〈damage type=&#8220;stain&#8221; degree=&#8220;light&#8220;〉he〈/damage〉ofon〈lb〉rices〈space〉〈/seg〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.1b.2&#8220;〉&wynn;eard〈space〉〈/seg〉<br />
+〈/l〉<br />
+〈l id=&#8220;t1.2&#8221; n=&#8220;2&#8220;〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.2a.1&#8220;〉meotodes〈space〉〈/seg〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.2a.2&#8220;〉me〈corr sic=&#8220;u&#8221; cert=&#8220;50%&#8220;〉〈del rend=&#8220;overwriting&#8220;〉u〈/del〉〈add rend=&#8220;overwriting&#8221; place=&#8220;intralinear&#8220;〉a〈/add〉〈/corr〉hte〈space〉〈/seg〉<br />
+&#x00A0;〈note type=&#8220;transcription&#8221; id=&#8220;t1.2a.2.n&#8221; target=&#8220;t1.2a.2&#8221; resp=dpod〉&amp;copyOft1.2a.2;] Corrected from 〈foreign〉meuhte〈/foreign〉?〈/note〉<br />
+&#x00A0;〈caesura〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.2b.1&#8220;〉&tyronianNota;〈space extent=&#8220;0&#8220;〉〈/seg〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.2b.2&#8220;〉his〈space〉〈/seg〉<br />
+&#x00A0;〈seg type=&#8220;<span class="caps">MSW</span>ord&#8221; id=&#8220;t1.2b.3&#8220;〉〈damage type=&#8220;stain&#8221; degree=&#8220;severe&#8220;〉〈unclear reason=&#8220;stain in facsimile&#8221; cert=&#8220;90%&#8220;〉mod〈/unclear〉〈/damage〉〈damage type=&#8220;stain&#8221; degree=&#8220;moderate&#8220;〉ge&thorn;anc〈/damage〉〈space〉〈/seg〉<br />
+&#x00A0;〈note type=&#8220;transcription&#8221; id=&#8220;t1.2b.3.n&#8221; target=&#8220;t1.2b.3&#8220;〉&amp;copyOft1.2b.3;] 〈c〉mod〈/c〉 obscured by stain in facsimile.〈/note〉<br />
+〈/l〉</p>
+	</blockquote>
+
+	<p>Same text after conversion to entity format (Information from the original l, w, caesura, and note elements are stored separately).</p>
+
+	<blockquote>
+		<p>〈!ENTITY t1.1a.1 &#8216;Nu〈space type=&#8220;wordBoundary&#8221; extent=&#8220;0&#8220;〉&#8216;〉<br />
+〈!ENTITY t1.1a.2 &#8216;sc〈damage type=&#8220;stain&#8221; rend=&#8220;beginning&#8220;〉ulon〈/damage〉〈space type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉</p>
+	</blockquote>
+
+	<p>[Begin p. 58]</p>
+
+	<blockquote>
+		<p>〈!ENTITY t1.1a.3 &#8216;〈damage type=&#8220;stain&#8221; rend=&#8220;middle&#8220;〉her&inodot;gean〈/damage〉〈space type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉 <br />
+〈!ENTITY t1.1b.1 &#8216;〈damage type=&#8220;stain&#8221; rend=&#8220;end&#8220;〉heo〈/damage〉fon〈lb〉r&inodot;ces〈space<br />
+type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉<br />
+〈!ENTITY t1.1b.2 &#8216;&mswynn;eard〈space type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉<br />
+〈!ENTITY t1.2a.1 &#8216;meotodes〈space type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉<br />
+〈!ENTITY t1.2a.2 &#8216;me〈damage type=&#8220;stain&#8221; rend=&#8220;complete&#8220;〉a〈/damage〉hte〈space type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉<br />
+〈!ENTITY t1.2b.1 &#8216;〈abbr type=&#8220;scribal&#8221; expan=&#8220;ond/and/end&#8220;〉&tyronianNota;〈/abbr〉〈expan type=&#8220;scribal&#8220;〉ond〈/expan〉〈space type=&#8220;wordBoundary&#8221; extent=&#8220;0&#8220;〉&#8216;〉<br />
+〈!ENTITY t1.2b.2 &#8216;h&inodot;s〈space type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉<br />
+〈!ENTITY t1.2b.3 &#8216;〈damage type=&#8220;stain&#8221; rend=&#8220;beginning&#8220;〉〈unclear rend=&#8220;complete&#8220;〉mod〈/unclear〉ge&thorn;anc〈/damage〉〈space type=&#8220;wordBoundary&#8221; extent=&#8220;1&#8220;〉&#8216;〉</p>
+	</blockquote>
+
+	<p>Same text after conversion to editorial format for use in editions.</p>
+
+	<blockquote>
+		<p>〈!ENTITY ex.1a.1 &#8216;Nu&#8216;〉 <br />
+〈!ENTITY ex.1a.2 &#8216;sculon&#8216;〉<br />
+〈!ENTITY ex.1a.3 &#8216;herigean&#8216;〉<br />
+〈!ENTITY ex.1b.1 &#8216;heofonrices&#8216;〉<br />
+〈!ENTITY ex.1b.2 &#8216;&edwynn;eard&#8216;〉<br />
+〈!ENTITY ex.2a.1 &#8216;meotodes&#8216;〉<br />
+〈!ENTITY ex.2a.2 &#8216;meahte&#8216;〉<br />
+〈!ENTITY ex.2b.1 &#8216;ond&#8216;〉<br />
+〈!ENTITY ex.2b.2 &#8216;his&#8216;〉<br />
+〈!ENTITY ex.2b.3 &#8216;modge&thorn;anc&#8216;〉</p>
+	</blockquote>
+
+	<p>Citation from the text of T1 (bold) in an introductory chapter (simplified for demonstration purposes).</p>
+
+	<blockquote>
+		<p>〈p id=&#8220;CH6.420&#8221; n=&#8220;6.42&#8220;〉Old English 〈mentioned lang=&#8220;<span class="caps">ANG</span>&#8220;〉swe〈/mentioned〉, 〈mentioned<br />
+lang=&#8220;<span class="caps">ANG</span>&#8220;〉sw&aelig;〈/mentioned〉, 〈mentioned lang=&#8220;<span class="caps">ANG</span>&#8220;〉swa〈/mentioned〉 appears as 〈mentioned<br />
+rend=&#8220;postcorrection&#8221; lang=&#8220;<span class="caps">ANG</span>&#8220;〉&amp;t1.3b.1;〈/mentioned〉 (&carmsx; 〈mentioned rend=&#8220;postcorrection&#8221;<br />
+lang=&#8220;<span class="caps">ANG</span>&#8220;〉&amp;ar.3b.1;〈/mentioned〉) in all West-Saxon witnesses of the poem on its sole occurrence in 3b. The expected West-Saxon development is 〈mentioned lang=&#8220;<span class="caps">ANG</span>&#8220;〉sw&aelig;〈/mentioned〉, found in early West-Saxon. As in most dialects, however, 〈mentioned lang=&#8220;<span class="caps">ANG</span>&#8220;〉swa〈/mentioned〉 develops<br />
+irregularly in the later period. 〈mentioned [Begin p. 59] lang=&#8220;<span class="caps">ANG</span>&#8220;〉Swa〈/mentioned〉 is the usual late West-Saxon reflex (see &hogg1992;, &sect;&nbsp;3.25, n. 3).〈/p〉</p>
+	</blockquote>
+
+	<p>Citation from the text of T1 (bold) in a textual apparatus (simplified for demonstration purposes)</p>
+
+	<blockquote>
+		<p>〈app id=&#8220;EX.1A.1.APP&#8221; n=&#8220;1&#8221; from=&#8220;EX.1A.1&#8220;〉<br />
+&#x00A0;〈lem id=&#8220;EX.1A.1.LEM&#8221; n=&#8220;1a&#8220;〉&amp;ex.1a.1;〈/lem〉<br />
+&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;〈rdg id=&#8220;T1.1A.1.RDG&#8221; wit=&#8220;T1&#8220;〉&amp;t1.1a.1;〈/rdg〉〈wit〉〈xptr doc=&#8220;t1&#8221;<br />
+from=&#8220;T1.1A.1&#8221; n=&#8220;T1&#8221; rend=&#8220;eorthan&#8220;〉〈/wit〉<br />
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;〈rdg id=&#8220;O.1A.1.RDG&#8221; wit=&#8220;O (Pre-Correction)&#8220;〉〈seg rend=&#8220;precorrection&#8220;〉&amp;o.1a.1;〈/seg〉〈/rdg〉〈wit〉〈xptr doc=&#8220;o&#8221; from=&#8220;O.1A.1&#8221; n=&#8220;O (Pre-Correction)&#8221;<br />
+rend=&#8220;eorthan&#8220;〉〈/wit〉<br />
+&#x00A0;&#x00A0;&#x00A0;〈/rdggrp〉<br />
+&#x00A0;&#x00A0;〈/rdggrp〉<br />
+&#x00A0;&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;〈rdg id=&#8220;N.1A.1.RDG&#8221; wit=&#8220;N&#8220;〉&amp;n.1a.1;〈/rdg〉〈wit〉〈xptr doc=&#8220;n&#8221; from=&#8220;N.1A.1&#8221; n=&#8220;N&#8221; rend=&#8220;eorthan&#8220;〉〈/wit〉<br />
+&#x00A0;&#x00A0;&#x00A0;〈/rdggrp〉<br />
+&#x00A0;&#x00A0;〈/rdggrp〉<br />
+&#x00A0;〈/rdggrp〉<br />
+&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;&#x00A0;〈rdggrp〉<br />
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;〈rdg id=&#8220;B1.1A.1.RDG&#8221; wit=&#8220;B1&#8220;〉&amp;b1.1a.1;&amp;b1.1a.2;〈/rdg〉〈wit〉〈xptr doc=&#8220;b1&#8221; from=&#8220;B1.1A.1&#8221; n=&#8220;B1&#8221; rend=&#8220;eorthan&#8220;〉〈/wit〉<br />
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;〈rdg id=&#8220;TO.1A.1.RDG&#8221; wit=&#8220;To&#8220;〉&amp;to.1a.1;&amp;to.1a.2;〈/rdg〉〈wit〉〈xptr doc=&#8220;to&#8221; from=&#8220;TO.1A.1&#8221; n=&#8220;To&#8221; rend=&#8220;eorthan&#8220;〉〈/wit〉<br />
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;〈rdg sameas=&#8220;O.1A.1.RDG&#8221; wit=&#8220;O (Post-Correction)&#8220;〉〈seg<br />
+rend=&#8220;postcorrection&#8220;〉&amp;o.1a.1;&amp;o.1a.2;〈/seg〉〈/rdg〉〈wit〉〈xptr doc=&#8220;o&#8221; from=&#8220;O.1A.1&#8221; n=&#8220;O (Post-Correction)&#8221; rend=&#8220;eorthan&#8220;〉〈/wit〉<br />
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;〈rdg id=&#8220;CA.1A.1.RDG&#8221; wit=&#8220;Ca&#8220;〉&amp;ca.1a.1;&amp;ca.1a.2;〈/rdg〉〈wit〉〈xptr doc=&#8220;ca&#8221; from=&#8220;CA.1A.1&#8221; n=&#8220;Ca&#8221; rend=&#8220;eorthan&#8220;〉〈/wit〉<br />
+&#x00A0;&#x00A0;&#x00A0;〈/rdggrp〉<br />
+&#x00A0;&#x00A0;〈/rdggrp〉<br />
+&#x00A0;〈/rdggrp〉<br />
+〈/app〉</p>
+		<p>[Begin p. 60]</p>
+	</blockquote>
+
+	<h3>Implementation (2005)</h3>
+
+	<p>The solutions I developed in 1998 to the problem of <span class="caps">SGML</span> transformation are no longer of intrinsic interest to Humanities Computing specialists except, perhaps, from a historical perspective. With the publication of the first <span class="caps">XSL</span> draft in November 1999, and, especially, the subsequent rapid integration of <span class="caps">XSL</span> and <span class="caps">XML</span> into commercial and academic digital practice, editors soon had far more powerful languages and tools available to accomplish the same ends.</p>
+
+	<p>Where my solutions are valuable, however, is as proof-of-concept. By dividing the editorial process into distinct phases, I was able to achieve, albeit imperfectly, both my original goals: no Old English text from the primary witnesses was input more than once in my edition and I did to a certain extent find in the “Virtual Editions” an appropriate and explicit locus for the encoding of editorial information.</p>
+
+	<p>With the use of <span class="caps">XSLT</span>, however, it is possible to improve upon this approach in both practice and theory. In practical terms, <span class="caps">XSLT</span> functions and instructions such as <code>document()</code> and <code>xsl:result-document</code> eliminate the need for a pre-compiled textual database: scholars using <span class="caps">XSLT</span> today can work, as I originally had hoped to, directly with the original witness transcriptions, extracting readings, processing them, and outputing them to different display texts using a single language and processor – and indeed perhaps even a single set of stylesheets. </p>
+
+	<p>In theoretical terms, moreover, the adoption of <span class="caps">XSLT</span> helps clarify an ambiguity in my original proposal. Because, in 1998, I saw the process of generating an edition largely as a question of translation from diplomatic to editorial encoding, my original model distinguished between the first two levels on largely semantic grounds. The Witness Archive was the level that was used to store primary readings from the poem’s manuscripts; the filter or Virtual Edition level was used to store everything else, from transformations necessary to translate witness readings into<br />
+editorial forms to secondary textual content such as introductory chapters, glossary entries, and bibliography.</p>
+
+	<p>In <span class="caps">XSLT</span> terms, however, there is no significant reason for maintaining such a distinction: to the stylesheet, both types of content are simply raw material for the transformation. What this raw material is, where it came from, or who its author is, are irrelevant to the stylesheet’s task of<br />
+[Begin p. 61] organisation, adaptation, interpretation, and re-presentation. While poor quality or poorly constructed data will affect the ultimate quality of its output, data composition and encoding remain, in the <span class="caps">XSLT</span> world, distinct operations from transformation.</p>
+
+	<p>This is significant because it helps us refine our theoretical model of the editorial process and further isolate the place where editorial intelligence is encoded in a digital edition. For organisation, adaptation, interpretation, and re-presentation are the defining tasks of the scholarly editor as much as they are that of the <span class="caps">XSLT</span> stylesheet. Change the way a standard set of textual data is interpreted, organised, adapted, or presented, and you change the nature of the final “edition”. Editions of literary works are usually based on very similar sets of primary data – there is only one Beowulf manuscript, after all, and even better attested works usually have a relatively small set of textually significant witnesses, editions, or recensions. What differences arise between modern editions of literary texts tend for the most part to hinge on the reinterpretation of existing evidence, rather than any real change in the available data<sup id="fnrev1120973554fbd96bf72b9a" class="footnote"><a href="#fn1120973554fbd96bf72b9a">5</a></sup>. In traditional editions, the evidence for this observation can be obscured by the fact that the “editor” also usually is responsible for much of the secondary textual content. That the observation is true, however, is demonstrated by emerging forms of digital editions in which the editorial function is largely distinct from that of content creation: multigenerational and derivative editions such as those discussed by Ore (2004), as well as interactive models such as that proposed by the Virtual Humanities Lab (e.g. Armstrong &amp; Zafrin 2005), or examples in which users reinterpret data in already existing corpora or databases (e.g. Green 2005).</p>
+
+	<p>Taken together, this suggests that my 1998 model was correct in its division of the editorial process into distinct tasks, but imprecise in its understanding of the editorial function. [Begin p. 62]</p>
+
+	<p>Figure 3. Revised Schema</p>
+
+	<p>In the revised version, the original “Witness Archive” is now reconceived of more generally as a collection of textual data used in the edition, regardless of source or type. This data is then organised, interpreted, adapted, and prepared for presentation using stylesheets (and perhaps other organisational tools) provided by an “editor” – regardless of whether this “editor” is the person responsible for assembling and/or authoring the original content, an invited collaborator, or even an end user. As in the original model, this reorganisation is then presented using<br />
+an appropriate display media. </p>
+
+	<h3>Conclusion</h3>
+
+	<p>Technical advances of the last eight years have greatly improved our ability to extract and manipulate textual data – and our ability to build editions in ways simply impossible in print. The model for the editorial [Begin p. 63] process proposed in O’Donnell (1998) represented an early attempt to understand how the new technology might affect the way editors work, and, more importantly, how this technology might be harnessed more efficiently. With suitable modifications to reflect our field’s growing sophistication, the model appears to have stood the test of time, and proven itself easily adapted to include approaches developed since its original publication. From my perspective, however, a real sign of strength is that it continues to satisfy my original two goals: it suggests a method for avoiding reinputting primary source documents, and it provides a description of the locus of editorial activity; in an increasingly collaborative and interactive scholarly world, it appears that the ghost in the machine may reside in the stylesheet.</p>
+
+	<p>Daniel Paul O’Donnell is an Associate Professor of English at the University of Lethbridge, Alberta, Canada. He is also director of the Digital Medievalist Project 〈http://www.digitalmedievalist.org/〉 and editor of Cædmon’s Hymn: A Multimedia Study, Edition, and Archive (D.S. Brewer, forthcoming 2005). His research interests include Old English poetry, Textual and Editorial Studies, Humanities Computing, and the History of the Book. E-mail: daniel.odonnell@uleth.ca Web page: http://people.uleth.ca/~daniel.odonnell/ [Begin p. 64]</p>
+
+	<h3>Notes</h3>
+
+	<p id="fn1" class="footnote"><sup>1</sup> A bibliography of studies and editions of Cædmon’s Hymn can be found in O’Donnell (forthcoming).</p>
+
+	<p id="fn16344388834fbd96bf3b4e1" class="footnote"><sup>2</sup> In the event, the final text of O’Donnell (forthcoming) has eight critical editions, all of which have several apparatus, and “semi-normalised” editions of all twenty-one witnesses.</p>
+
+	<p id="fn12484098684fbd96bf3dbe7" class="footnote"><sup>3</sup> This choice was unfortunate, as it seems that it led to my model being understood far more radically than I intended (e.g. in Dahlström 2000, 17, cited above). A perhaps better formulation would be that editors (print and digital) function in a manner analogous to (and perhaps reproducable in) progamming instructions.</p>
+
+	<p id="fn3213873864fbd96bf500e1" class="footnote"><sup>4</sup> In practice, of course, this type of modelling would work best in the case of simple, linguistically oriented exemplars. It becomes increasingly difficult – though still theoretically possible – with more complex or highly eclectic editorial approaches. A rule-based replica of Kane and Donaldson (1988), for example, is possible probably only in theory.</p>
+
+	<p id="fn1120973554fbd96bf72b9a" class="footnote"><sup>5</sup> While this obviously does not apply in those few cases in which editions are made after the discovery of significant new textual evidence, such discoveries are few and far between. Most editorial differences are the result of a reinterpretation of essentially similar sets of textual data.</p>
+
+	<p>[Begin p. 65]</p>
+
+	<h3>References</h3>
+
+	<ul>
+		<li>Adams, Robert, Hoyt N. Duggan, Eric Eliason, Ralph Hanna <span class="caps">III</span>, John Price-Wilkin &amp; Thorlac Turville-Petre, eds. (2000). The Piers Plowman Electronic Archive, vol. 1: Corpus Christi College, Oxford MS 201 (F). (<span class="caps">SEENET</span>, series A.1.) Ann Arbor: <span class="caps">SEENET</span> &amp; University of Michigan Press.</li>
+		<li>Armstrong, Guyda &amp; Vika Zafrin (2005). “Towards the Electronic Esposizioni: The Challenges of the Online Commentary.” Digital Medievalist 1.1. 〈http://www.digitalmedievalist.org/article.cfm?RecID=1〉 [2005-06-21]</li>
+		<li>Dahlström, Mats (2000). “Drowning by Versions.” Human IT 4.4: 7-38. 〈http://www.hb.se/bhs/ith/4-00/md.htm〉 [2005-06-21]</li>
+		<li>Dobbie, Elliott Van Kirk, ed. (1942). The Anglo-Saxon Minor Poems. (The Anglo-Saxon Poetic Records 6.) New York: Columbia University Press.</li>
+		<li>Green, Jonathan (2005). “Opening the Illustrated Incunable Short Title Catalog on CD-<span class="caps">ROM</span>: An End-user’s Approach to an Essential Database.” Digital Medievalist 1.1. 〈http://www.digitalmedievalist.org/article.cfm?RecID=4〉 [2005-06-21]</li>
+		<li>Kane, George &amp; E. Talbot Donaldson, eds. (1988). Piers Plowman: The B Version, Will’s Visions of Piers Plowman, Do Well, Do Better and Do Best. Rev. ed. London: Athlone Press.</li>
+		<li>Kiernan, Kevin S., ed. (1999). The Electronic Beowulf. London: British Library.</li>
+		<li>Mcgann, Jerome J. (1997). “The Rationale of Hypertext.” Electronic Text: Investigations in Method and Theory. Ed. K. Sutherland. Oxford: Clarendon. 19-46. Preprint available at: 〈http://jefferson.village.virginia.edu/public/jjm2f/rationale.html〉 [2005-06-21]</li>
+		<li>Mcgillivray, murray (1994). “Towards a Post-Critical Edition: Theory, Hypertext, and the Presentation of Middle English Works.” Text 7: 175-199.</li>
+	</ul>
+
+	<p>[Begin p. 66]</p>
+
+	<ul>
+		<li>O’Donnell, Daniel Paul (1996a). “Manuscript Variation in Multiple Recension Old English Poetry: The Technical Problem and Poetical Art.” Unpubl. PhD Diss. New Haven, CT: Yale University.</li>
+		<li>O’Donnell, Daniel Paul (1996b). “A Northumbrian Version of Cædmon’s Hymn (Eordu Recension) in Brussels Bibliothèque Royale MS 8245-57, ff. 62r2-v1: Identification, Edition, and Filiation.” Beda Venerabilis: Historian, Monk, and Northumbrian. Eds. L. A. R. J. Houwen &amp; A. A. MacDonald. Groningen: Egbert Forsten. 139-165.</li>
+		<li>O’Donnell, Daniel Paul (1998). “The Electronic Cædmon’s Hymn: Editorial Method.” 〈http://people.uleth.ca/~daniel.odonnell/research/caedmon-job.html〉 [2005-06-21]. The original <span class="caps">URL</span> for this page (cited, for e.g. in Dahlström 2000) was 〈http://home.uleth.ca/~daniel.odonnell/caedmon-job.html〉 It is reprinted below.</li>
+		<li>O’Donnell, Daniel Paul (Forthcoming). Cædmon’s Hymn: A Multimedia Study, Edition, and Witness Archive. Cambridge: D. S. Brewer.</li>
+		<li>Ore, Espen S. (2004). “Monkey Business – or What is an Edition?” Literary and Linguistic Computing 19.1: 35-44.</li>
+		<li>Robinson, Peter, ed. (1996). The Wife of Bath’s Prologue on CD-<span class="caps">ROM</span>. Cambridge: Cambridge University Press.</li>
+		<li>Ross, Charles L. (1996). “The Electronic Text and the Death of the Critical Edition.” The Literary Text in the Digital Age. Ed. R. Finneran. Ann Arbor: University of Michigan Press. 225-231.</li>
+		<li>Sperberg-Mcqueen, C. M. &amp; Lou Burnard (2004). <span class="caps">TEI</span> P4: Guidelines for Electronic Text Encoding and Interchange. <span class="caps">TEI</span>/ACH/ACL/ALLC. 〈http://www.teic.org/P4X/〉 [2005-06-21]</li>
+	</ul>
+
+	<p>[Begin p. 67]</p>
+
+	<h3>Appendix: O’Donnell (1998)</h3>
+
+	<p>The following is a reprint of O’Donnell (1998). It has been reformatted for publication, but is otherwise unchanged from the original text with the exception of closing brackets that were missing from some of the code examples in the original and that have been added here. The Editorial Schema diagram has been redrawn without any deliberate substantive alteration. The original low resolution version can be found at 〈http://people.uleth.ca/~daniel.odonnell/research/caedmon-job.html〉.</p>
+
+	<h3>The Electronic Cædmon’s Hymn: Editorial Method</h3>
+
+	<h4>Daniel Paul O’Donnell</h4>
+
+	<p>The Electronic Cædmon’s Hymn will be an archive based, virtual critical edition. This means users will:</p>
+
+	<ul>
+		<li>have access to colour facsimiles and diplomatic transcriptions of all surviving witnesses</li>
+		<li>be able to generate mediated (‘critical’) texts on-the-fly by choosing the editorial approach which best suits their individual research or study needs.</li>
+	</ul>
+
+	<p>The following is a rough schema describing how the edition will work:</p>
+
+	<p>[Begin p. 68]</p>
+
+	<p>Figure 1.</p>
+
+	<p>This schema reflects my developing view of the editing process. The terms (Witness Level, Processor Level, etc.) are defined further below. </p>
+
+	<p>In my view, the editor of a critical edition is understood as being functionally equivalent to a filter separating the final reader from the uninterpreted data contained in the raw witnesses. Depending on the nature of the instructions this processor is given, different types of manipulation will occur in producing the final critical edition. An editor interested in producing a student edition of the poem, for example, can be understood to be manipulating the data according to the instructions choose the easiest (most sensible) readings and ignore those which raise advanced textual problems; an editor interested in producing the ‘original’ text can be seen as a processor performing the instruction choose readings from the earliest manuscript(s) when these are available and sensible; emend or normalise readings as required; and an editor interested in producing an edition of a specific dialectal version of a text is working to the instruct[Begin p. 69]tion choose readings from manuscripts belong to dialect x; when these are not available, reconstruct or emend readings from other manuscripts, ensuring that they conform to the spelling rules of the dialect. If editors can be reduced to a set of programming instructions, then it ought to be possible, in an electronic edition, to automate the manipulations necessary to produce various kinds of critical texts. In the above schema, I have attempted to do so. Instead of producing a final interpretation of ‘the text’, I instead divide the editorial process into a series of discrete steps:</p>
+
+	<ul>
+		<li>the assembly of witnesses (the witness archive level);</li>
+		<li>the construction of the filter through which the raw data from the witness archive is to viewed (the virtual editions or the filter level)</li>
+		<li>the physical assembly and formatting of the chosen variant readings from the witnesses (the processing level);</li>
+		<li>the final ‘printed’ text as it appears in the user’s browser (the display level).</li>
+	</ul>
+
+	<p>Because the critical edition is not seen as an actual text but rather as a simple view of the raw data, different textual approaches are understood as being complementary rather than competing. It is possible to have multiple ‘views’ coexisting within a single edition. Readers will be expected to choose the view most appropriate to the type of work they wish to do. For research requiring a reconstruction of the hypothetical ‘author’s original’, a ‘reconstruction filter’ might be applied; a student can apply the ‘student edition filter’ and get a readable simplified text.<br />
+And the oral-formulaicist can apply the ‘single manuscript x filter’ and get a formatted edition of the readings of a single manuscript. Because different things are expected of the different levels, each layer has its own format and protocol. Because all layers are essential to the<br />
+development of the text, all would be included on the <span class="caps">CDR</span>om containing the edition. Users could program their own filters at the filter level, or change the processing instructions to use other layouts or formats; they could also conduct statistical experiments and the like on the raw<br />
+<span class="caps">SGML</span> texts in the witness archive or filter level as needed.</p>
+
+	<p>[Begin p. 70]</p>
+
+	<h4>Witness Archive</h4>
+
+	<p>The witness archive consists of facsimiles and diplomatic transcriptions of all relevant witnesses marked up in <span class="caps">SGML</span> (<span class="caps">TEI</span>) format. <span class="caps">TEI</span> is better for this initial stage of the mark-up because it is so verbose. Information completely unnecessary to formatting – linguistic, historical, metrical,<br />
+etc. – can be included for use search programs and manipulation by other scholars.</p>
+
+	<p>The following is a sample from a marked-up transcription at the witness archive level:</p>
+
+	<p>bq..〈l id=&#8220;ld.1&#8221; n=&#8220;1&#8220;〉<br />
+&#x00A0;〈w〉Nu〈/w〉<br />
+&#x00A0;〈w〉&wynn;e〈/w〉〈space extent=0〉<br />
+&#x00A0;〈w〉sceolan〈/w〉<br />
+&#x00A0;〈w〉herian〈/w〉<br />
+&#x00A0;〈w〉〈del type=&#8220;underlined&#8220;〉herian〈/del〉〈/w〉<br />
+&#x00A0;〈caesura〉<br />
+&#x00A0;〈w〉heo〈lb〉〈add hand=&#8220;editorial&#8221; cert=&#8220;90&#8220;〉f〈/add〉on〈space extent=1〉rices〈/w〉<br />
+&#x00A0;〈w〉&wynn;eard〈/w〉.〈space extent=0〉<br />
+〈/l〉</p>
+
+	<h4>Virtual Editions</h4>
+
+	<p>Virtual Editions are the filters that contain the editorial processing instructions. They are not so much texts in themselves as records of the intellectual processes by which a critical text interprets the underlying data contained in the witness archive. They are <span class="caps">SGML</span> (<span class="caps">TEI</span>) encoding<br />
+documents which provide a map of which witness readings are to be used in which critical texts. For most readings in most types of editions, these instructions will consist of empty elements using the ‘sameAs’ and ‘copyOf’ attributes to indicate which witness is to provide a specific<br />
+reading: e.g. 〈w copyOf=CaW2〉〈/w〉 where CaW2 is the identifier for the reading of a specific word from manuscript Ca. One of the advantages of this method is that eliminates one potential source of error (cutting and pasting from the diplomatic transcriptions into the critical editions); it also allows for the near instantaneous integration of new manuscript readings into the finished editions – changes in the witness transcriptions are automatically incorporated in the final texts via the filter.</p>
+
+	<p>[Begin p. 71]</p>
+
+	<p>In some cases, the elements will contain emendations or normalisation instructions: e.g. 〈w sameAs=CaW2〉þa〈w〉. The sample is from a virtual edition. It specifies that line 1 of this critical text is to be taken verbatim from manuscript ld (i.e. the text reproduced above):</p>
+
+	<blockquote>
+		<p>〈l id=&#8220;Early.1&#8221; n=&#8220;1&#8221; copyOf=&#8220;ld.1&#8220;〉〈/l〉</p>
+	</blockquote>
+
+	<h4>Processing Level and Display Texts</h4>
+
+	<p>The ‘Virtual Editions’ are a record of the decisions made by an editor in producing his or her text rather than a record of the text itself. Because they consists for the most part of references to specific readings in other files, the virtual editions will be next-to-unreadable to the human eye. Turning these instructions into readable, formatted text is the function of the next layer – in which the processing instructions implied by the virtual layer are applied and in which final formatting is applied. This processing is carried out using a transformation type processor – like Jade – in which the virtual text is filled in with actual readings from the<br />
+witness archive, and these readings then formatted with punctuation and capitalisation etc. as required. The final display text is <span class="caps">HTML</span> or <span class="caps">XML</span>. While this will involve a necessary loss of information – most <span class="caps">TEI</span> tags have nothing to do with formatting, few <span class="caps">HTML</span> tags have much to do with content – it is more than compensated for by the ability to include the bells and whistles which make a text useful to human readers: <span class="caps">HTML</span> browsers are as a rule better and more user friendly than <span class="caps">SGML</span> browsers. Users who need to do computer analysis of the texts can always use the <span class="caps">TEI</span> encoded witness transcriptions or virtual editions.</p>
+
+	<p>Here is my guess as to how <span class="caps">HTML</span> would display the same line in the final edition (a critical apparatus would normally also be attached at this layer containing variant readings from other manuscripts [built up from the manuscript archive using the ‘copyOf’ attribute rather than by<br />
+cutting and pasting]; notes would discuss the various corrections etc. ignored in the reading text of this view):</p>
+
+	<blockquote>
+		<p>〈P〉Nu we sceolan herian heofonrices weard〈/P〉</p>
+	</blockquote>
+<!-- <img src="https://people.uleth.ca/~daniel.odonnell/images/1.gif" width="400" height="1" class="divider" alt="---" title="Section separator" />
+<p>Posted: Saturday December 16, 2006. 00:56.</p> 
+<p>Last modified: Wednesday May 23, 2012. 20:02.</p> -->
+<div class="comments">
+<img src="../images/12.png" alt="----" title="Section separator: detail from Kakelbont MS 1, a fifteenth-century French Psalter. This image is in the public domain." style="max-width:300px;text-align:center"/>
+<!-- txp:comments_invite wraptag="p" / -->
+<!-- txp:comments_form / -->
+&#x00A0;
+</div>
+<!-- default page form ends --><h3 id="comment"></h3>
+
+
+
+
+
+
+<p>Commenting is closed for this article.</p>
+
+				<!-- #2cl -->
+				
+			<!-- #1cl -->
+			
+		</div>
+
+		<!-- Right bar -->
+		<!--googleoff: all-->
+		<!-- this stops google indexing the tweets and other static information -->
+		<div class="rightbar">
+			<p class="hideme">
+				<a class="hideme" id="navigation"></a>
+				<a href="#content" class="hideme">Back to content</a>
+			</p>
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.BOTTOM_RIGHT, autoDisplay: false, gaTrack: true, gaId: 'UA-32780614-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+			<h2>Search my site</h2>
+				<form role="search" method="get" action="https://people.uleth.ca/~daniel.odonnell/Search/">
+<p class="search_input">
+<input name="q" required="required" size="15" type="search" value="" /><input type="submit" value="Go!" /></p>
+</form>
+			<h2>Sections</h2>
+			<ul>
+<li><a href="https://outlook.office.com/bookwithme/user/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/meetingtype/vFTDmf-nQECoMYPMEtPS2A2?anonymous&amp;ep=mlink">Book a meeting time with me</a></li>				
+<li><a href="../Academic-Policies/current-academic-policies.html">Academic Policies (Current)</a></li>
+				<li><a href="../blog/index.html">Blog</a></li>
+<li><a href="../contact/index.html">Contact</a></li>
+<li><a href="index.html">Research</a></li>
+<li><a href="../teaching/index-2.html">Teaching</a></li>
+<li><a href="../tutorials/index.html">Tutorials</a></li>
+			</ul>
+<!-- h2>Schedule</h2>
+
+<iframe 
+name="My calendar"
+title="My calendar"
+width="75%"
+scrolling="yes"
+marginheight="0"
+marginwidth="0"
+src="https://outlook.office365.com/owa/calendar/a14f92d19eb24afdab3a3bc6938f09f7@uleth.ca/2c4f66847b2042dfb7db8ba348396f3c14689327663406417309/calendar.html"/>
+-->
+<h2>Current teaching</h2>
+			<ul>
+
+<li><a href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a></li>
+
+<li><a href="../teaching/english-4850a-7850a-beowulf-spring-2024.html">English 4850a/7850a: Advanced Old English (Spring 2024)</a></li>
+
+
+
+			</ul>
+			<h2>Recent changes to this site</h2>
+			<ul>
+				<li><strong><a rel="bookmark" href="../blog/calm-slippery-and-sadistic-my-silent-war-by-kim-philby-and-a-spy-among-friends-by-ben-macintyre.html">Calm, Slippery, and sadistic: My Silent War by Kim Philby and A Spy among Friends by Ben MacIntyre</a> </strong></li><li><strong><a rel="bookmark" href="../blog/chatbot-prompt-thyself.html">ChatBot prompt thyself</a> </strong></li><li><strong><a rel="bookmark" href="../blog/what-a-fuss-about-an-omlette-why-lies-are-protected-speech-in-the-us.html">What a fuss about an omlette! Why lies are protected speech in the U.S. (Liar in a crowded theater; Kosseff 2023)</a> </strong></li><li><strong><a rel="bookmark" href="../blog/blow-by-blow-island-victory-sla-marshall-1944-2002.html">Blow by blow: Island Victory, S.L.A. Marshall 1944/2002</a> </strong></li><li><strong><a rel="bookmark" href="../teaching/english-4400b-7400b-readers-researchers-and-books-case-studies-in-reception-spring-2024.html">English 4400b/7400b: Readers, Researchers, and Books: Case Studies in Reception (Spring 2024)</a> </strong></li>
+			</ul>
+			<h2>Tags</h2>
+			<a href="../tag/anglo-saxon%2bstudies/index.html" class="tagSizeMedium tagSize11" style="font-size: 135%;">anglo-saxon studies</a>, 
+<a href="../tag/caedmon/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">caedmon</a>, 
+<a href="../tag/citation%2bpractice/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">citation practice</a>, 
+<a href="../tag/composition/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">composition</a>, 
+<a href="../tag/computers/index.html" class="tagSizeMedium tagSize24" style="font-size: 182%;">computers</a>, 
+<a href="../tag/digital%2bhumanities/index.html" class="tagSizeLargest tagSize29" style="font-size: 200%;">digital humanities</a>, 
+<a href="../tag/digital%2bpedagogy/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">digital pedagogy</a>, 
+<a href="../tag/grammar/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">grammar</a>, 
+<a href="../tag/history/index.html" class="tagSizeMedium tagSize2" style="font-size: 103%;">history</a>, 
+<a href="../tag/moodle/index.html" class="tagSizeSmallest tagSize1" style="font-size: 100%;">moodle</a>, 
+<a href="../tag/old%2benglish/index.html" class="tagSizeMedium tagSize6" style="font-size: 117%;">old english</a>, 
+<a href="../tag/pedagogy/index.html" class="tagSizeMedium tagSize13" style="font-size: 142%;">pedagogy</a>, 
+<a href="../tag/research/index.html" class="tagSizeMedium tagSize4" style="font-size: 110%;">research</a>, 
+<a href="../tag/students/index.html" class="tagSizeMedium tagSize7" style="font-size: 121%;">students</a>, 
+<a href="../tag/study%2btips/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">study tips</a>, 
+<a href="../tag/teaching/index.html" class="tagSizeMedium tagSize10" style="font-size: 132%;">teaching</a>, 
+<a href="../tag/tips/index.html" class="tagSizeMedium tagSize16" style="font-size: 153%;">tips</a>, 
+<a href="../tag/tutorials/index.html" class="tagSizeMedium tagSize12" style="font-size: 139%;">tutorials</a>, 
+<a href="../tag/unessay/index.html" class="tagSizeMedium tagSize8" style="font-size: 125%;">unessay</a>, 
+<a href="../tag/universities/index.html" class="tagSizeMedium tagSize3" style="font-size: 107%;">universities</a><br /><br />
+			<a style="padding-left:1em;" href="../tag/index.html">See all...</a>
+			<!-- <h2>What I'm reading...</h2> -->
+			<!-- txp:aks_rss form="externalRSS" feed="https://api.zotero.org/groups/81065/items/" limit_per_feed="4" wraptag="ul" break="li" /> -->
+			<!-- <h2>Bibliography ticker...</h2> -->
+			<!-- txp:aks_rss form="citationTicker" feed="https://api.zotero.org/users/632779/items?key=lSavInnm7WmefW45BRO6f7uh" limit_per_feed="4" wraptag="p" break="<span />" /> -->
+			<h2>Follow me on <a href="https://twitter.com/#!/DanielPaulOD">Twitter</a></h2>
+			<ul class="arc_twitter"><li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I&#039;m afraid I don&#039;t. I thought it was one o&hellip; <a href='https://twitter.com/i/web/status/1673712143542390785'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 27, 09:17 AM</span></li>
+<li>RT <a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>: The results are in!
+
+<a href='http://twitter.com/BUFABrock' rel='external'>@BUFABrock</a>&nbsp;members have voted 97% in favour of strike authorization, if necessary.
+
+The participation r&hellip; <span class="arc_twitter-posted">Jun 27, 08:33 AM</span></li>
+<li><a href='http://twitter.com/LorinYochim' rel='external'>@LorinYochim</a> <a href='http://twitter.com/CAUT_ACPPU' rel='external'>@CAUT_ACPPU</a> <a href='http://twitter.com/case_acse' rel='external'>@case_acse</a> <a href='http://twitter.com/CSSESCEE' rel='external'>@CSSESCEE</a> <a href='http://twitter.com/UMFA_FAUM' rel='external'>@UMFA_FAUM</a> <a href='http://twitter.com/ULFAssociation' rel='external'>@ULFAssociation</a> I thought I heard talk of this at caut this year. <span class="arc_twitter-posted">Jun 27, 08:30 AM</span></li>
+<li>RT <a href='http://twitter.com/deelomas' rel='external'>@deelomas</a>: And, the official winner of the &lsquo;Not My Job&rsquo; award goes to&hellip; <a href='https://twitter.com/deelomas/status/1672611829967667202/photo/1'>pic.twitter.com/0sDes9D5oq</a> <span class="arc_twitter-posted">Jun 26, 09:34 PM</span></li>
+<li>I&#039;m beginning to think that electric vehicles are sort of a Linux of the car world at the moment. Except Teslas whi&hellip; <a href='https://twitter.com/i/web/status/1673344791856267271'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 26, 08:57 AM</span></li>
+<li>&quot;He felt that American children in recent generations have had too much parental protection and too little opportun&hellip; <a href='https://twitter.com/i/web/status/1670627745641172993'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 18, 09:01 PM</span></li>
+<li>I&#039;ve been going through Ernie Pyle&#039;s Brave Men (a collection of columns from the European front in WWII) looking up&hellip; <a href='https://twitter.com/i/web/status/1670263169556836354'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 17, 08:52 PM</span></li>
+<li>Traditionally, &ldquo;knowledge workers&rdquo; have had two productivity peaks in their workday: just before lunch and just aft&hellip; <a href='https://twitter.com/i/web/status/1667749991186833409'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">Jun 10, 10:25 PM</span></li>
+<li>RT <a href='http://twitter.com/JasonOnTheDrums' rel='external'>@JasonOnTheDrums</a>: <a href='http://twitter.com/search?q=%23Ableg' rel='external'>#Ableg</a>
+
+Today was within 97% of the record votes we record on Tuesday.
+
+We&rsquo;re on pace for 784,475 votes over and will&hellip; <span class="arc_twitter-posted">May 26, 08:08 PM</span></li>
+<li>So if we were doing bets,  here&#039;s mine: 
+
+NDP 45
+UCP 41
+IND (Child-hating poop-cookie) 1
+
+I think people are undere&hellip; <a href='https://twitter.com/i/web/status/1662279319685849088'>twitter.com/i/web/status/1…</a> <span class="arc_twitter-posted">May 26, 08:07 PM</span></li></ul>
+			<!--  <h2><form method="get" action="https://people.uleth.ca/~daniel.odonnell/"><div>
+
+<input name="s" type="hidden" value="research" />
+Navigation<br />
+<select name="s" onchange="submit(this.form);">
+	<option value="">&#160;</option>
+	<option value="about">About</option>
+	<option value="academic-policies">Academic Policies</option>
+	<option value="archive">Archive</option>
+	<option value="blog">Blog</option>
+	<option value="contact">Contact</option>
+	<option value="drafts">Drafts</option>
+	<option value="research" selected="selected">Research</option>
+	<option value="search">Search</option>
+	<option value="tag">All Tags</option>
+	<option value="teaching">Teaching</option>
+	<option value="tutorials">Tutorials</option>
+</select>
+<noscript><div><input type="submit" value="Go" /></div></noscript>
+</div>
+</form></h2> -->
+			<!-- h2>At <a href="http://dpod.kakelbont.ca/">the dpod blog</a></h2 -->
+			<!-- txp:aks_rss form="externalRSS" feed="http://dpod.kakelbont.ca/feed/" limit_per_feed="10" wraptag="ul" break="li"/ -->
+		</div>
+		<div class="footer">
+<p>Our University’s Blackfoot name is Iniskim, meaning Sacred
+Buffalo Stone.<br/>The University is located in traditional Blackfoot Confederacy territory.<br/>We honour the Blackfoot
+people and their traditional ways of knowing in caring for this land, as well as all Aboriginal peoples who have
+helped shape and continue to strengthen our University community.</p>
+			<p><a href="http://www.uleth.ca/">University of Lethbridge</a> | <a href="http://www.uleth.ca/artsci/">Faculty of Arts and Science</a> | <a href="http://www.uleth.ca/artsci/english">Department of English</a> | <a href="http://www.uleth.ca/graduatestudies/">School of Graduate studies</a> | <a href="../textpattern/index.html">Site
+Administration</a><br />&copy; Date of publication or modification by Daniel Paul O'Donnell<br />Unless otherwise noted, the non-negotiated licence for all work on this site is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons
+Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>.<br />If you want to use the work in some other fashion, feel free to contact me. </p>
+		</div>
+		<!--googleon: all-->
+	</body>
+
+<!-- Mirrored from people.uleth.ca/~daniel.odonnell/research/the-ghost-in-the-machine by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Mar 2024 22:52:16 GMT -->
+</html>
